@@ -1,39 +1,43 @@
-<!DOCTYPE HTML>
-<html lang="en">
-    <head>
-       @include('partials._head')
-    </head>
-    <body>
-        <!--loader-->
-        <div class="loader-wrap">
-            <div class="pin"></div>
-            <div class="pulse"></div>
-        </div>
-        <!--loader end-->
-        <!-- Main  -->
-        <div id="main">
-            <!-- header-->
-            @include('partials._header')
-            <!--  header end -->	
-            <!-- wrapper -->	
-            <div id="wrapper">
-                <!-- Content-->
-                <div class="content">   
-                    @yield('content')
-                <!-- Content end --> 
-                </div>     
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    @include('partials._head')
+</head>
+
+<body>
+
+    <!-- ====== Go to top ====== -->
+    <a id="toTop" title="Go to top" href="javascript:void(0)">
+        <span id="toTopHover"></span>TOP
+    </a>
+
+    <!-- Preloader start-->
+    <div class="preloader">
+        <div class="loader-inner">
+            <div class="dash one">
+                <i class="fa fa-map-marker-alt"></i>
             </div>
-            <!-- wrapper end -->
-            <!--footer -->
-            @include('partials._footer')
-            <!--footer end  -->
-            <!--register form -->
-            @include('partials._modal')
-            <!--register form end -->
-            <a class="to-top"><i class="fa fa-angle-up"></i></a>
+            <div class="dash two">
+                <i class="fa fa-map-marker-alt"></i>
+            </div>
+            <div class="dash three">
+                <i class="fa fa-map-marker-alt"></i>
+            </div>
         </div>
-        <!-- Main end -->
-        <!--=============== scripts  ===============-->
-        @include('partials._scripts')
-    </body>
+    </div>
+    <!-- Preloader end -->
+
+    <!-- Header start-->
+    @include('partials._header')
+    <!-- Header end -->
+
+    @yield('content')
+    
+
+    <!--footer -->
+    @include('partials._footer')
+
+    @include('partials._scripts')
+</body>
+
 </html>

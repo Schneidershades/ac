@@ -1,755 +1,896 @@
 @extends('layouts.web')
 
 @section('content')
-<div class="content">
-    <!--section -->
-    <section class="scroll-con-sec hero-section" data-scrollax-parent="true" id="sec1">
-        <div class="slideshow-container" data-scrollax="properties: { translateY: '200px' }">
-            <!-- slideshow-item --> 
-            <div class="slideshow-item">
-                <div class="bg" data-bg="{{URL::to('assets-web/images/bg/6.jpg')}}"></div>
-            </div>
-            <!--  slideshow-item end  -->   
-            <!-- slideshow-item --> 
-            <div class="slideshow-item">
-                <div class="bg" data-bg="{{URL::to('assets-web/images/bg/16.jpg')}}"></div>
-            </div>
-            <!--  slideshow-item end  -->   
-            <!-- slideshow-item --> 
-            <div class="slideshow-item">
-                <div class="bg" data-bg="{{URL::to('assets-web/images/bg/24.jpg')}}"></div>
-            </div>
-            <!--  slideshow-item end  -->                           
+ <!-- Search Form -->
+    <div id="search" class="top-search d-flex">
+        <span class="close">
+            <i class="fa fa-times"></i>
+        </span>
+        <div class="w-100 text-center mt-4">
+            <h3 class="c-white fw-5">search here</h3>
+            <form role="search" id="searchform" action="#" method="get" class="search-bar">
+                <input value="" name="q" type="search" placeholder="type to search..." class="form-control">
+                <button type="submit" class="submit-btn">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
         </div>
-        <div class="overlay"></div>
-        <div class="hero-section-wrap fl-wrap">
+    </div>
+
+    <!-- banner start -->
+    <div class="main-banner">
+        <div class="banner-image" data-jarallax='{"videoStartTime": 4300}' data-jarallax-video="https://youtu.be/y1Alop4LhYI">
             <div class="container">
-                <div class="intro-item fl-wrap">
-                    <h2>We will help you to find all</h2>
-                    <h3>Find great places , hotels , restourants , shops.</h3>
+                <div class="banner-content">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2>Find The Best Place In Your City</h2>
+                            <p class="mt-4">Lorem ipsum dolor sit amet, consecws eftetuer adscnki iscedring elit aendea cdefom ameodo lorem
+                                ipsf dolor sit amet conscsec tsetuer.</p>
+                        </div>
+                    </div>
+                    <form action="#" class="banner-form mt-5">
+                        <div class="row justify-content-md-center">
+                            <div class="col-lg-3 col-md-6">
+                                <input type="text" class="form-control mb-lg-0" placeholder="What are you looking for?">
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <select class="form-control mb-lg-0 custom-select" id="service2">
+                                    <option>all categories</option>
+                                    <option>hotel</option>
+                                    <option>tour</option>
+                                    <option>pharmacy</option>
+                                    <option>shops</option>
+                                </select>
+
+                            </div>
+                            <div class="col-lg-2 col-md-4">
+                                <button type="submit" class="btn btn-one btn-anim w-100">
+                                    <i class="fa fa-search"></i> search</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <div class="main-search-input-wrap">
-                    <div class="main-search-input fl-wrap">
-                        <div class="main-search-input-item">
-                            <input type="text" placeholder="What are you looking for?" value="">
+                <div class="list-category mb-4">
+                    <div class="row">
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+                            <div class="list-items mb-30 btn-anim">
+                                <div class="icon-box">
+                                    <i class="flaticon-find"></i>
+                                </div>
+                                <h5 class="mb-0">
+                                    <a href="#">destination</a>
+                                </h5>
+                            </div>
                         </div>
-                        <div class="main-search-input-item location" id="autocomplete-container">
-                            <input type="text" placeholder="Location" id="autocomplete-input" value="">
-                            <a href="#"><i class="fa fa-dot-circle-o"></i></a>
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+                            <div class="list-items mb-30 btn-anim">
+                                <div class="icon-box">
+                                    <i class="flaticon-spa"></i>
+                                </div>
+                                <h5 class="mb-0">
+                                    <a href="#">beauty & spa</a>
+                                </h5>
+                            </div>
                         </div>
-                        <div class="main-search-input-item">
-                            <select data-placeholder="All Categories" class="chosen-select">
-                                <option>All Categories</option>
-                                <option>Shops</option>
-                                <option>Hotels</option>
-                                <option>Restaurants</option>
-                                <option>Fitness</option>
-                                <option>Events</option>
-                            </select>
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+                            <div class="list-items mb-30 btn-anim">
+                                <div class="icon-box">
+                                    <i class="flaticon-cheers"></i>
+                                </div>
+                                <h5 class="mb-0">
+                                    <a href="#">nightlife</a>
+                                </h5>
+                            </div>
                         </div>
-                        <button class="main-search-button" onclick="window.location.href='listing.html'">Search</button>
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+                            <div class="list-items mb-30 btn-anim">
+                                <div class="icon-box">
+                                    <i class="flaticon-hotel"></i>
+                                </div>
+                                <h5 class="mb-0">
+                                    <a href="#">hotels</a>
+                                </h5>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+                            <div class="list-items mb-30 btn-anim">
+                                <div class="icon-box">
+                                    <i class="flaticon-cutlery"></i>
+                                </div>
+                                <h5 class="mb-0">
+                                    <a href="#">restaurants</a>
+                                </h5>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+                            <div class="list-items mb-30 btn-anim">
+                                <div class="icon-box">
+                                    <i class="flaticon-shop"></i>
+                                </div>
+                                <h5 class="mb-0">
+                                    <a href="#">shopping</a>
+                                </h5>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="bubble-bg"> </div>
-        <div class="header-sec-link">
-            <div class="container"><a href="#sec2" class="custom-scroll-link">Let's Start</a></div>
-        </div>
-    </section>
-    <!-- section end -->
-    <!--section -->
-    <section id="sec2">
-        <div class="container">
-            <div class="section-title">
-                <h2>Featured Categories</h2>
-                <div class="section-subtitle">Catalog of Categories</div>
-                <span class="section-separator"></span>
-                <p>Explore some of the best tips from around the city from our partners and friends.</p>
-            </div>
-            <!-- portfolio start -->
-            <div class="gallery-items fl-wrap mr-bot spad">
-                <!-- gallery-item-->
-                <div class="gallery-item">
-                    <div class="grid-item-holder">
-                        <div class="listing-item-grid">
-                            <img src="{{URL::to('assets-web\images\all\1.jpeg')}}" alt="">
-                            <div class="listing-counter"><span>10 </span> Locations</div>
-                            <div class="listing-item-cat">
-                                <h3><a href="listing.html">Conference and Event</a></h3>
-                                <p>Constant care and attention to the patients makes good record</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- gallery-item end-->
-                <!-- gallery-item-->
-                <div class="gallery-item gallery-item-second">
-                    <div class="grid-item-holder">
-                        <div class="listing-item-grid">
-                            <img src="{{URL::to('assets-web\images\bg\19.jpeg')}}" alt="">
-                            <div class="listing-counter"><span>6 </span> Locations</div>
-                            <div class="listing-item-cat">
-                                <h3><a href="listing.html">Cafe - Pub</a></h3>
-                                <p>Constant care and attention to the patients makes good record</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- gallery-item end-->
-                <!-- gallery-item-->
-                <div class="gallery-item">
-                    <div class="grid-item-holder">
-                        <div class="listing-item-grid">
-                            <img src="{{URL::to('assets-web\images\all\3.jpeg')}}" alt="">
-                            <div class="listing-counter"><span>21 </span> Locations</div>
-                            <div class="listing-item-cat">
-                                <h3><a href="listing.html">Gym - Fitness</a></h3>
-                                <p>Constant care and attention to the patients makes good record</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- gallery-item end-->
-                <!-- gallery-item-->
-                <div class="gallery-item">
-                    <div class="grid-item-holder">
-                        <div class="listing-item-grid">
-                            <img src="{{URL::to('assets-web\images\all\22.jpeg')}}" alt="">
-                            <div class="listing-counter"><span>7 </span> Locations</div>
-                            <div class="listing-item-cat">
-                                <h3><a href="listing.html">Hotels</a></h3>
-                                <p>Constant care and attention to the patients makes good record</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- gallery-item end-->
-                <!-- gallery-item-->
-                <div class="gallery-item">
-                    <div class="grid-item-holder">
-                        <div class="listing-item-grid">
-                            <img src="{{URL::to('assets-web\images\all\5.jpeg')}}" alt="">
-                            <div class="listing-counter"><span>15 </span> Locations</div>
-                            <div class="listing-item-cat">
-                                <h3><a href="listing.html">Shop - Store</a></h3>
-                                <p>Constant care and attention to the patients makes good record</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- gallery-item end-->
-            </div>
-            <!-- portfolio end -->
-            <a href="listing.html" class="btn  big-btn circle-btn dec-btn  color-bg flat-btn">View All<i class="fa fa-eye"></i></a>
-        </div>
-    </section>
-    <!-- section end -->
-    <!--section -->
-    <section class="gray-section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Popular listings</h2>
-                <div class="section-subtitle">Best Listings</div>
-                <span class="section-separator"></span>
-                <p>Nulla tristique mi a massa convallis cursus. Nulla eu mi magna.</p>
-            </div>
-        </div>
-        <!-- carousel --> 
-        <div class="list-carousel fl-wrap card-listing ">
-            <!--listing-carousel-->
-            <div class="listing-carousel  fl-wrap ">
-                <!--slick-slide-item-->
-                <div class="slick-slide-item">
-                    <!-- listing-item -->
-                    <div class="listing-item">
-                        <article class="geodir-category-listing fl-wrap">
-                            <div class="geodir-category-img">
-                                <img src="{{URL::to('assets-web\images\all\1.jpeg')}}" alt="">
-                                <div class="overlay"></div>
-                                <div class="list-post-counter"><span>4</span><i class="fa fa-heart"></i></div>
-                            </div>
-                            <div class="geodir-category-content fl-wrap">
-                                <a class="listing-geodir-category" href="listing.html">Retail</a>
-                                <div class="listing-avatar"><a href="author-single.html"><img src="{{URL::to('assets-web\images\avatar\5.jpeg')}}" alt=""></a>
-                                    <span class="avatar-tooltip">Added By  <strong>Lisa Smith</strong></span>
-                                </div>
-                                <h3><a href="listing-single.html">Event in City Mol</a></h3>
-                                <p>Sed interdum metus at nisi tempor laoreet.  </p>
-                                <div class="geodir-category-options fl-wrap">
-                                    <div class="listing-rating card-popup-rainingvis" data-starrating2="5">
-                                        <span>(7 reviews)</span>
-                                    </div>
-                                    <div class="geodir-category-location"><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i> 27th Brooklyn New York, NY 10065</a></div>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                    <!-- listing-item end-->                         
-                </div>
-                <!--slick-slide-item end-->
-                <!--slick-slide-item-->
-                <div class="slick-slide-item">
-                    <!-- listing-item -->
-                    <div class="listing-item">
-                        <article class="geodir-category-listing fl-wrap">
-                            <div class="geodir-category-img">
-                                <img src="{{URL::to('assets-web\images\all\2.jpeg')}}" alt="">
-                                <div class="overlay"></div>
-                                <div class="list-post-counter"><span>15</span><i class="fa fa-heart"></i></div>
-                            </div>
-                            <div class="geodir-category-content fl-wrap">
-                                <a class="listing-geodir-category" href="listing.html">Event</a>
-                                <div class="listing-avatar"><a href="author-single.html"><img src="{{URL::to('assets-web\images\avatar\2.jpeg')}}" alt=""></a>
-                                    <span class="avatar-tooltip">Added By  <strong>Mark Rose</strong></span>
-                                </div>
-                                <h3><a href="listing-single.html">Cafe "Lollipop"</a></h3>
-                                <p>Morbi suscipit erat in diam bibendum rutrum in nisl.</p>
-                                <div class="geodir-category-options fl-wrap">
-                                    <div class="listing-rating card-popup-rainingvis" data-starrating2="4">
-                                        <span>(17 reviews)</span>
-                                    </div>
-                                    <div class="geodir-category-location"><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i> 27th Brooklyn New York, NY 10065</a></div>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                    <!-- listing-item end-->  
-                </div>
-                <!--slick-slide-item end-->  
-                <!--slick-slide-item-->
-                <div class="slick-slide-item">
-                    <!-- listing-item -->
-                    <div class="listing-item">
-                        <article class="geodir-category-listing fl-wrap">
-                            <div class="geodir-category-img">
-                                <img src="{{URL::to('assets-web\images\all\20.jpeg')}}" alt="">
-                                <div class="overlay"></div>
-                                <div class="list-post-counter"><span>13</span><i class="fa fa-heart"></i></div>
-                            </div>
-                            <div class="geodir-category-content fl-wrap">
-                                <a class="listing-geodir-category" href="listing.html">Gym </a>
-                                <div class="listing-avatar"><a href="author-single.html"><img src="{{URL::to('assets-web\images\avatar\4.jpeg')}}" alt=""></a>
-                                    <span class="avatar-tooltip">Added By  <strong>Nasty Wood</strong></span>
-                                </div>
-                                <h3><a href="listing-single.html">Gym In Brooklyn</a></h3>
-                                <p>Morbiaccumsan ipsum velit tincidunt . </p>
-                                <div class="geodir-category-options fl-wrap">
-                                    <div class="listing-rating card-popup-rainingvis" data-starrating2="3">
-                                        <span>(16 reviews)</span>
-                                    </div>
-                                    <div class="geodir-category-location"><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i> 27th Brooklyn New York, NY 10065</a></div>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                    <!-- listing-item end--> 
-                </div>
-                <!--slick-slide-item end-->                                
-                <!--slick-slide-item-->
-                <div class="slick-slide-item">
-                    <!-- listing-item -->
-                    <div class="listing-item">
-                        <article class="geodir-category-listing fl-wrap">
-                            <div class="geodir-category-img">
-                                <img src="{{URL::to('assets-web\images\all\5.jpeg')}}" alt="">
-                                <div class="overlay"></div>
-                                <div class="list-post-counter"><span>3</span><i class="fa fa-heart"></i></div>
-                            </div>
-                            <div class="geodir-category-content fl-wrap">
-                                <a class="listing-geodir-category" href="listing.html">Shops</a>
-                                <div class="listing-avatar"><a href="author-single.html"><img src="{{URL::to('assets-web\images\avatar\1.jpeg')}}" alt=""></a>
-                                    <span class="avatar-tooltip">Added By  <strong>Nasty Wood</strong></span>
-                                </div>
-                                <h3><a href="listing-single.html">Shop in Boutique Zone</a></h3>
-                                <p>Morbiaccumsan ipsum velit tincidunt . </p>
-                                <div class="geodir-category-options fl-wrap">
-                                    <div class="listing-rating card-popup-rainingvis" data-starrating2="4">
-                                        <span>(6 reviews)</span>
-                                    </div>
-                                    <div class="geodir-category-location"><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i> 27th Brooklyn New York, NY 10065</a></div>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                    <!-- listing-item end--> 
-                </div>
-                <!--slick-slide-item end-->                                
-                <!--slick-slide-item-->
-                <div class="slick-slide-item">
-                    <!-- listing-item -->
-                    <div class="listing-item">
-                        <article class="geodir-category-listing fl-wrap">
-                            <div class="geodir-category-img">
-                                <img src="{{URL::to('assets-web\images\all\6.jpeg')}}" alt="">
-                                <div class="overlay"></div>
-                                <div class="list-post-counter"><span>35</span><i class="fa fa-heart"></i></div>
-                            </div>
-                            <div class="geodir-category-content fl-wrap">
-                                <a class="listing-geodir-category" href="listing.html">Cars</a>
-                                <div class="listing-avatar"><a href="author-single.html"><img src="{{URL::to('assets-web\images\avatar\6.jpeg')}}" alt=""></a>
-                                    <span class="avatar-tooltip">Added By  <strong>Kliff Antony</strong></span>
-                                </div>
-                                <h3><a href="listing-single.html">Best deal For the Cars</a></h3>
-                                <p>Lorem ipsum gravida nibh vel velit.</p>
-                                <div class="geodir-category-options fl-wrap">
-                                    <div class="listing-rating card-popup-rainingvis" data-starrating2="5">
-                                        <span>(11 reviews)</span>
-                                    </div>
-                                    <div class="geodir-category-location"><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i> 27th Brooklyn New York, NY 10065</a></div>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                    <!-- listing-item end-->  
-                </div>
-                <!--slick-slide-item end-->                                                             
-                <!--slick-slide-item-->
-                <div class="slick-slide-item">
-                    <!-- listing-item -->
-                    <div class="listing-item">
-                        <article class="geodir-category-listing fl-wrap">
-                            <div class="geodir-category-img">
-                                <img src="{{URL::to('assets-web\images\all\4.jpeg')}}" alt="">
-                                <div class="overlay"></div>
-                                <div class="list-post-counter"><span>553</span><i class="fa fa-heart"></i></div>
-                            </div>
-                            <div class="geodir-category-content fl-wrap">
-                                <a class="listing-geodir-category" href="listing.html">Restourants</a>
-                                <div class="listing-avatar"><a href="author-single.html"><img src="{{URL::to('assets-web\images\avatar\3.jpeg')}}" alt=""></a>
-                                    <span class="avatar-tooltip">Added By  <strong>Adam Koncy</strong></span>
-                                </div>
-                                <h3><a href="listing-single.html">Luxury Restourant</a></h3>
-                                <p>Sed non neque elit. Sed ut imperdie.</p>
-                                <div class="geodir-category-options fl-wrap">
-                                    <div class="listing-rating card-popup-rainingvis" data-starrating2="5">
-                                        <span>(7 reviews)</span>
-                                    </div>
-                                    <div class="geodir-category-location"><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i> 27th Brooklyn New York, NY 10065</a></div>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                    <!-- listing-item end-->   
-                </div>
-                <!--slick-slide-item end-->                              
-            </div>
-            <!--listing-carousel end-->
-            <div class="swiper-button-prev sw-btn"><i class="fa fa-long-arrow-left"></i></div>
-            <div class="swiper-button-next sw-btn"><i class="fa fa-long-arrow-right"></i></div>
-        </div>
-        <!--  carousel end--> 
-    </section>
-    <!-- section end -->
-    <!--section -->
-    <section class="color-bg">
-        <div class="shapes-bg-big"></div>
+    </div>
+    <!-- banner end -->
+
+    <!-- popular list start-->
+    <section class="popular-list sp-100 bg-w">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <div class="images-collage fl-wrap">
-                        <div class="images-collage-title">City<span>Book</span></div>
-                        <div class="images-collage-main images-collage-item"><img src="{{URL::to('assets-web\images\avatar\1.jpeg')}}" alt=""></div>
-                        <div class="images-collage-other images-collage-item" data-position-left="23" data-position-top="10" data-zindex="2"><img src="{{URL::to('assets-web\images\avatar\2.jpeg')}}" alt=""></div>
-                        <div class="images-collage-other images-collage-item" data-position-left="62" data-position-top="54" data-zindex="5"><img src="{{URL::to('assets-web\images\avatar\4.jpeg')}}" alt=""></div>
-                        <div class="images-collage-other images-collage-item anim-col" data-position-left="18" data-position-top="70" data-zindex="11"><img src="{{URL::to('assets-web\images\avatar\6.jpeg')}}" alt=""></div>
-                        <div class="images-collage-other images-collage-item" data-position-left="37" data-position-top="90" data-zindex="1"><img src="{{URL::to('assets-web\images\avatar\5.jpeg')}}" alt=""></div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="color-bg-text">
-                        <h3>Join our online community</h3>
-                        <p>In ut odio libero, at vulputate urna. Nulla tristique mi a massa convallis cursus. Nulla eu mi magna. Etiam suscipit commodo gravida. Lorem ipsum dolor sit amet, conse ctetuer adipiscing elit, sed diam nonu mmy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.</p>
-                        <a href="#" class="color-bg-link modal-open">Sign In Now</a>
+                <div class="col-12">
+                    <div class="all-title">
+                        <h3 class="sec-title">
+                            popular listing
+                        </h3>
+                        <svg class="title-sep">
+                            <path fill-rule="evenodd" d="M32.000,13.000 L32.000,7.000 L35.000,7.000 L35.000,13.000 L32.000,13.000 ZM24.000,4.000 L27.000,4.000 L27.000,16.000 L24.000,16.000 L24.000,4.000 ZM16.000,-0.000 L19.000,-0.000 L19.000,20.000 L16.000,20.000 L16.000,-0.000 ZM8.000,4.000 L11.000,4.000 L11.000,16.000 L8.000,16.000 L8.000,4.000 ZM-0.000,7.000 L3.000,7.000 L3.000,13.000 L-0.000,13.000 L-0.000,7.000 Z"
+                            />
+                        </svg>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor penatibus
+                            ean massa. Cum sociis natoqu penatibus et magnis dis parturient montes.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!--section   end -->  
-    <!--section -->  
-    <section>
-        <div class="container">
-            <div class="section-title">
-                <h2>How it works</h2>
-                <div class="section-subtitle">Discover & Connect </div>
-                <span class="section-separator"></span>
-                <p>Explore some of the best tips from around the world.</p>
-            </div>
-            <!--process-wrap  -->
-            <div class="process-wrap fl-wrap">
-                <ul>
-                    <li>
-                        <div class="process-item">
-                            <span class="process-count">01 . </span>
-                            <div class="time-line-icon"><i class="fa fa-map-o"></i></div>
-                            <h4> Find Interesting Place</h4>
-                            <p>Proin dapibus nisl ornare diam varius tempus. Aenean a quam luctus, finibus tellus ut, convallis eros sollicitudin turpis.</p>
-                        </div>
-                        <span class="pr-dec"></span>
-                    </li>
-                    <li>
-                        <div class="process-item">
-                            <span class="process-count">02 .</span>
-                            <div class="time-line-icon"><i class="fa fa-envelope-open-o"></i></div>
-                            <h4> Contact a Few Owners</h4>
-                            <p>Faucibus ante, in porttitor tellus blandit et. Phasellus tincidunt metus lectus sollicitudin feugiat pharetra consectetur.</p>
-                        </div>
-                        <span class="pr-dec"></span>
-                    </li>
-                    <li>
-                        <div class="process-item">
-                            <span class="process-count">03 .</span>
-                            <div class="time-line-icon"><i class="fa fa-hand-peace-o"></i></div>
-                            <h4> Make a Listing</h4>
-                            <p>Maecenas pulvinar, risus in facilisis dignissim, quam nisi hendrerit nulla, id vestibulum metus nullam viverra porta.</p>
-                        </div>
-                    </li>
-                </ul>
-                <div class="process-end"><i class="fa fa-check"></i></div>
-            </div>
-            <!--process-wrap   end-->
-        </div>
-    </section>
-    <section class="parallax-section" data-scrollax-parent="true">
-        <div class="bg" data-bg="images/bg/8.jpg" data-scrollax="properties: { translateY: '100px' }"></div>
-        <div class="overlay co lor-overlay"></div>
-        <!--container-->
-        <div class="container">
-            <div class="intro-item fl-wrap">
-                <h2>Visit the Best Places In Your City</h2>
-                <h3>Find great places , hotels , restourants , shops.</h3>
-                <a class="trs-btn" href="#">Add Listing + </a>
-            </div>
-        </div>
-    </section>
-    <!-- section end -->
-    <!--section -->
-    <section>
-        <div class="container">
-            <div class="section-title">
-                <h2> Pricing Tables</h2>
-                <div class="section-subtitle">cost of our services</div>
-                <span class="section-separator"></span>
-                <p>Explore some of the best tips from around the city from our partners and friends.</p>
-            </div>
-            <div class="pricing-wrap fl-wrap">
-                <!-- price-item-->
-                <div class="price-item">
-                    <div class="price-head op1">
-                        <h3>Basic</h3>
-                    </div>
-                    <div class="price-content fl-wrap">
-                        <div class="price-num fl-wrap">
-                            <span class="curen">$</span>
-                            <span class="price-num-item">49</span> 
-                            <div class="price-num-desc">Per month</div>
-                        </div>
-                        <div class="price-desc fl-wrap">
-                            <ul>
-                                <li>One Listing</li>
-                                <li>90 Days Availability</li>
-                                <li>Non-Featured</li>
-                                <li>Limited Support</li>
-                            </ul>
-                            <a href="#" class="price-link">Choose Basic</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- price-item end-->
-                <!-- price-item-->
-                <div class="price-item best-price">
-                    <div class="price-head op2">
-                        <h3>Extended</h3>
-                    </div>
-                    <div class="price-content fl-wrap">
-                        <div class="price-num fl-wrap">
-                            <span class="curen">$</span>
-                            <span class="price-num-item">99</span> 
-                            <div class="price-num-desc">Per month</div>
-                        </div>
-                        <div class="price-desc fl-wrap">
-                            <ul>
-                                <li>Ten Listings</li>
-                                <li>Lifetime Availability</li>
-                                <li>Featured In Search Results</li>
-                                <li>24/7 Support</li>
-                            </ul>
-                            <a href="#" class="price-link">Choose Extended</a>
-                            <div class="recomm-price">
-                                <i class="fa fa-check"></i> 
-                                <span class="clearfix"></span>
-                                Recommended
+            <div class="row">
+                <div class="col-12">
+                    <div class="popular-list-slider mb-0">
+                        <div class="listing-item p-2">
+                            <div class="img-holder">
+                                <span class="offer">save 49%
+                                </span>
+                                <img src="assets/img/home/pl-slide1.jpg" alt="list">
+                                <div class="rate-like centering justify-content-between">
+                                    <div class="rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <a class="likes" href="#">
+                                        <i class="far fa-heart"></i> 4
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- price-item end-->
-                <!-- price-item-->
-                <div class="price-item">
-                    <div class="price-head">
-                        <h3>Professional</h3>
-                    </div>
-                    <div class="price-content fl-wrap">
-                        <div class="price-num fl-wrap">
-                            <span class="curen">$</span>
-                            <span class="price-num-item">149</span> 
-                            <div class="price-num-desc">Per month</div>
-                        </div>
-                        <div class="price-desc fl-wrap">
-                            <ul>
-                                <li>Unlimited Listings</li>
-                                <li>Lifetime Availability</li>
-                                <li>Featured In Search Results</li>
-                                <li>24/7 Support</li>
-                            </ul>
-                            <a href="#" class="price-link">Choose Professional</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- price-item end-->                                                    
-            </div>
-            <!-- about-wrap end  --> 
-        </div>
-    </section>
-    <!-- section end -->
-    <!--section -->
-    <section class="color-bg">
-        <div class="shapes-bg-big"></div>
-        <div class="container">
-            <div class=" single-facts fl-wrap">
-                <!-- inline-facts -->
-                <div class="inline-facts-wrap">
-                    <div class="inline-facts">
-                        <div class="milestone-counter">
-                            <div class="stats animaper">
-                                <div class="num" data-content="0" data-num="254">154</div>
-                            </div>
-                        </div>
-                        <h6>New Visiters Every Week</h6>
-                    </div>
-                </div>
-                <!-- inline-facts end -->
-                <!-- inline-facts  -->
-                <div class="inline-facts-wrap">
-                    <div class="inline-facts">
-                        <div class="milestone-counter">
-                            <div class="stats animaper">
-                                <div class="num" data-content="0" data-num="12168">12168</div>
-                            </div>
-                        </div>
-                        <h6>Happy customers every year</h6>
-                    </div>
-                </div>
-                <!-- inline-facts end -->
-                <!-- inline-facts  -->
-                <div class="inline-facts-wrap">
-                    <div class="inline-facts">
-                        <div class="milestone-counter">
-                            <div class="stats animaper">
-                                <div class="num" data-content="0" data-num="172">172</div>
-                            </div>
-                        </div>
-                        <h6>Won Awards</h6>
-                    </div>
-                </div>
-                <!-- inline-facts end -->                            
-                <!-- inline-facts  -->
-                <div class="inline-facts-wrap">
-                    <div class="inline-facts">
-                        <div class="milestone-counter">
-                            <div class="stats animaper">
-                                <div class="num" data-content="0" data-num="732">732</div>
-                            </div>
-                        </div>
-                        <h6>New Listing Every Week</h6>
-                    </div>
-                </div>
-                <!-- inline-facts end -->                             
-            </div>
-        </div>
-    </section>
-    <!-- section end -->
-    <!--section -->
-    <section>
-        <div class="container">
-            <div class="section-title">
-                <h2>Testimonials</h2>
-                <div class="section-subtitle">Clients Reviews</div>
-                <span class="section-separator"></span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque. Nulla finibus lobortis pulvinar.</p>
-            </div>
-        </div>
-        <!-- testimonials-carousel --> 
-        <div class="carousel fl-wrap">
-            <!--testimonials-carousel-->
-            <div class="testimonials-carousel single-carousel fl-wrap">
-                <!--slick-slide-item-->
-                <div class="slick-slide-item">
-                    <div class="testimonilas-text">
-                        <div class="listing-rating card-popup-rainingvis" data-starrating2="5"> </div>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi arch itecto beatae vitae dicta sunt explicabo. </p>
-                    </div>
-                    <div class="testimonilas-avatar-item">
-                        <div class="testimonilas-avatar"><img src="{{URL::to('assets-web\images\avatar\4.jpeg')}}" alt=""></div>
-                        <h4>Lisa Noory</h4>
-                        <span>Restaurant Owner</span>
-                    </div>
-                </div>
-                <!--slick-slide-item end-->
-                <!--slick-slide-item-->
-                <div class="slick-slide-item">
-                    <div class="testimonilas-text">
-                        <div class="listing-rating card-popup-rainingvis" data-starrating2="4"> </div>
-                        <p>Aliquam erat volutpat. Curabitur convallis fringilla diam sed aliquam. Sed tempor iaculis massa faucibus feugiat. In fermentum facilisis massa, a consequat purus viverra.</p>
-                    </div>
-                    <div class="testimonilas-avatar-item">
-                        <div class="testimonilas-avatar"><img src="{{URL::to('assets-web\images\avatar\3.jpeg')}}" alt=""></div>
-                        <h4>Antony Moore</h4>
-                        <span>Restaurant Owner</span>
-                    </div>
-                </div>
-                <!--slick-slide-item end-->
-                <!--slick-slide-item-->
-                <div class="slick-slide-item">
-                    <div class="testimonilas-text">
-                        <div class="listing-rating card-popup-rainingvis" data-starrating2="5"> </div>
-                        <p>Feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te odio dignissim qui blandit praesent.</p>
-                    </div>
-                    <div class="testimonilas-avatar-item">
-                        <div class="testimonilas-avatar"><img src="{{URL::to('assets-web\images\avatar\1.jpeg')}}" alt=""></div>
-                        <h4>Austin Harisson</h4>
-                        <span>Restaurant Owner</span>
-                    </div>
-                </div>
-                <!--slick-slide-item end-->                      
-                <!--slick-slide-item-->
-                <div class="slick-slide-item">
-                    <div class="testimonilas-text">
-                        <div class="listing-rating card-popup-rainingvis" data-starrating2="4"> </div>
-                        <p>Qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram seacula quarta decima et quinta decima.</p>
-                    </div>
-                    <div class="testimonilas-avatar-item">
-                        <div class="testimonilas-avatar"><img src="{{URL::to('assets-web\images\avatar\6.jpeg')}}" alt=""></div>
-                        <h4>Garry Colonsi</h4>
-                        <span>Restaurant Owner</span>
-                    </div>
-                </div>
-                <!--slick-slide-item end-->   
-            </div>
-            <!--testimonials-carousel end-->
-            <div class="swiper-button-prev sw-btn"><i class="fa fa-long-arrow-left"></i></div>
-            <div class="swiper-button-next sw-btn"><i class="fa fa-long-arrow-right"></i></div>
-        </div>
-        <!-- carousel end-->
-    </section>
-    <!-- section end -->
-    <!--section -->
-    <section class="gray-section">
-        <div class="container">
-            <div class="fl-wrap spons-list">
-                <ul class="client-carousel">
-                    <li><a href="#" target="_blank"><img src="{{URL::to('assets-web\images\clients\1.png')}}" alt=""></a></li>
-                    <li><a href="#" target="_blank"><img src="{{URL::to('assets-web\images\clients\2.png')}}" alt=""></a></li>
-                    <li><a href="#" target="_blank"><img src="{{URL::to('assets-web\images\clients\3.png')}}" alt=""></a></li>
-                    <li><a href="#" target="_blank"><img src="{{URL::to('assets-web\images\clients\1.png')}}" alt=""></a></li>
-                    <li><a href="#" target="_blank"><img src="{{URL::to('assets-web\images\clients\2.png')}}" alt=""></a></li>
-                    <li><a href="#" target="_blank"><img src="{{URL::to('assets-web\images\clients\3.png')}}" alt=""></a></li>
-                </ul>
-                <div class="sp-cont sp-cont-prev"><i class="fa fa-angle-left"></i></div>
-                <div class="sp-cont sp-cont-next"><i class="fa fa-angle-right"></i></div>
-            </div>
-        </div>
-    </section>
-    <!-- section end -->
-    <!--section -->
-    <section>
-        <div class="container">
-            <div class="section-title">
-                <h2>Tips & Articles</h2>
-                <div class="section-subtitle">From the blog.</div>
-                <span class="section-separator"></span>
-                <p>Browse the latest articles from our blog.</p>
-            </div>
-            <div class="row home-posts">
-                <div class="col-md-4">
-                    <article class="card-post">
-                        <div class="card-post-img fl-wrap">
-                            <a href="blog-single.html"><img src="{{URL::to('assets-web\images\all\15.jpeg')}}" alt=""></a>
-                        </div>
-                        <div class="card-post-content fl-wrap">
-                            <h3><a href="blog-single.html">Gallery Post</a></h3>
-                            <p>In ut odio libero, at vulputate urna. Nulla tristique mi a massa convallis cursus. Nulla eu mi magna. Etiam suscipit commodo gravida. </p>
-                            <div class="post-author"><a href="#"><img src="images\avatar\4.jpeg" alt=""><span>By , Alisa Noory</span></a></div>
-                            <div class="post-opt">
-                                <ul>
-                                    <li><i class="fa fa-calendar-check-o"></i> <span>25 April 2018</span></li>
-                                    <li><i class="fa fa-eye"></i> <span>264</span></li>
-                                    <li><i class="fa fa-tags"></i> <a href="#">Photography</a>  </li>
+                            <div class="list-content p-2">
+                                <ul class="ctg-info py-2 mb-3">
+                                    <li>
+                                        <a href="#">
+                                            <i class="flaticon-cutlery mr-2"></i> restaurants</a>
+                                    </li>
+                                    <li>
+                                        <span class="c-theme"> open now</span>
+                                    </li>
+                                </ul>
+                                <h5 class="mb-2">
+                                    <a href="listing-detail.html">the lounge & bar</a>
+                                </h5>
+                                <p>Donec pede justo, fringilla vel, aliquet nectior</p>
+                                <ul class="ctg-info2 pt-2 mt-3 centering justify-content-between">
+                                    <li class="mt-1">
+                                        <a href="#">
+                                            <i class="fa fa-map-marker-alt mr-2"></i>San Francisco, USA</a>
+                                    </li>
+                                    <li class="mt-1">
+                                        <a href="#">
+                                            <i class="fa fa-phone mr-2"></i>0123-456-789</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
-                    </article>
-                </div>
-                <div class="col-md-4">
-                    <article class="card-post">
-                        <div class="card-post-img fl-wrap">
-                            <a href="blog-single.html"><img src="{{URL::to('assets-web\images\all\18.jpeg')}}" alt=""></a>
-                        </div>
-                        <div class="card-post-content fl-wrap">
-                            <h3><a href="blog-single.html">Video and gallery post</a></h3>
-                            <p>In ut odio libero, at vulputate urna. Nulla tristique mi a massa convallis cursus. Nulla eu mi magna. Etiam suscipit commodo gravida. </p>
-                            <div class="post-author"><a href="#"><img src="images\avatar\5.jpeg" alt=""><span>By , Mery Lynn</span></a></div>
-                            <div class="post-opt">
-                                <ul>
-                                    <li><i class="fa fa-calendar-check-o"></i> <span>25 April 2018</span></li>
-                                    <li><i class="fa fa-eye"></i> <span>264</span></li>
-                                    <li><i class="fa fa-tags"></i> <a href="#">Design</a>  </li>
+                        <div class="listing-item p-2">
+                            <div class="img-holder">
+                                <span class="offer">save 30%
+                                </span>
+                                <img src="assets/img/home/pl-slide2.jpg" alt="list">
+                                <div class="rate-like centering justify-content-between">
+                                    <div class="rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+
+                                    <a class="likes" href="#">
+                                        <i class="far fa-heart"></i>3
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="list-content p-2">
+                                <ul class="ctg-info py-2 mb-3">
+                                    <li>
+                                        <a href="#">
+                                            <i class="flaticon-shop mr-2"></i>shopping</a>
+                                    </li>
+                                    <li>
+                                        <span class="c-theme"> open now</span>
+                                    </li>
+                                </ul>
+                                <h5 class="mb-2">
+                                    <a href="listing-detail.html">the best shop in city</a>
+                                </h5>
+                                <p>Donec pede justo, fringilla vel, aliquet nectior</p>
+                                <ul class="ctg-info2 pt-2 mt-3 centering justify-content-between">
+                                    <li class="mt-1">
+                                        <a href="#">
+                                            <i class="fa fa-map-marker-alt mr-2"></i>San Francisco, USA</a>
+                                    </li>
+                                    <li class="mt-1">
+                                        <a href="#">
+                                            <i class="fa fa-phone mr-2"></i>0123-456-789</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
-                    </article>
-                </div>
-                <div class="col-md-4">
-                    <article class="card-post">
-                        <div class="card-post-img fl-wrap">
-                            <a href="blog-single.html"><img src="{{URL::to('assets-web\images\all\19.jpeg')}}" alt=""></a>
-                        </div>
-                        <div class="card-post-content fl-wrap">
-                            <h3><a href="blog-single.html">Post Article</a></h3>
-                            <p>In ut odio libero, at vulputate urna. Nulla tristique mi a massa convallis cursus. Nulla eu mi magna. Etiam suscipit commodo gravida. </p>
-                            <div class="post-author"><a href="#"><img src="images\avatar\6.jpeg" alt=""><span>By , Garry Dee</span></a></div>
-                            <div class="post-opt">
-                                <ul>
-                                    <li><i class="fa fa-calendar-check-o"></i> <span>25 April 2018</span></li>
-                                    <li><i class="fa fa-eye"></i> <span>264</span></li>
-                                    <li><i class="fa fa-tags"></i> <a href="#">Stories</a>  </li>
+                        <div class="listing-item p-2">
+                            <div class="img-holder">
+                                <span class="offer">save 19%
+                                </span>
+                                <img src="assets/img/home/pl-slide3.jpg" alt="list">
+                                <div class="rate-like centering justify-content-between">
+                                    <div class="rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+
+                                    <a class="likes" href="#">
+                                        <i class="far fa-heart"></i>6
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="list-content p-2">
+                                <ul class="ctg-info py-2 mb-3">
+                                    <li>
+                                        <a href="#">
+                                            <i class="flaticon-cheers mr-2"></i>nightlife</a>
+                                    </li>
+                                    <li>
+                                        <span class="c-theme"> open now</span>
+                                    </li>
+                                </ul>
+                                <h5 class="mb-2">
+                                    <a href="listing-detail.html">enjoy best nightlife</a>
+                                </h5>
+                                <p>Donec pede justo, fringilla vel, aliquet nectior</p>
+                                <ul class="ctg-info2 pt-2 mt-3 centering justify-content-between">
+                                    <li class="mt-1">
+                                        <a href="#">
+                                            <i class="fa fa-map-marker-alt mr-2"></i>San Francisco, USA</a>
+                                    </li>
+                                    <li class="mt-1">
+                                        <a href="#">
+                                            <i class="fa fa-phone mr-2"></i>0123-456-789</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
-                    </article>
-                </div>
-            </div>
-            <a href="blog.html" class="btn  big-btn circle-btn  dec-btn color-bg flat-btn">Read All<i class="fa fa-eye"></i></a>
-        </div>
-    </section>
-    <!-- section end -->
-    <!--section -->
-    <section class="gradient-bg">
-        <div class="cirle-bg">
-            <div class="bg" data-bg="{{URL::to('assets-web/images/bg/circle.png')}}"></div>
-        </div>
-        <div class="container">
-            <div class="join-wrap fl-wrap">
-                <div class="row">
-                    <div class="col-md-8">
-                        <h3>Do You Have Questions ?</h3>
-                        <p>Lorem ipsum dolor sit amet, harum dolor nec in, usu molestiae at no.</p>
+                        <div class="listing-item p-2">
+                            <div class="img-holder">
+                                <span class="offer">save 59%
+                                </span>
+                                <img src="assets/img/home/pl-slide4.jpg" alt="list">
+                                <div class="rate-like centering justify-content-between">
+                                    <div class="rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+
+                                    <a class="likes" href="#">
+                                        <i class="far fa-heart"></i> 9
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="list-content p-2">
+                                <ul class="ctg-info py-2 mb-3">
+                                    <li>
+                                        <a href="#">
+                                            <i class="flaticon-spa mr-2"></i>beauty & spa</a>
+                                    </li>
+                                    <li>
+                                        <span class="c-theme"> open now</span>
+                                    </li>
+                                </ul>
+                                <h5 class="mb-2">
+                                    <a href="listing-detail.html">best beauty & spa services</a>
+                                </h5>
+                                <p>Donec pede justo, fringilla vel, aliquet nectior</p>
+                                <ul class="ctg-info2 pt-2 mt-3 centering justify-content-between">
+                                    <li class="mt-1">
+                                        <a href="#">
+                                            <i class="fa fa-map-marker-alt mr-2"></i>San Francisco, USA</a>
+                                    </li>
+                                    <li class="mt-1">
+                                        <a href="#">
+                                            <i class="fa fa-phone mr-2"></i>0123-456-789</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="listing-item p-2">
+                            <div class="img-holder">
+                                <span class="offer">save 20%
+                                </span>
+                                <img src="assets/img/home/pl-slide5.jpg" alt="list">
+                                <div class="rate-like centering justify-content-between">
+                                    <div class="rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+
+                                    <a class="likes" href="#">
+                                        <i class="far fa-heart"></i> 14
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="list-content p-2">
+                                <ul class="ctg-info py-2 mb-3">
+                                    <li>
+                                        <a href="#">
+                                            <i class="flaticon-find mr-2"></i>desitination</a>
+                                    </li>
+                                    <li>
+                                        <span class="c-theme"> open now</span>
+                                    </li>
+                                </ul>
+                                <h5 class="mb-2">
+                                    <a href="listing-detail.html">best destinations in city</a>
+                                </h5>
+                                <p>Donec pede justo, fringilla vel, aliquet nectior</p>
+                                <ul class="ctg-info2 pt-2 mt-3 centering justify-content-between">
+                                    <li class="mt-1">
+                                        <a href="#">
+                                            <i class="fa fa-map-marker-alt mr-2"></i>San Francisco, USA</a>
+                                    </li>
+                                    <li class="mt-1">
+                                        <a href="#">
+                                            <i class="fa fa-phone mr-2"></i>0123-456-789</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-4"><a href="contacts.html" class="join-wrap-btn">Get In Touch <i class="fa fa-envelope-o"></i></a></div>
                 </div>
             </div>
         </div>
     </section>
-</div>
+    <!-- popular list end -->
+
+    <!-- steps-section start-->
+    <section class="steps-section sp-100-70 bg-dull tri-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="all-title">
+                        <h3 class="sec-title">
+                            fitness programs
+                        </h3>
+                        <svg class="title-sep">
+                            <path fill-rule="evenodd" d="M32.000,13.000 L32.000,7.000 L35.000,7.000 L35.000,13.000 L32.000,13.000 ZM24.000,4.000 L27.000,4.000 L27.000,16.000 L24.000,16.000 L24.000,4.000 ZM16.000,-0.000 L19.000,-0.000 L19.000,20.000 L16.000,20.000 L16.000,-0.000 ZM8.000,4.000 L11.000,4.000 L11.000,16.000 L8.000,16.000 L8.000,4.000 ZM-0.000,7.000 L3.000,7.000 L3.000,13.000 L-0.000,13.000 L-0.000,7.000 Z"
+                            />
+                        </svg>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor penatibus
+                            ean massa. Cum sociis natoqu penatibus et magnis dis parturient montes.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row steps-wrap justify-content-center">
+                <div class="col-lg-4 col-md-6 col-12 mb-30">
+                    <div class="steps">
+                        <div class="icon-box mb-3">
+                            <i class="flaticon-layers"></i>
+                        </div>
+                        <h5>
+                            <span class="c-theme">1. </span> Choose a Category</h5>
+                        <p class="mb-0">Lorem ipsum dolor sit amet, consec rcqui adipiscing elit socada como ligaui.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-30">
+                    <div class="steps">
+                        <div class="icon-box mb-3">
+                            <i class="flaticon-map"></i>
+                        </div>
+                        <h5>
+                            <span class="c-theme">2. </span> Find What You Want</h5>
+                        <p class="mb-0">Lorem ipsum dolor sit amet, consec rcqui adipiscing elit socada como ligaui.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-30">
+                    <div class="steps">
+                        <div class="icon-box mb-3">
+                            <i class="flaticon-shop"></i>
+                        </div>
+                        <h5>
+                            <span class="c-theme">3. </span> go Out & Explore</h5>
+                        <p class="mb-0">Lorem ipsum dolor sit amet, consec rcqui adipiscing elit socada como ligaui.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- steps-section end -->
+
+    <!-- cta-one start-->
+    <section class="cta-one tri-bg-w text-lg-left text-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 my-lg-0 my-5 py-lg-0 py-5">
+                    <div class="cta-content">
+                        <h3>Sign Up To Get Special Offers Every Day</h3>
+                        <p>Lorem ipsum dolor sit amet, consectadetudzdae rcquisc adipiscing elit. Aenean socada commodo ligaui
+                            egets dolor. </p>
+                        <a href="login.html" class="btn btn-two btn-anim mt-2">
+                            sign up
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-lg-block d-none">
+                    <div class="cta-img mt-4">
+                        <img src="assets/img/home/cta-bg.png" alt="image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- cta-one end -->
+
+    <!-- features start-->
+    <section class="features sp-100-70 bg-w">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="all-title">
+                        <h3 class="sec-title">
+                            Why We Are Best
+                        </h3>
+                        <svg class="title-sep">
+                            <path fill-rule="evenodd" d="M32.000,13.000 L32.000,7.000 L35.000,7.000 L35.000,13.000 L32.000,13.000 ZM24.000,4.000 L27.000,4.000 L27.000,16.000 L24.000,16.000 L24.000,4.000 ZM16.000,-0.000 L19.000,-0.000 L19.000,20.000 L16.000,20.000 L16.000,-0.000 ZM8.000,4.000 L11.000,4.000 L11.000,16.000 L8.000,16.000 L8.000,4.000 ZM-0.000,7.000 L3.000,7.000 L3.000,13.000 L-0.000,13.000 L-0.000,7.000 Z"
+                            />
+                        </svg>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor penatibus
+                            ean massa. Cum sociis natoqu penatibus et magnis dis parturient montes.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-12 mb-30">
+                    <div class="feature-item">
+                        <div class="icon-box">
+                            <i class="flaticon-rising"></i>
+                        </div>
+                        <h5>our vision</h5>
+                        <p>Lorem ipsum dolor sit ame conse castei efte tuerg scn kt iscedring elit ende cd magum socadaiis nato
+                            ipsf.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-30">
+                    <div class="feature-item">
+                        <div class="icon-box">
+                            <i class="flaticon-list"></i>
+                        </div>
+                        <h5>missions</h5>
+                        <p>Lorem ipsum dolor sit ame conse castei efte tuerg scn kt iscedring elit ende cd magum socadaiis nato
+                            ipsf.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-30">
+                    <div class="feature-item">
+                        <div class="icon-box">
+                            <i class="flaticon-medal"></i>
+                        </div>
+                        <h5>our value</h5>
+                        <p>Lorem ipsum dolor sit ame conse castei efte tuerg scn kt iscedring elit ende cd magum socadaiis nato
+                            ipsf.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-30">
+                    <div class="feature-item">
+                        <div class="icon-box">
+                            <i class="flaticon-find-1"></i>
+                        </div>
+                        <h5>find your listing</h5>
+                        <p>Lorem ipsum dolor sit ame conse castei efte tuerg scn kt iscedring elit ende cd magum socadaiis nato
+                            ipsf.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-30">
+                    <div class="feature-item">
+                        <div class="icon-box">
+                            <i class="flaticon-map"></i>
+                        </div>
+                        <h5>find the way</h5>
+                        <p>Lorem ipsum dolor sit ame conse castei efte tuerg scn kt iscedring elit ende cd magum socadaiis nato
+                            ipsf.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-30">
+                    <div class="feature-item">
+                        <div class="icon-box">
+                            <i class="flaticon-support"></i>
+                        </div>
+                        <h5>24/7 support</h5>
+                        <p>Lorem ipsum dolor sit ame conse castei efte tuerg scn kt iscedring elit ende cd magum socadaiis nato
+                            ipsf.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- features end -->
+
+    <!-- categories start-->
+    <section class="categories sp-100-70 bg-dull">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="all-title">
+                        <h3 class="sec-title">
+                            top categories
+                        </h3>
+                        <svg class="title-sep">
+                            <path fill-rule="evenodd" d="M32.000,13.000 L32.000,7.000 L35.000,7.000 L35.000,13.000 L32.000,13.000 ZM24.000,4.000 L27.000,4.000 L27.000,16.000 L24.000,16.000 L24.000,4.000 ZM16.000,-0.000 L19.000,-0.000 L19.000,20.000 L16.000,20.000 L16.000,-0.000 ZM8.000,4.000 L11.000,4.000 L11.000,16.000 L8.000,16.000 L8.000,4.000 ZM-0.000,7.000 L3.000,7.000 L3.000,13.000 L-0.000,13.000 L-0.000,7.000 Z"
+                            />
+                        </svg>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor penatibus
+                            ean massa. Cum sociis natoqu penatibus et magnis dis parturient montes.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-30">
+                    <div class="ctg-item">
+                        <div class="icon-box" style="background-image:url('assets/img/home/cat1.jpg')">
+                            <i class="flaticon-map"></i>
+                        </div>
+                        <div class="content-box p-4">
+                            <h5 class="mb-1">
+                                <a href="listing.html">destination</a>
+                            </h5>
+                            <p class="mb-0">35 Listing</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-30">
+                    <div class="ctg-item">
+                        <div class="icon-box" style="background-image:url('assets/img/home/cat2.jpg')">
+                            <i class="flaticon-cutlery"></i>
+                        </div>
+                        <div class="content-box p-4">
+                            <h5 class="mb-1">
+                                <a href="listing.html">restaurants</a>
+                            </h5>
+                            <p class="mb-0">20 Listing</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-30">
+                    <div class="ctg-item">
+                        <div class="icon-box" style="background-image:url('assets/img/home/cat3.jpg')">
+                            <i class="flaticon-shop"></i>
+                        </div>
+                        <div class="content-box p-4">
+                            <h5 class="mb-1">
+                                <a href="listing.html"> shopping</a>
+                            </h5>
+                            <p class="mb-0">15 Listing</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-30">
+                    <div class="ctg-item">
+                        <div class="icon-box" style="background-image:url('assets/img/home/cat4.jpg')">
+                            <i class="flaticon-hotel"></i>
+                        </div>
+                        <div class="content-box p-4">
+                            <h5 class="mb-1">
+                                <a href="listing.html"> hotels</a>
+                            </h5>
+                            <p class="mb-0">12 Listing</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-30">
+                    <div class="ctg-item">
+                        <div class="icon-box" style="background-image:url('assets/img/home/cat5.jpg')">
+                            <i class="flaticon-spa"></i>
+                        </div>
+                        <div class="content-box p-4">
+                            <h5 class="mb-1">
+                                <a href="listing.html"> Beauty & Spa</a>
+                            </h5>
+                            <p class="mb-0">18 Listing</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-30">
+                    <div class="ctg-item">
+                        <div class="icon-box" style="background-image:url('assets/img/home/cat6.jpg')">
+                            <i class="flaticon-drama"></i>
+                        </div>
+                        <div class="content-box p-4">
+                            <h5 class="mb-1">
+                                <a href="listing.html"> events</a>
+                            </h5>
+                            <p class="mb-0">14 Listing</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-30">
+                    <div class="ctg-item">
+                        <div class="icon-box" style="background-image:url('assets/img/home/cat7.jpg')">
+                            <i class="flaticon-cheers"></i>
+                        </div>
+                        <div class="content-box p-4">
+                            <h5 class="mb-1">
+                                <a href="listing.html"> nightlie</a>
+                            </h5>
+                            <p class="mb-0">25 Listing</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-30">
+                    <div class="ctg-item">
+                        <div class="icon-box" style="background-image:url('assets/img/home/cat8.jpg')">
+                            <i class="flaticon-fast-food"></i>
+                        </div>
+                        <div class="content-box p-4">
+                            <h5 class="mb-1">
+                                <a href="listing.html"> Beauty & Spa</a>
+                            </h5>
+                            <p class="mb-0">10 Listing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- categories end -->
+
+    <!-- partner start-->
+    <div class="partner-one bg-red py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="partner-slider owl-carousel owl-theme">
+                        <div class="partner-slide">
+                            <img src="assets/img/home/partner1.png" alt="partner">
+                        </div>
+                        <div class="partner-slide">
+                            <img src="assets/img/home/partner2.png" alt="partner">
+                        </div>
+                        <div class="partner-slide">
+                            <img src="assets/img/home/partner3.png" alt="partner">
+                        </div>
+                        <div class="partner-slide">
+                            <img src="assets/img/home/partner4.png" alt="partner">
+                        </div>
+                        <div class="partner-slide">
+                            <img src="assets/img/home/partner5.png" alt="partner">
+                        </div>
+                        <div class="partner-slide">
+                            <img src="assets/img/home/partner1.png" alt="partner">
+                        </div>
+                        <div class="partner-slide">
+                            <img src="assets/img/home/partner2.png" alt="partner">
+                        </div>
+                        <div class="partner-slide">
+                            <img src="assets/img/home/partner3.png" alt="partner">
+                        </div>
+                        <div class="partner-slide">
+                            <img src="assets/img/home/partner4.png" alt="partner">
+                        </div>
+                        <div class="partner-slide">
+                            <img src="assets/img/home/partner5.png" alt="partner">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- partner end-->
+
+    <!-- blog start-->
+    <section class="sp-100 bg-w">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="all-title">
+                        <h3 class="sec-title">
+                            from our blog
+                        </h3>
+                        <svg class="title-sep">
+                            <path fill-rule="evenodd" d="M32.000,13.000 L32.000,7.000 L35.000,7.000 L35.000,13.000 L32.000,13.000 ZM24.000,4.000 L27.000,4.000 L27.000,16.000 L24.000,16.000 L24.000,4.000 ZM16.000,-0.000 L19.000,-0.000 L19.000,20.000 L16.000,20.000 L16.000,-0.000 ZM8.000,4.000 L11.000,4.000 L11.000,16.000 L8.000,16.000 L8.000,4.000 ZM-0.000,7.000 L3.000,7.000 L3.000,13.000 L-0.000,13.000 L-0.000,7.000 Z"
+                            />
+                        </svg>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor penatibus
+                            ean massa. Cum sociis natoqu penatibus et magnis dis parturient montes.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+                    <div class="blog-item blog-1" style="background-image:url('assets/img/blog/blog1.png')">
+                        <div class="blog-date p-2">
+                            <span>11 april 2019</span>
+                        </div>
+                        <div class="blog-content">
+                            <h5>
+                                <a href="blog-detail.html">Nullam quis ante tiam sit ame orci eget erovtiu faucid nbys</a>
+                            </h5>
+                            <ul class="blog-meta d-flex justify-content-between align-items-center">
+                                <li>
+                                    <span class="mr-1">
+                                        <img src="assets/img/blog/aut-1.png" alt="#">
+                                    </span>
+                                    <a href="#">Johnathan Doe</a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-eye mr-1"></i>
+                                        20
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+                    <div class="blog-item blog-1" style="background-image:url('assets/img/blog/blog2.png')">
+                        <div class="blog-date p-2">
+                            <span>21 april 2019</span>
+                        </div>
+                        <div class="blog-content">
+                            <h5>
+                                <a href="blog-detail.html">Nullam quis ante tiam sit ame orci eget erovtiu faucid nbys</a>
+                            </h5>
+                            <ul class="blog-meta d-flex justify-content-between align-items-center">
+                                <li>
+                                    <span class="mr-1">
+                                        <img src="assets/img/blog/aut-2.png" alt="#">
+                                    </span>
+                                    <a href="#">Alicia Thomas</a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-eye mr-1"></i>
+                                        20
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+                    <div class="blog-item blog-1" style="background-image:url('assets/img/blog/blog3.png')">
+                        <div class="blog-date p-2">
+                            <span>01 april 2019</span>
+                        </div>
+                        <div class="blog-content">
+                            <h5>
+                                <a href="blog-detail.html">Nullam quis ante tiam sit ame orci eget erovtiu faucid nbys</a>
+                            </h5>
+                            <ul class="blog-meta d-flex justify-content-between align-items-center">
+                                <li>
+                                    <span class="mr-1">
+                                        <img src="assets/img/blog/aut-3.png" alt="#">
+                                    </span>
+                                    <a href="#">Johnis Doe</a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-eye mr-1"></i>
+                                        20
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 col-12">
+                    <div class="blog-item blog-1" style="background-image:url('assets/img/blog/blog4.png')">
+                        <div class="blog-date p-2">
+                            <span>09 april 2019</span>
+                        </div>
+                        <div class="blog-content">
+                            <h5>
+                                <a href="blog-detail.html">Nullam quis ante tiam sit ame orci liamco non.</a>
+                            </h5>
+                            <ul class="blog-meta d-flex justify-content-between align-items-center">
+                                <li>
+                                    <span class="mr-1">
+                                        <img src="assets/img/blog/aut-1.png" alt="#">
+                                    </span>
+                                    <a href="#">Johnas Doe</a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-eye mr-1"></i>
+                                        20
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-12">
+                    <div class="blog-item blog-1" style="background-image:url('assets/img/blog/blog5.png')">
+                        <div class="blog-date p-2">
+                            <span>15 april 2019</span>
+                        </div>
+                        <div class="blog-content">
+                            <h5>
+                                <a href="blog-detail.html">Amet incididunt tempor aliqua mollit magna proident sit amet elit nostrud. </a>
+                            </h5>
+                            <ul class="blog-meta d-flex justify-content-between align-items-center">
+                                <li>
+                                    <span class="mr-1">
+                                        <img src="assets/img/blog/aut-3.png" alt="#">
+                                    </span>
+                                    <a href="#">Alexi Johnas </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-eye mr-1"></i>
+                                        20
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 col-12">
+                    <div class="blog-item blog-1" style="background-image:url('assets/img/blog/blog6.png')">
+                        <div class="blog-date p-2">
+                            <span>13 april 2019</span>
+                        </div>
+                        <div class="blog-content">
+                            <h5>
+                                <a href="blog-detail.html">Nullam quis ante tiam sit ame orci liamco non.</a>
+                            </h5>
+                            <ul class="blog-meta d-flex justify-content-between align-items-center">
+                                <li>
+                                    <span class="mr-1">
+                                        <img src="assets/img/blog/aut-2.png" alt="#">
+                                    </span>
+                                    <a href="#">sehny Doe</a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-eye mr-1"></i>
+                                        20
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 text-center mt-30">
+                    <a href="#" class="btn btn-one btn-anim">view all</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- blog end -->
 @endsection

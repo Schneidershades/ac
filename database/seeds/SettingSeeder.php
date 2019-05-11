@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Models\Setting;
 
 class SettingSeeder extends Seeder
 {
@@ -11,23 +12,24 @@ class SettingSeeder extends Seeder
      */
     public function run()
     {
-        \App\Setting::Create([
+        Setting::Create([
         'site_name'                            => 'Achievers Confluence',
           'site_url'                             => 'https://www.achieversconfluence.com',
-          'site_logo_header'                     => 'assets/images/logo.png',
-          'site_logo_footer'                     => 'assets/images/logo.png',
-          'site_slogan'                          => ' ...the peoples senate!',
+          'site_logo_header'                     => 'assets-web/img/logo-white.png',
+          'site_logo_footer'                     => 'assets-web/img/logo2.png',
+          'site_slogan'                          => ' ...the peoples connection!',
         	'site_state_country'                   => 'Lagos-Nigeria',
-          'site_main_number'                     => '+(234) 803 311 6403 ',
-          'site_whatsapp_number'                    => '+234 803 311 6403',
-          'site_international_number'            => '+1469-880-5410',
+          'site_main_number'                     => '+(234) 802 327 1927 ',
+          'site_whatsapp_number'                    => '+(234) 816 955 6004',
+          'site_international_number'            => '+(234) 802 327 1927',
         	'site_email'                           => 'info@achieversconfluence.com',
         	'site_facebook'                        => 'achieversconfluence',
         	'site_twitter'                         => 'achieversconfluence',
+          'site_linkedin'                         => '#',
         	'site_instagram'                       => '#',
           'site_youtube'                         => '#',
           'site_pinterest'                       => '#',
-          'site_home_text'                       => '#',
+          'site_home_text'                       => 'Achievers Confluence is a Pan-African e-business networking group, designed for the convergence of various business concepts, ideas, inventions, manufacturing and initiatives to trigger quantum growth in African commercial and investments environment',
           'site_home_image'                      => '#',
 
             'site_about_text'                    => 

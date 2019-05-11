@@ -28,6 +28,7 @@ class CreateSettingsTable extends Migration
             $table->string('site_international_number')->nullable();
             $table->string('site_email')->nullable();
             $table->string('site_facebook')->nullable();
+            $table->string('site_linkedin')->nullable();
             $table->string('site_twitter')->nullable();
             $table->string('site_instagram')->nullable();
             $table->string('site_youtube')->nullable();

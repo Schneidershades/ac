@@ -1,6 +1,11 @@
-<!-- Google Autocomplete -->
-<script type="text/javascript" src="{{URL::to('assets-web\js\jquery.min.js')}}"></script>
-<script type="text/javascript" src="{{URL::to('assets-web\js\plugins.js')}}"></script>
-<script type="text/javascript" src="{{URL::to('assets-web\js\scripts.js')}}"></script>
-@yield('scripts')
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwJSRi0zFjDemECmFl9JtRj1FY7TiTRRo&libraries=places&callback=initAutocomplete"></script>
+ <!-- JavaScript Libraries -->
+    <script src="{{URL::to('assets-web/js/jquery-3.3.1.min.js')}}"></script>
+    <script src="{{URL::to('assets-web/js/popper.min.js')}}"></script>
+    <script src="{{URL::to('assets-web/js/bootstrap.min.js')}}"></script>
+    <script src="{{URL::to('assets-web/js/owl.carousel.min.js')}}"></script>
+    <script src="{{URL::to('assets-web/js/slick.min.js')}}"></script>
+    <script src="{{URL::to('assets-web/js/jarallax/jarallax.min.js')}}"></script>
+    <script src="{{URL::to('assets-web/js/jarallax/jarallax-element.min.js')}}"></script>
+    <script src="{{URL::to('assets-web/js/jarallax/jarallax-video.min.js')}}"></script>
+    <script src="{{URL::to('assets-web/js/custom.js')}}"></script>
+

@@ -14,22 +14,31 @@ use App\Models\Partner;
 use App\Models\Count;
 use App\Models\Faq;
 use App\Models\Contact;
+use App\Models\Post;
+use App\Models\Advert;
+use App\Models\Category;
 
 class PageController extends Controller
 {
     public function index()
     {
-    	return view('web.pages.welcome')
-            ->with('services', RegistrationItem::all())
+    	return view('pages.welcome')
     		->with('sliders', Slider::all())
-            ->with('whys', Why::all())
-            ->with('testimonials', Testimonial::all())
+            ->with('adverts', Advert::all())
+            // ->with('testimonials', Testimonial::all())
             ->with('partners', Partner::all())
-            ->with('stats', Count::latest('created_at')->take(4)->get())
-            ->with('faqs', Faq::all())
+            ->with('home_posts', Post::all())
+            ->with('categories', Category::all())
+            // ->with('stats', Count::latest('created_at')->take(4)->get())
+            // ->with('faqs', Faq::all())
     		// ->with('attribute', Attribute::all())
     		// ->with('processes', Process::all())
     		;
+    }
+
+    public function about()
+    {
+        return view('pages.about');
     }
 
     public function page()
