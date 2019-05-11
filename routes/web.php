@@ -9,3 +9,6 @@ Route::get('/events', 'HomeController@index')->name('events');
 Route::resource('/advert', 'User\AdvertController');
 Route::resource('/wallet', 'User\WalletController');
 Route::resource('/package', 'User\BuyPackageController');
+
+Route::post('/pay', 'Users\RaveController@initialize')->name('pay');
+Route::post('/rave/callback', 'Users\RaveController@callback')->name('callback');
