@@ -9,7 +9,7 @@
         <div class="tilt-anim" data-tilt>
             <div class="banner-content">
                 <p class="text-uppercase mb-4">Welcome to The Achievers Confluence Hub</p>
-                <h2>We Connect you to businesses</h2>
+                <h2>We network you to businesses</h2>
             </div>
         </div>
         <div class="mt-5 text-center">
@@ -19,6 +19,61 @@
     </div>
 </section>
 <!-- banner end -->
+
+
+<!-- steps-section start-->
+<section class="steps-section sp-100-70 bg-dull tri-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="all-title">
+                    <h3 class="sec-title">
+                        Welcome to our website
+                    </h3>
+                    <svg class="title-sep">
+                        <path fill-rule="evenodd" d="M32.000,13.000 L32.000,7.000 L35.000,7.000 L35.000,13.000 L32.000,13.000 ZM24.000,4.000 L27.000,4.000 L27.000,16.000 L24.000,16.000 L24.000,4.000 ZM16.000,-0.000 L19.000,-0.000 L19.000,20.000 L16.000,20.000 L16.000,-0.000 ZM8.000,4.000 L11.000,4.000 L11.000,16.000 L8.000,16.000 L8.000,4.000 ZM-0.000,7.000 L3.000,7.000 L3.000,13.000 L-0.000,13.000 L-0.000,7.000 Z"
+                        />
+                    </svg>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor penatibus
+                        ean massa. Cum sociis natoqu penatibus et magnis dis parturient montes.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row steps-wrap justify-content-center">
+            <div class="col-lg-4 col-md-6 col-12 mb-30">
+                <div class="steps">
+                    <div class="icon-box mb-3">
+                        <i class="flaticon-layers"></i>
+                    </div>
+                    <h5>
+                        <span class="c-theme">1. </span> Choose a Category</h5>
+                    <p class="mb-0">Leads you to businesses that meets you category of value.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12 mb-30">
+                <div class="steps">
+                    <div class="icon-box mb-3">
+                        <i class="flaticon-map"></i>
+                    </div>
+                    <h5>
+                        <span class="c-theme">2. </span> Find a business</h5>
+                    <p class="mb-0">Share ideas and relate with visioned businesses heading to meet way goals</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12 mb-30">
+                <div class="steps">
+                    <div class="icon-box mb-3">
+                        <i class="flaticon-shop"></i>
+                    </div>
+                    <h5>
+                        <span class="c-theme">3. </span> Explore & Close</h5>
+                    <p class="mb-0">Close a deal .</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- steps-section end -->
 
 @foreach($adverts as $advert)
 <!-- popular list start-->
@@ -274,59 +329,6 @@
 <!-- popular list end -->
 @endforeach
 
-<!-- steps-section start-->
-<section class="steps-section sp-100-70 bg-dull tri-bg">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="all-title">
-                    <h3 class="sec-title">
-                        Programs & Activities
-                    </h3>
-                    <svg class="title-sep">
-                        <path fill-rule="evenodd" d="M32.000,13.000 L32.000,7.000 L35.000,7.000 L35.000,13.000 L32.000,13.000 ZM24.000,4.000 L27.000,4.000 L27.000,16.000 L24.000,16.000 L24.000,4.000 ZM16.000,-0.000 L19.000,-0.000 L19.000,20.000 L16.000,20.000 L16.000,-0.000 ZM8.000,4.000 L11.000,4.000 L11.000,16.000 L8.000,16.000 L8.000,4.000 ZM-0.000,7.000 L3.000,7.000 L3.000,13.000 L-0.000,13.000 L-0.000,7.000 Z"
-                        />
-                    </svg>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor penatibus
-                        ean massa. Cum sociis natoqu penatibus et magnis dis parturient montes.</p>
-                </div>
-            </div>
-        </div>
-        <div class="row steps-wrap justify-content-center">
-            <div class="col-lg-4 col-md-6 col-12 mb-30">
-                <div class="steps">
-                    <div class="icon-box mb-3">
-                        <i class="flaticon-layers"></i>
-                    </div>
-                    <h5>
-                        <span class="c-theme">1. </span> Choose a Category</h5>
-                    <p class="mb-0">Lorem ipsum dolor sit amet, consec rcqui adipiscing elit socada como ligaui.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-12 mb-30">
-                <div class="steps">
-                    <div class="icon-box mb-3">
-                        <i class="flaticon-map"></i>
-                    </div>
-                    <h5>
-                        <span class="c-theme">2. </span> Find What You Want</h5>
-                    <p class="mb-0">Lorem ipsum dolor sit amet, consec rcqui adipiscing elit socada como ligaui.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-12 mb-30">
-                <div class="steps">
-                    <div class="icon-box mb-3">
-                        <i class="flaticon-shop"></i>
-                    </div>
-                    <h5>
-                        <span class="c-theme">3. </span> go Out & Explore</h5>
-                    <p class="mb-0">Lorem ipsum dolor sit amet, consec rcqui adipiscing elit socada como ligaui.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- steps-section end -->
 
 <!-- cta-one start-->
 <section class="cta-one tri-bg-w text-lg-left text-center">
@@ -463,97 +465,7 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-30">
-                <div class="ctg-item">
-                    <div class="icon-box" style="background-image:url('assets-web/img/home/cat1.jpg')">
-                        <i class="flaticon-map"></i>
-                    </div>
-                    <div class="content-box p-4">
-                        <h5 class="mb-1">
-                            <a href="listing.html">destination</a>
-                        </h5>
-                        <p class="mb-0">35 Listing</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-30">
-                <div class="ctg-item">
-                    <div class="icon-box" style="background-image:url('assets-web/img/home/cat2.jpg')">
-                        <i class="flaticon-cutlery"></i>
-                    </div>
-                    <div class="content-box p-4">
-                        <h5 class="mb-1">
-                            <a href="listing.html">restaurants</a>
-                        </h5>
-                        <p class="mb-0">20 Listing</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-30">
-                <div class="ctg-item">
-                    <div class="icon-box" style="background-image:url('assets-web/img/home/cat3.jpg')">
-                        <i class="flaticon-shop"></i>
-                    </div>
-                    <div class="content-box p-4">
-                        <h5 class="mb-1">
-                            <a href="listing.html"> shopping</a>
-                        </h5>
-                        <p class="mb-0">15 Listing</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-30">
-                <div class="ctg-item">
-                    <div class="icon-box" style="background-image:url('assets-web/img/home/cat4.jpg')">
-                        <i class="flaticon-hotel"></i>
-                    </div>
-                    <div class="content-box p-4">
-                        <h5 class="mb-1">
-                            <a href="listing.html"> hotels</a>
-                        </h5>
-                        <p class="mb-0">12 Listing</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-30">
-                <div class="ctg-item">
-                    <div class="icon-box" style="background-image:url('assets-web/img/home/cat5.jpg')">
-                        <i class="flaticon-spa"></i>
-                    </div>
-                    <div class="content-box p-4">
-                        <h5 class="mb-1">
-                            <a href="listing.html"> Beauty & Spa</a>
-                        </h5>
-                        <p class="mb-0">18 Listing</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-30">
-                <div class="ctg-item">
-                    <div class="icon-box" style="background-image:url('assets-web/img/home/cat6.jpg')">
-                        <i class="flaticon-drama"></i>
-                    </div>
-                    <div class="content-box p-4">
-                        <h5 class="mb-1">
-                            <a href="listing.html"> events</a>
-                        </h5>
-                        <p class="mb-0">14 Listing</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-30">
-                <div class="ctg-item">
-                    <div class="icon-box" style="background-image:url('assets-web/img/home/cat7.jpg')">
-                        <i class="flaticon-cheers"></i>
-                    </div>
-                    <div class="content-box p-4">
-                        <h5 class="mb-1">
-                            <a href="listing.html"> nightlie</a>
-                        </h5>
-                        <p class="mb-0">25 Listing</p>
-                    </div>
-                </div>
-            </div>
+            @foreach($categories as $category)
             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-30">
                 <div class="ctg-item">
                     <div class="icon-box" style="background-image:url('assets-web/img/home/cat8.jpg')">
@@ -561,12 +473,13 @@
                     </div>
                     <div class="content-box p-4">
                         <h5 class="mb-1">
-                            <a href="listing.html"> Beauty & Spa</a>
+                            <a href="listing.html"> {{$category->name}}</a>
                         </h5>
-                        <p class="mb-0">10 Listing</p>
+                        <p class="mb-0">{{$category->adverts->count()}} Listing</p>
                     </div>
                 </div>
             </div>
+            @endforeach
         </div>
     </div>
 </section>
@@ -602,7 +515,7 @@
             <div class="col-12">
                 <div class="all-title">
                     <h3 class="sec-title">
-                        from our blog
+                        from our News
                     </h3>
                     <svg class="title-sep">
                         <path fill-rule="evenodd" d="M32.000,13.000 L32.000,7.000 L35.000,7.000 L35.000,13.000 L32.000,13.000 ZM24.000,4.000 L27.000,4.000 L27.000,16.000 L24.000,16.000 L24.000,4.000 ZM16.000,-0.000 L19.000,-0.000 L19.000,20.000 L16.000,20.000 L16.000,-0.000 ZM8.000,4.000 L11.000,4.000 L11.000,16.000 L8.000,16.000 L8.000,4.000 ZM-0.000,7.000 L3.000,7.000 L3.000,13.000 L-0.000,13.000 L-0.000,7.000 Z"

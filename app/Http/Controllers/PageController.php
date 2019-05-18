@@ -17,6 +17,7 @@ use App\Models\Contact;
 use App\Models\Post;
 use App\Models\Advert;
 use App\Models\Category;
+use App\Models\Package;
 
 class PageController extends Controller
 {
@@ -28,7 +29,7 @@ class PageController extends Controller
             // ->with('testimonials', Testimonial::all())
             ->with('partners', Partner::all())
             ->with('home_posts', Post::all())
-            ->with('categories', Category::all())
+            ->with('categories', Category::latest('created_at')->take(12)->get())
             // ->with('stats', Count::latest('created_at')->take(4)->get())
             // ->with('faqs', Faq::all())
     		// ->with('attribute', Attribute::all())
@@ -36,9 +37,15 @@ class PageController extends Controller
     		;
     }
 
+    public function contact()
+    {
+        return view('pages.contact');
+    }
+
     public function about()
     {
-        return view('pages.about');
+        return view('pages.about')
+            ->with('packages', Package::all());
     }
 
     public function page()

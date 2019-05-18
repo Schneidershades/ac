@@ -79,20 +79,20 @@ class User extends Authenticatable
         return $this->hasMany(Upload::class);
     }
 
-    public function smsTextTransactions()
-    {
-        return $this->hasMany(SmsTextTransaction::class);
-    }
+    // public function smsTextTransactions()
+    // {
+    //     return $this->hasMany(SmsTextTransaction::class);
+    // }
 
     public function walletTransactions()
     {
         return $this->hasMany(WalletTransaction::class);
     }
 
-    public function smsTransaction()
-    {
-        return $this->hasMany(SmsTextTransaction::class);
-    }
+    // public function smsTransaction()
+    // {
+    //     return $this->hasMany(SmsTextTransaction::class);
+    // }
 
     public function package()
     {

@@ -35,17 +35,17 @@
 				<form class="color-form" method="POST" action="{{route('advert.store')}}" enctype="multipart/form-data">
 					@csrf
 					<div class="form-row">
-						<div class="form-group col-md-3" >
+						<div class="form-group col-md-4" >
 							<label for="input-9">Category</label>
 							<input type="text" class="form-control form-control-rounded" id="input-9" name="category_id" required/>
 						</div>
 
-						<div class="form-group col-md-3">
+						<div class="form-group col-md-4">
 							<label for="input-9">Subcategory</label>
 							<input type="text" class="form-control form-control-rounded" id="input-9" name="sub_category_id" required/>
 						</div>
 
-						<div class="form-group col-md-3">
+						<div class="form-group col-md-4">
 							<label for="input-9">Type</label>
 							<input type="text" class="form-control form-control-rounded" id="input-9" name="type" required/>
 						</div>
@@ -53,7 +53,7 @@
 					
 					<div class="form-row">
 						<div class="form-group col-md-12">
-							<label for="input-13"> Title of listing</label>
+							<label for="input-13"> Title of Advert</label>
 							<input type="text" class="form-control form-control-rounded" id="input-9" name="title" required/>
 						</div>
 
@@ -68,10 +68,10 @@
 							<input type="radio" id="input-9" name="price" value="no" required/>No
 						</div>
 
-						<div class="form-group col-md-12">
+						<!-- <div class="form-group col-md-12">
 							<label for="input-13">Contact</label>
-							<input type="text" class="form-control form-control-rounded" id="input-9" name="title" value="{{auth()->user()->phone1}} , {{auth()->user()->phone2}}" required/>
-						</div>
+							<input type="hidden" class="form-control form-control-rounded" id="input-9" name="title" value="{{auth()->user()->phone1}} , {{auth()->user()->phone2}}" required/>
+						</div> -->
 
 						<div class="form-group col-md-12">
 							<label for="input-13"> Address</label>

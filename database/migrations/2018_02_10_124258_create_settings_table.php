@@ -34,6 +34,7 @@ class CreateSettingsTable extends Migration
             $table->string('site_youtube')->nullable();
             $table->string('site_pinterest')->nullable();
             $table->text('site_home_text')->nullable();
+            $table->text('site_objectives')->nullable();
             $table->text('site_about_text')->nullable();
             $table->text('site_home_image')->nullable();
             $table->string('site_about_image')->nullable();

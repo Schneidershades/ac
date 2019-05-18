@@ -32,7 +32,7 @@
 				<div class="card-title text-uppercase "><i class="fa fa-address-book-o"></i> Wallet Fund</div>
 				<hr>
 
-				<form class="color-form" method="POST" action="{{route('advert.store')}}" enctype="multipart/form-data">
+				<form class="color-form" method="POST" action="{{route('wallet.store')}}" enctype="multipart/form-data">
 					@csrf
 					<div class="form-row">
 						<div class="form-group col-md-12" >

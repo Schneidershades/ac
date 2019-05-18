@@ -7,7 +7,7 @@
 	<div class="col-sm-9">
 		<h4 class="page-title">User Profile</h4>
 		<ol class="breadcrumb">
-			<li class="breadcrumb-item"><a href="javaScript:void();">Rocker</a></li>
+			<li class="breadcrumb-item"><a href="javaScript:void();">AC Hub</a></li>
 			<li class="breadcrumb-item"><a href="javaScript:void();">Pages</a></li>
 			<li class="breadcrumb-item active" aria-current="page">User Profile</li>
 		</ol>
@@ -47,7 +47,7 @@
 					<div class="row">
 
 						<div class="col p-2">
-							<h5 class="mb-0 line-height-5">{{auth()->user()->balance}}</h5>
+							<h5 class="mb-0 line-height-5">{{auth()->user()->balance ? auth()->user()->balance : "N0.00"}}</h5>
 							<small class="mb-0 font-weight-bold">Wallet</small>
 						</div>
 						<div class="col p-2">
@@ -55,7 +55,7 @@
 							<small class="mb-0 font-weight-bold">Adverts</small>
 						</div>
 						<div class="col p-2">
-							<h5 class="mb-0 line-height-5">{{auth()->user()->package_id}}</h5>
+							<h5 class="mb-0 line-height-5">{{auth()->user()->package->name}}</h5>
 							<small class="mb-0 font-weight-bold">Package</small>
 						</div>
 					</div>
@@ -172,7 +172,7 @@
 									<tr>
 
 										<td>
-											{{$referral->user()->name}}
+											{{$referral->user->name}}
 										</td>
 									</tr>
 									@endforeach

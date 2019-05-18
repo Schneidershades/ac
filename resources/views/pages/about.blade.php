@@ -9,13 +9,13 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h3>about us</h3>
+                <h3>about</h3>
                 <ul class="banner-link text-center">
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="{{route('home')}}">Home</a>
                     </li>
                     <li>
-                        <span class="active">about us</span>
+                        <span class="active">about</span>
                     </li>
                 </ul>
             </div>
@@ -30,7 +30,7 @@
         <div class="row">
             <div class="col-lg-6 align-self-end">
                 <div class="abt-img">
-                    <img src="assets/img/pages/abt-mockup.png" alt="mockup">
+                    <img src="{{URL::to('assets/img/pages/abt-mockup.png')}}" alt="mockup">
                 </div>
             </div>
             <div class="col-lg-6 mt-lg-0 mt-5">
@@ -196,220 +196,41 @@
 </section>
 <!-- features end -->
 
-<!-- team start-->
-<section class="bg-dull sp-100-70">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="all-title">
-                    <h3 class="sec-title">
-                        our team
-                    </h3>
-                    <svg class="title-sep">
-                        <path fill-rule="evenodd" d="M32.000,13.000 L32.000,7.000 L35.000,7.000 L35.000,13.000 L32.000,13.000 ZM24.000,4.000 L27.000,4.000 L27.000,16.000 L24.000,16.000 L24.000,4.000 ZM16.000,-0.000 L19.000,-0.000 L19.000,20.000 L16.000,20.000 L16.000,-0.000 ZM8.000,4.000 L11.000,4.000 L11.000,16.000 L8.000,16.000 L8.000,4.000 ZM-0.000,7.000 L3.000,7.000 L3.000,13.000 L-0.000,13.000 L-0.000,7.000 Z"
-                        />
-                    </svg>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor penatibus
-                        ean massa. Cum sociis natoqu penatibus et magnis dis parturient montes.</p>
+  <!-- price start-->
+    <section class="bg-w sp-100-70">
+        <div class="container">
+            <div class="row justify-content-center">
+                @foreach($packages as $package)
+                <div class="col-lg-4 col-md-6 col-12 mb-30">
+                    <div class="price-item">
+                        <div class="price-top">
+                            <div class="amount">
+                                <h4>{{$package->name}}</h4>
+                                <h3>
+                                    <sup>N</sup>{{$package->amount}}</h3>
+                                <p class="c-theme text-capitalize mb-0">per year</p>
+                            </div>
+                            <div class="price-body mt-3">
+                                <ul class="plan-info-list">
+                                    @foreach($package->packageFeatures as $feature)
+                                    <li>
+                                        <p>{{$feature->description}}</p>
+                                    </li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="price-bottom">
+                            <a href="#" class="btn btn-anim btn-two mt-30">choose plan</a>
+                        </div>
+                    </div>
                 </div>
+                @endforeach
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-4 col-md-6 col-12 mb-30">
-                <div class="team-item">
-                    <img src="assets/img/pages/team1.png" alt="lister">
-                    <div class="team-overlay">
-                        <div class="t-inner">
-                            <h5>Julia Holmes</h5>
-                            <span>manager</span>
-                            <div class="socials mt-3">
-                                <a href="#">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fab fa-google-plus-g"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-12 mb-30">
-                <div class="team-item">
-                    <img src="assets/img/pages/team2.png" alt="lister">
-                    <div class="team-overlay">
-                        <div class="t-inner">
-                            <h5>Lucas Smith</h5>
-                            <span>ceo</span>
-                            <div class="socials mt-3">
-                                <a href="#">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fab fa-google-plus-g"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-12 mb-30">
-                <div class="team-item">
-                    <img src="assets/img/pages/team3.png" alt="lister">
-                    <div class="team-overlay">
-                        <div class="t-inner">
-                            <h5>Sarah Paul</h5>
-                            <span>marketing</span>
-                            <div class="socials mt-3">
-                                <a href="#">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fab fa-google-plus-g"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-12 mb-30">
-                <div class="team-item">
-                    <img src="assets/img/pages/team4.png" alt="lister">
-                    <div class="team-overlay">
-                        <div class="t-inner">
-                            <h5>Pablo Heminez</h5>
-                            <span>manager</span>
-                            <div class="socials mt-3">
-                                <a href="#">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fab fa-google-plus-g"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-12 mb-30">
-                <div class="team-item">
-                    <img src="assets/img/pages/team5.png" alt="lister">
-                    <div class="team-overlay">
-                        <div class="t-inner">
-                            <h5>Maria Grey</h5>
-                            <span>Business Consultant</span>
-                            <div class="socials mt-3">
-                                <a href="#">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fab fa-google-plus-g"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-12 mb-30">
-                <div class="team-item">
-                    <img src="assets/img/pages/team6.png" alt="lister">
-                    <div class="team-overlay">
-                        <div class="t-inner">
-                            <h5>Andrew Stugart</h5>
-                            <span>director</span>
-                            <div class="socials mt-3">
-                                <a href="#">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fab fa-google-plus-g"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- team end -->
+    </section>
+    <!-- price end -->
 
-<!-- cta-one start-->
-<section class="cta-one tri-bg-w text-lg-left text-center">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 my-lg-0 my-5 py-lg-0 py-5">
-                <div class="cta-content">
-                    <h3>Sign Up To Get Special Offers Every Day</h3>
-                    <p>Lorem ipsum dolor sit amet, consectadetudzdae rcquisc adipiscing elit. Aenean socada commodo ligaui
-                        egets dolor. </p>
-                    <a href="login.html" class="btn btn-two btn-anim mt-2">
-                        sign up
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-6 d-lg-block d-none">
-                <div class="cta-img mt-4">
-                    <img src="assets/img/home/cta-bg.png" alt="image">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- cta-one end -->
+@include('partials._actionmark')
 
 @endsection

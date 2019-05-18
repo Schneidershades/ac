@@ -1,102 +1,113 @@
 @extends('layouts.web')
 
 @section('content')
-<section class="parallax-section" data-scrollax-parent="true">
-    <div class="bg par-elem " data-bg="images/bg/2.jpg" data-scrollax="properties: { translateY: '30%' }"></div>
-    <div class="overlay"></div>
-    <div class="bubble-bg"></div>
-    <div class="container">
-        <div class="section-title center-align">
-            <h2><span>Our Contacts</span></h2>
-            <div class="breadcrumbs fl-wrap"><a href="#">Home</a> <span>Contacts</span></div>
-            <span class="section-separator"></span>
-        </div>
-    </div>
-    <div class="header-sec-link">
-        <div class="container"><a href="#sec1" class="custom-scroll-link">Let's Start</a></div>
-    </div>
-</section>
-<!-- section end -->
-<!--section -->  
-<section id="sec1">
+<!-- page-banner start-->
+<section class="page-banner">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
-                <div class="list-single-main-item fl-wrap">
-                    <div class="list-single-main-item-title fl-wrap">
-                        <h3>Contact <span>Details </span></h3>
-                    </div>
-                    <div class="list-single-main-media fl-wrap">
-                        <img src="images\all\12.jpeg" class="respimg" alt="">
-                    </div>
-                    <p>Ut euismod ultricies sollicitudin. Curabitur sed dapibus nulla. Nulla eget iaculis lectus. Mauris ac maximus neque. Nam in mauris quis libero sodales eleifend. Morbi varius, nulla sit amet rutrum elementum, est elit finibus tellus, ut tristique elit risus at metus. In ut odio libero, at vulputate urna. Nulla tristique mi a massa convallis cursus. Nulla eu mi magna. Etiam suscipit commodo gravida.</p>
-                    <div class="list-author-widget-contacts">
-                        <ul>
-                            <li><span><i class="fa fa-map-marker"></i> Adress :</span> <a href="#">USA 27TH Brooklyn NY</a></li>
-                            <li><span><i class="fa fa-phone"></i> Phone :</span> <a href="#">+7(123)987654</a></li>
-                            <li><span><i class="fa fa-envelope-o"></i> Mail :</span> <a href="#">AlisaNoory@domain.com</a></li>
-                            <li><span><i class="fa fa-globe"></i> Website :</span> <a href="#">themeforest.net</a></li>
-                        </ul>
-                    </div>
-                    <div class="list-widget-social">
-                        <ul>
-                            <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#" target="_blank"><i class="fa fa-vk"></i></a></li>
-                            <li><a href="#" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="list-single-main-wrapper fl-wrap">
-                    <div class="list-single-main-item-title fl-wrap">
-                        <h3>Our Location</h3>
-                    </div>
-                    <div class="map-container">
-                        <div id="singleMap" data-latitude="40.7427837" data-longitude="-73.11445617675781"></div>
-                    </div>
-                    <div class="list-single-main-item-title fl-wrap">
-                        <h3>Get In Touch</h3>
-                    </div>
-                    <div id="contact-form">
-                        <div id="message"></div>
-                        <form class="custom-form" action="php/contact.php" name="contactform" id="contactform">
-                            <fieldset>
-                                <label><i class="fa fa-user-o"></i></label>
-                                <input type="text" name="name" id="name" placeholder="Your Name *" value="">
-                                <div class="clearfix"></div>
-                                <label><i class="fa fa-envelope-o"></i>  </label>
-                                <input type="text" name="email" id="email" placeholder="Email Address*" value="">
-                                <textarea name="comments" id="comments" cols="40" rows="3" placeholder="Your Message:"></textarea>
-                            </fieldset>
-                            <button class="btn  big-btn  color-bg flat-btn" id="submit">Send<i class="fa fa-angle-right"></i></button>
-                        </form>
-                    </div>
-                    <!-- contact form  end--> 
-                </div>
+            <div class="col-12">
+                <h3>contact</h3>
+                <ul class="banner-link text-center">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <span class="active">contact</span>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
 </section>
-<!-- section end -->
-<div class="limit-box fl-wrap"></div>
-<!--section -->  
-<section class="gradient-bg">
-    <div class="cirle-bg">
-        <div class="bg" data-bg="images/bg/circle.png"></div>
-    </div>
+<!-- page-banner ends-->
+
+<!-- contact start-->
+<section class="bg-w sp-100 pb-lg-0">
     <div class="container">
-        <div class="join-wrap fl-wrap">
-            <div class="row">
-                <div class="col-md-8">
-                    <h3>Join our online community</h3>
-                    <p>Grow your marketing and be happy with your online business</p>
+        <div class="row">
+            <div class="col-12">
+                <div class="contact-box">
+                    <div class="d-block d-xl-flex">
+                        <div class="contact-left">
+                            <h4 class="mb-4">get in touch</h4>
+                            <form class="custom-form" action="{{route('contact.store')}}" method="post">
+                                @csrf
+                                <div class="row">
+                                    <div class="col-md-6 col-12">
+                                        <span class="fa fa-user"></span>
+                                        <input type="text" id="name" class="form-control" name="name" placeholder="Enter Name" required>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <span class="fa fa-phone"></span>
+                                        <input type="text" id="phn" class="form-control" name="phone" placeholder="Enter Name" required>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <span class="fa fa-envelope"></span>
+                                        <input type="email" class="form-control" placeholder="Enter Email" name="email" id="email" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <span class="fa fa-edit"></span>
+                                        <textarea rows="5" name="comment" class="form-control" placeholder="Your Message" id="comment" required></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-one btn-anim" id="submit" name="submit">
+                                            send message</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="contact-right">
+                            <h4 class="mb-4">contact info</h4>
+                            <p>Get on touch with us to get informations, answer to suggestions and more.</p>
+                            <ul class="contact-info mt-4">
+                                <li>
+                                    <i class="fa fa-phone"></i>
+                                    {{$web->site_main_number}}<br> 
+                                    {{$web->site_whatsapp_number}} <br>
+                                    {{$web->site_international_number}}<br>
+                                </li>
+                                <li>
+                                    <i class="fa fa-envelope"></i>
+                                    {{$web->site_email}}
+                                </li>
+                                <li>
+                                    <i class="fa fa-map-marker-alt"></i>
+                                    {{$web->site_full_address_local}}
+                                </li>
+                            </ul>
+                            <div class="socials contact-social">
+                                <a href="http://www.facebook.com/{{$web->site_facebook}}">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="http://www.googleplus.com/{{$web->site_googleplus}}">
+                                    <i class="fab fa-google-plus-g"></i>
+                                </a>
+                                <a href="http://www.instagram.com/{{$web->site_instagram}}">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="http://www.linkedin.com/{{$web->site_linkedin}}">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="http://www.twitter.com/{{$web->site_twitter}}">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-4"><a href="#" class="join-wrap-btn modal-open">Sign Up <i class="fa fa-sign-in"></i></a></div>
             </div>
         </div>
     </div>
 </section>
-<!-- section end -->
+<!-- contact end -->
+
+<!-- map start-->
+<div class="map">
+    <div id="theme-map"></div>
+</div>
+<!-- map end -->
+
+
+@include('partials._actionmark')
+
 @endsection

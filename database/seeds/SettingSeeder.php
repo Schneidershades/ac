@@ -30,15 +30,16 @@ class SettingSeeder extends Seeder
           'site_youtube'                         => '#',
           'site_pinterest'                       => '#',
           'site_home_text'                       => 'Achievers Confluence is a Pan-African e-business networking group, designed for the convergence of various business concepts, ideas, inventions, manufacturing and initiatives to trigger quantum growth in African commercial and investments environment',
+          'site_objectives'                       => 'A Bold Step towards Influencing & Networking Generations of Entrepreneurs and Professionals With Ideas & Creativity In Wealth Creation',
           'site_home_image'                      => '#',
 
             'site_about_text'                    => 
 
             'Building a movement of Nigerian youths to participate in politics and nation building. Creating a platform to share ideas with counterparts across the nation and the world in general. Creating an irreversible consciousness in the Nigerian people through education, debates, interaction and information gathering to permanently guarantee a Nigeria where every voice has a genuine hope of being heard.<br>All members of The Peoples\' Senate are referred to as Senators.',
 
-            'site_mission'                    => 'Create an irreversible consciousness in the Nigerian people through education, debates, interaction and information gathering to permanently guarantee a Nigeria where every voice has a genuine hope of being heard.',
+            'site_mission'                    => 'To create opportunities for people to attain full potentials through capacity building, business growth and wealth creation',
 
-            'site_vision'                    => 'A truly politically conscious and informed Nigeria where everyone is a guardian of our national identity and prosperity ',
+            'site_vision'                    => 'To be the foremost network of reputable business and professional people, committed to growth & excellence',
 
             'site_overview'                    => '
 
@@ -51,15 +52,15 @@ class SettingSeeder extends Seeder
                                                   7.  Create a platform to share ideas with counterparts across the globe<br> 
                                                   8.  Create a platform for cross-fertilization of ideas amongst the people<br>',
 
-            'site_client_description'          => 'To Create an irreversible consciousness in the Nigerian people through education, debates, interaction and information gathering to permanently guarantee a Nigeria where every voice has a genuine hope of being heard.',
+            'site_client_description'          => 'This networking pool is purposely designed for convergence of various business platforms , ideas, inventions, manufacturing and initiatives to trigger quantum growth in African businesses and investments, and interlinking them with partners, buyers, manufacturers, and sellers within Africa and across the world. ',
 
 
             'site_work_days'              => 'Every Day',
 
 
             'site_about_image'                  => '/assets/images/logo-white.png',
-            'site_full_address_local'              => 'No. 10 Gimbiya Street, Area 11, Garki. Abuja, Nigeria',
-            'site_full_address_international'      => 'No. 10 Gimbiya Street, Area 11, Garki. Abuja, Nigeria.'
+            'site_full_address_local'              => '50, Addo Road, Ajah-Lekki, Lagos, Nigeria.',
+            'site_full_address_international'      => '50, Addo Road, Ajah-Lekki, Lagos, Nigeria.'
         ]);
     }
 }
