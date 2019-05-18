@@ -183,7 +183,8 @@
 						</table>
 					</div>
 					<div class="tab-pane" id="edit">
-						<form action="" method="post">
+						<form action="{{route('profile.update')}}" method="post">
+							@csrf
 							<div class="form-group row">
 								<label class="col-lg-3 col-form-label form-control-label">Full name</label>
 								<div class="col-lg-9">
