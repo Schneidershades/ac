@@ -12,7 +12,7 @@
             </div>
             <div class="col-lg-6 d-lg-block d-none">
                 <div class="cta-img mt-4">
-                    <img src="{{URL::to('assets-web/img/home/cta-bg.png')}}" alt="image">
+                    <img src="{{URL::to('assets-web/img/home/ad.png')}}" alt="image">
                 </div>
             </div>
         </div>
