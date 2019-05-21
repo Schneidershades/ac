@@ -18,6 +18,7 @@ use App\Models\Post;
 use App\Models\Advert;
 use App\Models\Category;
 use App\Models\Package;
+use App\Models\User;
 
 class PageController extends Controller
 {
@@ -45,7 +46,11 @@ class PageController extends Controller
     public function about()
     {
         return view('pages.about')
-            ->with('packages', Package::all());
+            ->with('packages', Package::all())
+            ->with('users', User::all())
+            ->with('adverts', Advert::all())
+            ->with('partners', Partner::all())
+            ->with('event', 1);
     }
 
     public function page()
@@ -81,6 +86,16 @@ class PageController extends Controller
         Session::flash('success', 'Your request was sent');
 
         return redirect()->back();
+    }
+
+    public function conference()
+    {
+        return view('pages.conference');
+    } 
+
+    public function roundTable()
+    {
+        return view('pages.round-table');
     }
 
 }

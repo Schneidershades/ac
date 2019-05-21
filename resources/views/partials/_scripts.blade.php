@@ -9,3 +9,4 @@
     <script src="{{URL::to('assets-web/js/jarallax/jarallax-video.min.js')}}"></script>
     <script src="{{URL::to('assets-web/js/custom.js')}}"></script>
 
+@yield('scripts')

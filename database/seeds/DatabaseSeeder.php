@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
         $this->call(StatesTableSeeder::class);
         $this->call(PackageSeeder::class);
         $this->call(PackageFeatureSeeder::class);
+        $this->call(PartnersTableSeeder::class);
         // $this->call(ReferralBonusSeeder::class);
         // $this->call(ServiceProvidedSeeder::class);
         $this->call(CategorySeeder::class);

@@ -30,6 +30,7 @@ class CreateUsersTable extends Migration
             $table->string('twitter')->nullable();
             $table->string('instagram')->nullable();
             $table->string('pinterest')->nullable();
+            $table->string('vimeo')->nullable();
             $table->string('googleplus')->nullable();
             $table->string('whatsapp')->nullable();
             $table->string('youtube')->nullable();

@@ -61,34 +61,29 @@
 
       <li>
         <a href="{{route('home')}}" class="waves-effect">
-          <i class="fa fa-home text-red"></i> <span>Home</span></a>
+          <i class="fa fa-home text-red"></i> <span>Website</span></a>
+      </li>
+
+      <li>
+        <a href="{{route('home')}}" class="waves-effect">
+          <i class="fa fa-home text-red"></i> <span>Dashboard Home</span></a>
       </li>
 
 
       <li>
         <a href="" class="waves-effect">
-          <i class="icon-home"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
+          <i class="icon-home"></i> <span>Activity</span> <i class="fa fa-angle-left pull-right"></i>
         </a>
         <ul class="sidebar-submenu">                 
           <li><a href="{{route('profile.show', auth()->user()->id)}}"><i class="fa fa-user"></i>My Profile </a></li>            
-          <li><a href="{{route('advert.index')}}"><i class="fa fa-user"></i>My Advert </a></li>                  
+          <li><a href="{{route('profile.edit', auth()->user()->id)}}"><i class="fa fa-edit"></i>Edit Profile </a></li>            
+          <li><a href="{{route('listings.index')}}"><i class="icon-envelope"></i>My Listings </a></li>                  
+          <li><a href="{{route('listings.create.start')}}"><i class="fa fa-user"></i>Create Listings </a></li>                  
+          <li><a href=""><i class="fa fa-user"></i>Conference Activity </a></li>                  
           <li><a href="{{route('wallet.create')}}"><i class="fa fa-money"></i>Fund Wallet </a></li>     
-          <li><a href="{{route('package.create')}}"><i class="fa fa-money"></i>Upgrade Package </a></li>     
-          <li><a href="{{route('wallet.index')}}"><i class="fa fa-money"></i>My Transaction </a></li>             
+          <li><a href="{{route('package.create')}}"><i class="fa fa-circle-o"></i>Upgrade Package </a></li>     
+          <li><a href="{{route('wallet.index')}}"><i class="icon-calendar"></i>My Transaction </a></li>             
         </ul>
-      </li>
-      <li>
-        <a href="index.html" class="waves-effect">
-          <i class="icon-home"></i> <span>Services</span> <i class="fa fa-angle-left pull-right"></i>
-        </a>
-       <!--  <ul class="sidebar-submenu">
-          <li><a href=""><i class="fa fa-circle-o"></i> New Business</a></li>
-          <li><a href=""><i class="fa fa-circle-o"></i> New Company</a></li>
-          <li><a href=""><i class="fa fa-circle-o"></i> New Copyright</a></li>
-          <li><a href=""><i class="fa fa-circle-o"></i> New Patent</a></li>
-          <li><a href=""><i class="fa fa-circle-o"></i> New TradeMark</a></li>
-          <li><a href=""><i class="fa fa-circle-o"></i> New NGO</a></li>
-        </ul> -->
       </li>
 
       <li><a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">

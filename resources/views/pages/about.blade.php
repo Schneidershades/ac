@@ -30,30 +30,51 @@
         <div class="row">
             <div class="col-lg-6 align-self-end">
                 <div class="abt-img">
-                    <img src="{{URL::to('assets/img/pages/abt-mockup.png')}}" alt="mockup">
+                    <img src="{{URL::to('assets-web/img/pages/abt-mockup.png')}}" alt="mockup">
                 </div>
             </div>
             <div class="col-lg-6 mt-lg-0 mt-5">
-                <h4>our awesome story</h4>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligu eg dolor. Aenatibus parturien
-                    monte, nascetur rt ridiculus mus. Donec quam felis ultricies nec pellent esqueu pretium quis, sem.
-                    Nulla con sequat massa quis enim. Donec pede justo, fringil vel, aliquet nec, vulputate eget, arcu.
-                    In enim justo dictum felis eu mollis ju pretium tincidunt.
-                </p>
+                <h4>About Us</h4>
+                <p>Achievers Connect Confluence International (ACCi) is Pan-African business networking “pool”, with membership which cuts across various sectors of African economy. This networking “pool” is purposely designed for convergence of various business platforms , ideas, inventions, manufacturing and initiatives to trigger quantum growth in African businesses and investments, and interlinking them with partners, buyers, manufacturers, and sellers within Africa and across the world. Our membership first of all is drawn amongst CEOs, MDs, Presidents and individuals occupying functional, strategic positions in their various organizations. We help our members grow their business through a structured, positive and professional referral program that enables them to develop meaningful, long-term relationships. We create unparalleled opportunities for our members to grow expand their networks and grow positive relationships.</p> 
+ 
+                <p>The steady growth of ACCi in its brief history has been attributed to solid wheel of trust and discipline which the “pool” is running upon.</p><br><br>
+            </div>
+
+            <div class="col-lg-6 align-self-end">
+                <h4>HOW WE BUILD OUR MEMBERS’ CAPACITIES</h4>
                 <ul class="list-1">
                     <li>
-                        <span>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</span>
+                        <span>One-On-One & Group Mentorship </span>
                     </li>
                     <li>
-                        <span>Nulla consequat massa quis enim. Donec fringilla vel, aliquet nec.</span>
+                        <span>Leadership Trainings</span>
                     </li>
                     <li>
-                        <span> Aenean leo ligula, porttitor eu consequat vitae eleifend ac enim.</span>
+                        <span>Career Enhancement Programs</span>
                     </li>
                     <li>
-                        <span> Sociis na toque penatibus et magnis dis parturien monte nascetur ridic.</span>
+                        <span> Links to Quality Relationships for Growth</span>
                     </li>
-                </ul>
+                    <li>
+                        <span>Networking Business Seminars/Exhibitions</span>
+                    </li>
+                    <li>
+                        <span>Business Referrals</span>
+                    </li>
+                    <li>
+                        <span>Breakfast, Lunch or Dinner Hours with an Outstanding ACHIEVER</span>
+                    </li>
+                    <li>
+                        <span> Discounted Products & Services at Selected Business Channels</span>
+                    </li>
+                    <li>
+                        <span> 24/7 Business Help Desk</span>
+                    </li>
+                </ul> 
+
+            </div>
+            <div class="col-lg-6 mt-lg-0 mt-5">
+                
             </div>
 
         </div>
@@ -70,8 +91,8 @@
                     <div class="icon-box">
                         <i class="flaticon-list-1"></i>
                     </div>
-                    <h2 class="count c-theme" data-count="5256">0</h2>
-                    <p>total listing</p>
+                    <h2 class="count c-theme" data-count="{{$users->count()}}">0</h2>
+                    <p>Businesses</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-30">
@@ -79,8 +100,8 @@
                     <div class="icon-box">
                         <i class="flaticon-team"></i>
                     </div>
-                    <h2 class="count c-theme" data-count="1250">0</h2>
-                    <p>total listing</p>
+                    <h2 class="count c-theme" data-count="{{$partners->count()}}">0</h2>
+                    <p>Partners</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-30">
@@ -88,8 +109,8 @@
                     <div class="icon-box">
                         <i class="flaticon-trophy"></i>
                     </div>
-                    <h2 class="count c-theme" data-count="160">0</h2>
-                    <p>total listing</p>
+                    <h2 class="count c-theme" data-count="{{$adverts->count()}}">0</h2>
+                    <p>Buiness Listings</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-30">
@@ -97,8 +118,8 @@
                     <div class="icon-box">
                         <i class="flaticon-appointment"></i>
                     </div>
-                    <h2 class="count c-theme" data-count="12">0</h2>
-                    <p>total listing</p>
+                    <h2 class="count c-theme" data-count="1">0</h2>
+                    <p>Event</p>
                 </div>
             </div>
         </div>
@@ -113,7 +134,7 @@
             <div class="col-12">
                 <div class="all-title">
                     <h3 class="sec-title">
-                        Why We Are Best
+                        We are dedicated to businesses
                     </h3>
                     <svg class="title-sep">
                         <path fill-rule="evenodd" d="M32.000,13.000 L32.000,7.000 L35.000,7.000 L35.000,13.000 L32.000,13.000 ZM24.000,4.000 L27.000,4.000 L27.000,16.000 L24.000,16.000 L24.000,4.000 ZM16.000,-0.000 L19.000,-0.000 L19.000,20.000 L16.000,20.000 L16.000,-0.000 ZM8.000,4.000 L11.000,4.000 L11.000,16.000 L8.000,16.000 L8.000,4.000 ZM-0.000,7.000 L3.000,7.000 L3.000,13.000 L-0.000,13.000 L-0.000,7.000 Z"
@@ -128,12 +149,19 @@
             <div class="col-lg-4 col-md-6 col-12 mb-30">
                 <div class="feature-item">
                     <div class="icon-box">
+                        <i class="flaticon-medal"></i>
+                    </div>
+                    <h5>our Objective</h5>
+                    <p>{{$web->site_objectives}}</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12 mb-30">
+                <div class="feature-item">
+                    <div class="icon-box">
                         <i class="flaticon-rising"></i>
                     </div>
                     <h5>our vision</h5>
-                    <p>Lorem ipsum dolor sit ame conse castei efte tuerg scn kt iscedring elit ende cd magum socadaiis nato
-                        ipsf.
-                    </p>
+                    <p>{{$web->site_vision}}</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-12 mb-30">
@@ -141,54 +169,8 @@
                     <div class="icon-box">
                         <i class="flaticon-list"></i>
                     </div>
-                    <h5>missions</h5>
-                    <p>Lorem ipsum dolor sit ame conse castei efte tuerg scn kt iscedring elit ende cd magum socadaiis nato
-                        ipsf.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-12 mb-30">
-                <div class="feature-item">
-                    <div class="icon-box">
-                        <i class="flaticon-medal"></i>
-                    </div>
-                    <h5>our value</h5>
-                    <p>Lorem ipsum dolor sit ame conse castei efte tuerg scn kt iscedring elit ende cd magum socadaiis nato
-                        ipsf.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-12 mb-30">
-                <div class="feature-item">
-                    <div class="icon-box">
-                        <i class="flaticon-find-1"></i>
-                    </div>
-                    <h5>find your listing</h5>
-                    <p>Lorem ipsum dolor sit ame conse castei efte tuerg scn kt iscedring elit ende cd magum socadaiis nato
-                        ipsf.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-12 mb-30">
-                <div class="feature-item">
-                    <div class="icon-box">
-                        <i class="flaticon-map"></i>
-                    </div>
-                    <h5>find the way</h5>
-                    <p>Lorem ipsum dolor sit ame conse castei efte tuerg scn kt iscedring elit ende cd magum socadaiis nato
-                        ipsf.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-12 mb-30">
-                <div class="feature-item">
-                    <div class="icon-box">
-                        <i class="flaticon-support"></i>
-                    </div>
-                    <h5>24/7 support</h5>
-                    <p>Lorem ipsum dolor sit ame conse castei efte tuerg scn kt iscedring elit ende cd magum socadaiis nato
-                        ipsf.
-                    </p>
+                    <h5>mission</h5>
+                    <p>{{$web->site_mission}}</p>
                 </div>
             </div>
         </div>
@@ -199,6 +181,20 @@
   <!-- price start-->
     <section class="bg-w sp-100-70">
         <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="all-title">
+                        <h3 class="sec-title">
+                            Member & Pricing
+                        </h3>
+                        <svg class="title-sep">
+                            <path fill-rule="evenodd" d="M32.000,13.000 L32.000,7.000 L35.000,7.000 L35.000,13.000 L32.000,13.000 ZM24.000,4.000 L27.000,4.000 L27.000,16.000 L24.000,16.000 L24.000,4.000 ZM16.000,-0.000 L19.000,-0.000 L19.000,20.000 L16.000,20.000 L16.000,-0.000 ZM8.000,4.000 L11.000,4.000 L11.000,16.000 L8.000,16.000 L8.000,4.000 ZM-0.000,7.000 L3.000,7.000 L3.000,13.000 L-0.000,13.000 L-0.000,7.000 Z"
+                            />
+                        </svg>
+                        <!-- <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor penatibus ean massa. Cum sociis natoqu penatibus et magnis dis parturient montes.</p> -->
+                    </div>
+                </div>
+            </div>
             <div class="row justify-content-center">
                 @foreach($packages as $package)
                 <div class="col-lg-4 col-md-6 col-12 mb-30">

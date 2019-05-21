@@ -26,8 +26,8 @@ class AdvertController extends Controller
     {
         $adverts = auth()->user()->adverts()->latest()->finished()->get();
 
-        return view('users.advert_add', [
-            'adverts' => $adverts
+        return view('users.listing_add', [
+            'listing' => $adverts
         ]);
     }
 
@@ -38,15 +38,28 @@ class AdvertController extends Controller
      */
     public function create(Advert $advert)
     {
-        $count = auth()->user()->adverts()->finished()->count();
+        if(!$advert->exists){
+            $advert = $this->createAndReturnSkeletonfile();
 
-        // dd($count);
+            return view('users.listing_add')
+                ->with('listing', $advert)
+                ->with('categories', Category::all())
+                ->with('countries', Country::all());
+        }
+
+        return view('users.listing_add')
+            ->with('categories', Category::all())
+            ->with('countries', Country::all());
+    }
+
+    protected function createAndReturnSkeletonfile()
+    {
+        $count = auth()->user()->adverts()->finished()->count();
 
         if (Auth::user()->package_id == 1){
             $count = auth()->user()->adverts()->finished()->count();
 
             if ($count >= 1){
-
                 Session::flash('error', 'sorry you can only create '.$count.' advert. Please upgrade for more features');
                 return redirect()->back();
             }
@@ -76,9 +89,11 @@ class AdvertController extends Controller
             }
         }
 
-        return view('users.advert_add')
-            ->with('categories', Category::all())
-            ->with('countries', Country::all());
+        return auth()->user()->adverts()->create([
+            'status' => 'Not Available',
+            'finished' => 0,
+            'title' => 'untitled',
+        ]);
     }
     
     /**
@@ -110,21 +125,21 @@ class AdvertController extends Controller
         $advert->address = $request->address;
         $advert->finished = true;
 
-        if($request->hasFile('featured')){
-            $image_small = $request->file('featured');
-            $filename_small = Auth::user()->name.'-'.time().'-'.str_slug($image_small->getClientOriginalName()).'.'.$image_small->getClientOriginalExtension();
-            $location_small = 'assets/images/advert-cover/small/' . $filename_small;
-            Image::make($image_small)->resize(400, 250)->save($location_small);
-            $advert->featured_sm = $location_small;
-        }
+        // if($request->hasFile('featured')){
+        //     $image_small = $request->file('featured');
+        //     $filename_small = Auth::user()->name.'-'.time().'-'.str_slug($image_small->getClientOriginalName()).'.'.$image_small->getClientOriginalExtension();
+        //     $location_small = 'assets/images/advert-cover/small/' . $filename_small;
+        //     Image::make($image_small)->resize(400, 250)->save($location_small);
+        //     $advert->featured_sm = $location_small;
+        // }
 
-        if($request->hasFile('featured')){
-            $image = $request->file('featured');
-            $filename = Auth::user()->name.'-'.time().'-'.str_slug($image->getClientOriginalName()).'.'.$image->getClientOriginalExtension();
-            $location = 'assets/images/advert-cover/' . $filename;
-            Image::make($image)->resize(1900, 600)->save($location);
-            $advert->featured_bg = $location;
-        }
+        // if($request->hasFile('featured')){
+        //     $image = $request->file('featured');
+        //     $filename = Auth::user()->name.'-'.time().'-'.str_slug($image->getClientOriginalName()).'.'.$image->getClientOriginalExtension();
+        //     $location = 'assets/images/advert-cover/' . $filename;
+        //     Image::make($image)->resize(1900, 600)->save($location);
+        //     $advert->featured_bg = $location;
+        // }
 
         // if($request->hasFile('featured2')){
         //     $image = $request->file('featured2');

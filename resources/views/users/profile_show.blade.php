@@ -80,8 +80,8 @@
 						@endif
 					</div>
 					<hr>
-					<a href="javascript:void():" class="btn btn-primary shadow-primary btn-sm btn-round waves-effect waves-light m-1">Hire Me</a>
-					<a href="javascript:void():" class="btn btn-outline-primary btn-sm btn-round waves-effect waves-light m-1">Profile</a>
+					<!-- <a href="javascript:void():" class="btn btn-primary shadow-primary btn-sm btn-round waves-effect waves-light m-1">Hire Me</a>
+					<a href="javascript:void():" class="btn btn-outline-primary btn-sm btn-round waves-effect waves-light m-1">Profile</a> -->
 				</div>
 			</div>
 		</div>
@@ -96,9 +96,6 @@
 					<li class="nav-item">
 	                    <a href="javascript:void();" data-target="#messages" data-toggle="pill" class="nav-link"><i class="icon-envelope-open"></i> <span class="hidden-xs">Referrals</span></a>
 	                </li>
-					<li class="nav-item">
-						<a href="javascript:void();" data-target="#edit" data-toggle="pill" class="nav-link"><i class="icon-note"></i> <span class="hidden-xs">Edit Profile</span></a>
-					</li>
 				</ul>
 				<div class="tab-content p-3">
 					<div class="tab-pane active" id="profile">
@@ -132,10 +129,6 @@
 								</p>
 								@endif
 
-								<!-- <h6>Hobbies</h6>
-								<p>
-									Indie music, skiing and hiking. I love the great outdoors.
-								</p> -->
 							</div>
 							<div class="col-md-6">
 								<!-- <h6>Recent badges</h6>
@@ -170,7 +163,6 @@
 								@if(auth()->user()->referrals->count() > 0)
 									@foreach(auth()->user()->referrals as $referral)                                   
 									<tr>
-
 										<td>
 											{{$referral->user->name}}
 										</td>
@@ -181,157 +173,6 @@
 								@endif
 							</tbody> 
 						</table>
-					</div>
-					<div class="tab-pane" id="edit">
-						<form action="{{route('profile.update')}}" method="post">
-							@csrf
-							<div class="form-group row">
-								<label class="col-lg-3 col-form-label form-control-label">Full name</label>
-								<div class="col-lg-9">
-									<input class="form-control" type="text" name="name" value="{{auth()->user()->name}}" required>
-								</div>
-							</div>
-							<div class="form-group row">
-								<label class="col-lg-3 col-form-label form-control-label">Official Email</label>
-								<div class="col-lg-9">
-									<input class="form-control" type="text" name="official_email" value="{{auth()->user()->official_email}}" required>
-								</div>
-							</div>
-							<div class="form-group row">
-	                            <label class="col-lg-3 col-form-label form-control-label">Primary Contact</label>
-	                            <div class="col-lg-3">
-	                                <input class="form-control" type="text" name="phone1" value="{{auth()->user()->phone1}}" placeholder="Primary Contact"required>
-	                            </div>
-
-	                            <label class="col-lg-3 col-form-label form-control-label">Primary Contact</label>
-	                            <div class="col-lg-3">
-	                                <input class="form-control" type="text" name="phone2" value="{{auth()->user()->phone2}}" placeholder="Alternate Contact"required>
-	                            </div>
-	                        </div>
-							<div class="form-group row">
-	                            <label class="col-lg-3 col-form-label form-control-label">Website</label>
-	                            <div class="col-lg-3">
-	                                <input class="form-control" type="text" name="website" value="{{auth()->user()->Website}}" placeholder="Website" required>
-	                            </div>
-
-	                            <label class="col-lg-3 col-form-label form-control-label">Facebook Username</label>
-	                            <div class="col-lg-3">
-	                                <input class="form-control" type="text" name="facebook" value="{{auth()->user()->facebook}}" placeholder="Alternate Contact"required>
-	                            </div>
-	                        </div>
-
-	                        <div class="form-group row">
-	                            <label class="col-lg-3 col-form-label form-control-label">Linkedin Username</label>
-	                            <div class="col-lg-3">
-	                                <input class="form-control" type="text" name="website" value="{{auth()->user()->linkedin}}" placeholder="Linkedin Username" required>
-	                            </div>
-
-	                            <label class="col-lg-3 col-form-label form-control-label">Twitter Username</label>
-	                            <div class="col-lg-3">
-	                                <input class="form-control" type="text" name="twitter" value="{{auth()->user()->twitter}}" placeholder="Twitter Contact"required>
-	                            </div>
-	                        </div>
-							
-							<div class="form-group row">
-	                            <label class="col-lg-3 col-form-label form-control-label">Instagram Username</label>
-	                            <div class="col-lg-3">
-	                                <input class="form-control" type="text" name="instagram" value="{{auth()->user()->instagram}}" placeholder="Instagram Username" required>
-	                            </div>
-
-	                            <label class="col-lg-3 col-form-label form-control-label">Pinterest Username</label>
-	                            <div class="col-lg-3">
-	                                <input class="form-control" type="text" name="pinterest" value="{{auth()->user()->pinterest}}" placeholder="Pinterest Username"required>
-	                            </div>
-	                        </div>
-
-	                        <div class="form-group row">
-	                            <label class="col-lg-3 col-form-label form-control-label">Googleplus Username</label>
-	                            <div class="col-lg-3">
-	                                <input class="form-control" type="text" name="googleplus" value="{{auth()->user()->googleplus}}" placeholder="Googleplus Username" required>
-	                            </div>
-
-	                            <label class="col-lg-3 col-form-label form-control-label">Twitter Username</label>
-	                            <div class="col-lg-3">
-	                                <input class="form-control" type="text" name="twitter" value="{{auth()->user()->twitter}}" placeholder="Twitter Contact"required>
-	                            </div>
-	                        </div>
-
-	                        <div class="form-group row">
-	                            <label class="col-lg-3 col-form-label form-control-label">Whatsapp Username</label>
-	                            <div class="col-lg-3">
-	                                <input class="form-control" type="text" name="whatsapp" value="{{auth()->user()->whatsapp}}" placeholder="Whatsapp Username" required>
-	                            </div>
-
-	                            <label class="col-lg-3 col-form-label form-control-label">Youtube Username</label>
-	                            <div class="col-lg-3">
-	                                <input class="form-control" type="text" name="youtube" value="{{auth()->user()->youtube}}" placeholder="Youtube Contact"required>
-	                            </div>
-	                        </div>
-
-							<div class="form-group row">
-								<label class="col-lg-3 col-form-label form-control-label">Change profile</label>
-								<div class="col-lg-9">
-									<input class="form-control" name="image" type="file">
-								</div>
-							</div>
-							<div class="form-group row">
-								<label class="col-lg-3 col-form-label form-control-label">Website</label>
-								<div class="col-lg-9">
-									<input class="form-control" type="url" value="">
-								</div>
-							</div>
-							<div class="form-group row">
-								<label class="col-lg-3 col-form-label form-control-label">Address</label>
-								<div class="col-lg-9">
-									<input class="form-control" type="text" name="address" value="{{auth()->user()->address}}" placeholder="Street">
-								</div>
-							</div>
-							<div class="form-group row">
-								<label class="col-lg-3 col-form-label form-control-label"></label>
-								<div class="col-lg-6">
-									<input class="form-control" type="text" name="city_id" value="{{auth()->user()->city_id}}" placeholder="City">
-								</div>
-								<div class="col-lg-3">
-									<input class="form-control" type="text" value="{{auth()->user()->city_id}}" name="state_id" placeholder="State">
-								</div>
-								<div class="col-lg-3">
-									<input class="form-control" type="text" value="{{auth()->user()->postal_code}}" name="postal_code" placeholder="Postal Code">
-								</div>
-							</div>
-
-							<div class="form-group row">
-								<label class="col-lg-3 col-form-label form-control-label">What has been your experience with the platform</label>
-								<div class="col-lg-9">
-									<input class="form-control" type="url" value="">
-								</div>
-							</div>
-
-							<div class="form-group row">
-								<label class="col-lg-3 col-form-label form-control-label">Username</label>
-								<div class="col-lg-9">
-									<input class="form-control" type="text" value="jhonsanmark">
-								</div>
-							</div>
-							<div class="form-group row">
-								<label class="col-lg-3 col-form-label form-control-label">Password</label>
-								<div class="col-lg-9">
-									<input class="form-control" type="password" value="11111122333">
-								</div>
-							</div>
-							<div class="form-group row">
-								<label class="col-lg-3 col-form-label form-control-label">Confirm password</label>
-								<div class="col-lg-9">
-									<input class="form-control" type="password" value="11111122333">
-								</div>
-							</div>
-							<div class="form-group row">
-								<label class="col-lg-3 col-form-label form-control-label"></label>
-								<div class="col-lg-9">
-									<input type="reset" class="btn btn-secondary" value="Cancel">
-									<input type="button" class="btn btn-primary" value="Save Changes">
-								</div>
-							</div>
-						</form>
 					</div>
 				</div>
 			</div>

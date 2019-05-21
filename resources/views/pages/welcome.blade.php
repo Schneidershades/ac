@@ -34,8 +34,7 @@
                         <path fill-rule="evenodd" d="M32.000,13.000 L32.000,7.000 L35.000,7.000 L35.000,13.000 L32.000,13.000 ZM24.000,4.000 L27.000,4.000 L27.000,16.000 L24.000,16.000 L24.000,4.000 ZM16.000,-0.000 L19.000,-0.000 L19.000,20.000 L16.000,20.000 L16.000,-0.000 ZM8.000,4.000 L11.000,4.000 L11.000,16.000 L8.000,16.000 L8.000,4.000 ZM-0.000,7.000 L3.000,7.000 L3.000,13.000 L-0.000,13.000 L-0.000,7.000 Z"
                         />
                     </svg>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor penatibus
-                        ean massa. Cum sociis natoqu penatibus et magnis dis parturient montes.</p>
+                    <p>We are an esteemed community capable of connecting business to an end goal</p>
                 </div>
             </div>
         </div>
@@ -330,120 +329,9 @@
 @endforeach
 
 
-<!-- cta-one start-->
-<section class="cta-one tri-bg-w text-lg-left text-center">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 my-lg-0 my-5 py-lg-0 py-5">
-                <div class="cta-content">
-                    <h3>Sign Up To Register for our Upcoming Event</h3>
-                    <p>Lorem ipsum dolor sit amet, consectadetudzdae rcquisc adipiscing elit. Aenean socada commodo ligaui
-                        egets dolor. </p>
-                    <a href="login.html" class="btn btn-two btn-anim mt-2">
-                        sign up
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-6 d-lg-block d-none">
-                <div class="cta-img mt-4">
-                    <img src="assets-web/img/home/cta-bg.png" alt="image">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- cta-one end -->
+@include('partials._actionmark')
 
 
-<!-- features start-->
-<section class="features sp-100-70 bg-w">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="all-title">
-                    <h3 class="sec-title">
-                        Why We Are Best
-                    </h3>
-                    <svg class="title-sep">
-                        <path fill-rule="evenodd" d="M32.000,13.000 L32.000,7.000 L35.000,7.000 L35.000,13.000 L32.000,13.000 ZM24.000,4.000 L27.000,4.000 L27.000,16.000 L24.000,16.000 L24.000,4.000 ZM16.000,-0.000 L19.000,-0.000 L19.000,20.000 L16.000,20.000 L16.000,-0.000 ZM8.000,4.000 L11.000,4.000 L11.000,16.000 L8.000,16.000 L8.000,4.000 ZM-0.000,7.000 L3.000,7.000 L3.000,13.000 L-0.000,13.000 L-0.000,7.000 Z"
-                        />
-                    </svg>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor penatibus
-                        ean massa. Cum sociis natoqu penatibus et magnis dis parturient montes.</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 col-md-6 col-12 mb-30">
-                <div class="feature-item">
-                    <div class="icon-box">
-                        <i class="flaticon-rising"></i>
-                    </div>
-                    <h5>our vision</h5>
-                    <p>Lorem ipsum dolor sit ame conse castei efte tuerg scn kt iscedring elit ende cd magum socadaiis nato
-                        ipsf.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-12 mb-30">
-                <div class="feature-item">
-                    <div class="icon-box">
-                        <i class="flaticon-list"></i>
-                    </div>
-                    <h5>missions</h5>
-                    <p>Lorem ipsum dolor sit ame conse castei efte tuerg scn kt iscedring elit ende cd magum socadaiis nato
-                        ipsf.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-12 mb-30">
-                <div class="feature-item">
-                    <div class="icon-box">
-                        <i class="flaticon-medal"></i>
-                    </div>
-                    <h5>our value</h5>
-                    <p>Lorem ipsum dolor sit ame conse castei efte tuerg scn kt iscedring elit ende cd magum socadaiis nato
-                        ipsf.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-12 mb-30">
-                <div class="feature-item">
-                    <div class="icon-box">
-                        <i class="flaticon-find-1"></i>
-                    </div>
-                    <h5>find your listing</h5>
-                    <p>Lorem ipsum dolor sit ame conse castei efte tuerg scn kt iscedring elit ende cd magum socadaiis nato
-                        ipsf.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-12 mb-30">
-                <div class="feature-item">
-                    <div class="icon-box">
-                        <i class="flaticon-map"></i>
-                    </div>
-                    <h5>find the way</h5>
-                    <p>Lorem ipsum dolor sit ame conse castei efte tuerg scn kt iscedring elit ende cd magum socadaiis nato
-                        ipsf.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-12 mb-30">
-                <div class="feature-item">
-                    <div class="icon-box">
-                        <i class="flaticon-support"></i>
-                    </div>
-                    <h5>24/7 support</h5>
-                    <p>Lorem ipsum dolor sit ame conse castei efte tuerg scn kt iscedring elit ende cd magum socadaiis nato
-                        ipsf.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- features end -->
 
 @if($categories->count() > 0)
 <!-- categories start-->
@@ -459,8 +347,7 @@
                         <path fill-rule="evenodd" d="M32.000,13.000 L32.000,7.000 L35.000,7.000 L35.000,13.000 L32.000,13.000 ZM24.000,4.000 L27.000,4.000 L27.000,16.000 L24.000,16.000 L24.000,4.000 ZM16.000,-0.000 L19.000,-0.000 L19.000,20.000 L16.000,20.000 L16.000,-0.000 ZM8.000,4.000 L11.000,4.000 L11.000,16.000 L8.000,16.000 L8.000,4.000 ZM-0.000,7.000 L3.000,7.000 L3.000,13.000 L-0.000,13.000 L-0.000,7.000 Z"
                         />
                     </svg>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor penatibus
-                        ean massa. Cum sociis natoqu penatibus et magnis dis parturient montes.</p>
+                    <!-- <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor penatibus ean massa. Cum sociis natoqu penatibus et magnis dis parturient montes.</p> -->
                 </div>
             </div>
         </div>
@@ -468,7 +355,7 @@
             @foreach($categories as $category)
             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-30">
                 <div class="ctg-item">
-                    <div class="icon-box" style="background-image:url('assets-web/img/home/cat8.jpg')">
+                    <div class="icon-box" style="background-image:url({{$category->image}})">
                         <i class="flaticon-fast-food"></i>
                     </div>
                     <div class="content-box p-4">
@@ -486,26 +373,7 @@
 <!-- categories end -->
 @endif
 
-@if($partners->count() > 0)
-<!-- partner start-->
-<div class="partner-one bg-red py-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="partner-slider owl-carousel owl-theme">
-                    @foreach($partners as $partner)
-                    <div class="partner-slide">
-                        <img src="{{URL::to($partner->image)}}" alt="partner">
-                    </div>
-                    @endforeach
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- partner end-->
-@endif
-
+@include('partials._partners')
 
 @if($home_posts->count() > 0)
 <!-- blog start-->

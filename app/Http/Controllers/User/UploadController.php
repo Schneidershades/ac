@@ -11,6 +11,7 @@ use Illuminate\Http\Response;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\UploadedFile;
 use App\Models\Advert;
+use App\Models\Functions\Helper;
 use App\Models\Upload;
 
 class UploadController extends Controller
@@ -35,16 +36,13 @@ class UploadController extends Controller
         if ($request->hasFile('file')) {
             $photo = $request->file('file');
 
-            $filename = Auth::user()->username.'-'.time().'-'.str_slug($uploadedFile->getClientOriginalName()).'.'.$uploadedFile->getClientOriginalExtension();
-
             try {
-                $image = Image::make($photo);
-                // If valid file
-                $image->resize(750, 500, function($constraint){ $constraint->aspectRatio(); });
-                $image->save('assets/images/advert/'.$filename);
+                $filename = auth()->user()->name.'-'.time().'-'.str_slug($uploadedFile->getClientOriginalName()).'.'.$uploadedFile->getClientOriginalExtension();
+
+                // returns the id from the database
+                return Helper::uploadAnything($photo, $filename, 'assets/images/advert/', $upload);
             }
             catch(NotReadableException $e) {
-//                flash('The File is not valid. Ensure the file is in either JPG, PNG or GIF format', 'danger');
                 return false;
             }
         }

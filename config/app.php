@@ -166,6 +166,7 @@ return [
          * Package Service Providers...
          */
         KingFlamez\Rave\RaveServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -226,6 +227,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Rave' => KingFlamez\Rave\Facades\Rave::class,
+        'Image' => Intervention\Image\Facades\Image::class,
 
     ],
 

@@ -6,9 +6,23 @@ Route::get('/about', 'PageController@about')->name('about');
 Route::get('/contact', 'PageController@contact')->name('contact');
 Route::post('/contact', 'PageController@contactStore')->name('contact.store');
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/conference/about', 'PageController@conference')->name('conference.about');
+Route::get('/news/round-table', 'PageController@roundTable')->name('round.table');
+
 Route::resource('/profile', 'User\ProfileController');
+Route::post('/profile/{id}', 'User\ProfileController@save')->name('profile.update');
+Route::get('/profile/edit/{id}', 'User\ProfileController@edit')->name('profile.edit');
+
 Route::get('/events', 'HomeController@index')->name('events');
-Route::resource('/advert', 'User\AdvertController');
+
+Route::get('listing/create', 'User\AdvertController@create')->name('listings.create.start');
+Route::get('listing/{listing}/create', 'User\AdvertController@create')->name('listings.create');
+Route::resource('/listings', 'User\AdvertController');
+
+Route::post('/{advert}/upload', 'User\UploadController@store')->name('upload.store');
+Route::get('/{advert}/upload/{upload}', 'User\UploadController@destroy')->name('upload.destroy');
+Route::get('/storage/{photo}', 'User\UploadController@getPhoto')->name('uploaded.image');
+
 Route::resource('/wallet', 'User\WalletController');
 Route::resource('/package', 'User\BuyPackageController');
 

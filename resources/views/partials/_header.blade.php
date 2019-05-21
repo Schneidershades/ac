@@ -79,7 +79,7 @@
                             <div class="main-menu collapse navbar-collapse" id="nav-content">
                                 <ul class="navbar-nav ml-auto align-items-lg-center">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="{{route('home')}}">Home</a>
+                                        <a class="nav-link" href="{{route('welcome')}}">Home</a>
                                     </li>
 
                                     <!-- <li class="nav-item">
@@ -92,31 +92,26 @@
                                             <li class="dropdown-item">
                                                 <a href="{{route('about')}}">The Community</a>
                                             </li>
-                                            <li class="dropdown-item">
-                                                <a href="">Gallery</a>
-                                            </li>
                                         </ul>
                                     </li>
 
                                     <li class="nav-item dropdown">
                                         <a href="javascript:void(0)" class="nav-link dropdown-toggle" data-toggle="dropdown">Conference </a>
                                         <ul class="dropdown-menu">
+                                            <!-- <li class="dropdown-item">
+                                                <a href="">Speakers</a>
+                                            </li> -->
                                             <li class="dropdown-item">
-                                                <a href="#">Speakers</a>
-                                            </li>
-                                            <li class="dropdown-item">
-                                                <a href="#">Registration</a>
+                                                <a href="{{route('conference.about')}}">Registration</a>
                                             </li>
                                         </ul>
                                     </li>
 
                                     <li class="nav-item">
-                                        <a class="nav-link" href="">Round Table</a>
+                                        <a class="nav-link" href="{{route('round.table')}}">Round Table</a>
                                     </li>
 
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="">Profile</a>
-                                    </li>
+                                    
 
                                     <li class="nav-item dropdown">
                                         <a href="javascript:void(0)" class="nav-link dropdown-toggle" data-toggle="dropdown">Business </a>
@@ -152,7 +147,7 @@
                                         </a>
                                     </li>
                                     @auth
-                                   <!--  <li class="nav-item d-lg-block d-none">
+                                    <!-- <li class="nav-item d-lg-block d-none">
                                         <a href="" class="btn btn-one btn-anim br-5 px-3 nav-btn">
                                             <i class="fa fa-plus-circle"></i> add listing
                                         </a>
