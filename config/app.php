@@ -165,8 +165,8 @@ return [
         /*
          * Package Service Providers...
          */
-        KingFlamez\Rave\RaveServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
+        KingFlamez\Rave\RaveServiceProvider::class,
         /*
          * Application Service Providers...
          */
