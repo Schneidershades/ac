@@ -1,11 +1,32 @@
 @extends('layouts.web')
 
+@section('stylesheets')
+<style>
+    .banner-image2::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("{{URL::to('assets-web/img/home/baner-img22.jpg')}}");
+
+    background-size: cover;
+    background-position: 0 0;
+    background-repeat: repeat-x;
+    z-index: -1;
+    -webkit-animation: bgslide 40s linear infinite;
+}
+</style>
+@endsection
+
 @section('content')
+
 
 @include('partials._search')
 <!-- banner start -->
 <section class="main-banner-2">
-    <div class="banner-image2" style="background-image: url('assets-web/img/home/baner-img22.jpg')">
+    <div class="banner-image2" >
         <div class="tilt-anim" data-tilt>
             <div class="banner-content">
                 <p class="text-uppercase mb-4">Welcome to The Achievers Confluence Hub</p>
