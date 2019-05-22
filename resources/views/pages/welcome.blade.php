@@ -5,7 +5,7 @@
 @include('partials._search')
 <!-- banner start -->
 <section class="main-banner-2">
-    <div class="banner-image2" style="background-image: url('assets-web/img/home/baner-img.jpg')">
+    <div class="banner-image2" style="background-image: url('assets-web/img/home/baner-img22.jpg')">
         <div class="tilt-anim" data-tilt>
             <div class="banner-content">
                 <p class="text-uppercase mb-4">Welcome to The Achievers Confluence Hub</p>
@@ -74,7 +74,7 @@
 </section>
 <!-- steps-section end -->
 
-@foreach($adverts as $advert)
+@if($adverts->count() > 0)
 <!-- popular list start-->
 <section class="popular-list sp-100 bg-w">
     <div class="container">
@@ -326,7 +326,7 @@
     </div>
 </section>
 <!-- popular list end -->
-@endforeach
+@endif
 
 
 @include('partials._actionmark')
