@@ -5,7 +5,7 @@
 @include('partials._search')
 <!-- banner start -->
 <section class="main-banner-2">
-    <div class="banner-image2">
+    <div class="banner-image2" style="background-image: url('assets-web/img/home/baner-img22.jpg')">
         <div class="tilt-anim" data-tilt>
             <div class="banner-content">
                 <p class="text-uppercase mb-4">Welcome to The Achievers Confluence Hub</p>
