@@ -201,7 +201,7 @@ class CategorySeeder extends Seeder
 
         Category::Create([
             'name'                            => 'Mechanical Engineering',
-            'image'                            => 'assets-web/img/categories/mech.jpg',
+            'image'                            => 'assets-web/img/categories/mech.png',
             'slug'                            => str_slug('Mechanical Engineering'),
         ]);
 
@@ -220,7 +220,7 @@ class CategorySeeder extends Seeder
 
         Category::Create([
             'name'                            => 'Customer Service',
-            'image'                            => 'assets-web/img/categories/customer.jpg',
+            'image'                            => 'assets-web/img/categories/customer-service.jpg',
             'slug'                            => str_slug('Customer Service'),
         ]);
 

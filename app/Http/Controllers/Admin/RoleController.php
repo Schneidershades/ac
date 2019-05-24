@@ -13,22 +13,14 @@ class RoleController extends Controller
     {
         $this->middleware('admin');
     }
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+ 
     public function index()
     {
         return view('backend.admin.role.index')
             ->with('roles', Role::all());
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
         return view('backend.admin.role.create');
@@ -43,12 +35,6 @@ class RoleController extends Controller
         return redirect()->back();
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
         $role = Role::where('id', $id)->first();
@@ -60,13 +46,7 @@ class RoleController extends Controller
             ->with('role', $role);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, $id)
     {
         // dd($request->all());
@@ -80,12 +60,6 @@ class RoleController extends Controller
         Session::flash('success', 'The role has been updated');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         $role = Role::find($id);

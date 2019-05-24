@@ -8,6 +8,7 @@ use App\Models\Advert;
 use App\Models\AdvertTag;
 use App\Models\Category;
 use App\Models\Country;
+use App\Models\State;
 use App\Models\Tag;
 use App\Models\Package;
 use Session;
@@ -17,11 +18,6 @@ use Auth;
 
 class AdvertController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $adverts = auth()->user()->adverts()->latest()->finished()->get();
@@ -31,11 +27,6 @@ class AdvertController extends Controller
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create(Advert $advert)
     {
         if(!$advert->exists){
@@ -44,11 +35,13 @@ class AdvertController extends Controller
             return view('users.listing_add')
                 ->with('listing', $advert)
                 ->with('categories', Category::all())
+                ->with('states', State::all())
                 ->with('countries', Country::all());
         }
 
         return view('users.listing_add')
             ->with('categories', Category::all())
+            ->with('states', State::all())
             ->with('countries', Country::all());
     }
 
@@ -96,12 +89,6 @@ class AdvertController extends Controller
         ]);
     }
     
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request, $advert)
     {   
         $advert = Advert::where('identifier', $advert)->first();
@@ -202,24 +189,12 @@ class AdvertController extends Controller
 
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($slug)
     {
         $slug = Advert::where('slug', $slug);
         return view('users.advert.show')->with('slug', $slug);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($slug)
     {
         $slug = Advert::where('slug', $slug)->first();
@@ -230,13 +205,6 @@ class AdvertController extends Controller
             ->with('tags', Tag::all());
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $slug)
     {
 
@@ -362,12 +330,7 @@ class AdvertController extends Controller
         return redirect()->route('account.advert.index');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    
     public function destroy($id)
     {
         $advert = Advert::find($id);

@@ -10,16 +10,15 @@
   <div class="simplebar-scroll-content" style="padding-right: 17px; margin-bottom: -34px;">
     <div class="simplebar-content" style="padding-bottom: 17px; margin-right: -17px;">
      <div class="brand-logo">
-      <a href="index.html">
+      <a href="">
        <img src="{{URL::to('assets/images/logo-icon.png')}}" class="logo-icon" alt="logo icon">
        <h5 class="logo-text">Hub</h5>
      </a>
    </div>
    <ul class="sidebar-menu do-nicescrol in">
-      @if(auth()->user()->hasRole('admin'))
       <li class="sidebar-header">ADMIN NAVIGATION</li>
       <!-- <li>
-        <a href="index.html" class="waves-effect">
+        <a href="" class="waves-effect">
           <i class="icon-home"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
         </a>
         <ul class="sidebar-submenu">
@@ -27,22 +26,25 @@
         </ul>
       </li> -->
       
-      <!-- <li>
-        <a href="index.html" class="waves-effect">
+      <li>
+        <a href="" class="waves-effect">
           <i class="icon-home"></i> <span>Activities</span> <i class="fa fa-angle-left pull-right"></i>
         </a>
         <ul class="sidebar-submenu">
-          <li><a href=""><i class="fa fa-circle-o"></i> All Users </a></li>
-          <li><a href=""><i class="fa fa-circle-o"></i> All Roles </a></li>
-          <li><a href=""><i class="fa fa-circle-o"></i> Role Discount </a></li>
-          <li><a href=""><i class="fa fa-circle-o"></i> Users Discounts </a></li> 
-          <li><a href=""><i class="fa fa-circle-o"></i> All Payments </a></li>
-          <li><a href=""><i class="fa fa-circle-o"></i> All Service Orders </a></li>         
+          <li><a href="{{route('admin-events.index')}}"><i class="fa fa-circle-o"></i> Events</a></li>
+          <li><a href="{{route('admin-users.index')}}"><i class="fa fa-circle-o"></i> Users </a></li>
+          <li><a href="{{route('admin-business-categories.index')}}"><i class="fa fa-circle-o"></i> Business Categories </a></li>
+          <li><a href="{{route('admin-post-categories.index')}}"><i class="fa fa-circle-o"></i> Post Categories </a></li>
+          <li><a href="{{route('admin-posts.index')}}"><i class="fa fa-circle-o"></i> Posts </a></li>
+          <li><a href="{{route('admin-tags.index')}}"><i class="fa fa-circle-o"></i> Tags </a></li>
+          <li><a href="{{route('admin-tags.settings')}}"><i class="fa fa-circle-o"></i> Settings</a></li>
+          <li><a href="{{route('admin-tags.payments')}}"><i class="fa fa-circle-o"></i> Payments </a></li>        
+          <li><a href="{{route('admin-tags.transaction')}}"><i class="fa fa-circle-o"></i> Transactions </a></li>        
         </ul>
-      </li> -->
+      </li>
 
      <!--  <li>
-        <a href="index.html" class="waves-effect">
+        <a href="" class="waves-effect">
           <i class="icon-home"></i> <span>Website Content</span> <i class="fa fa-angle-left pull-right"></i>
         </a>
         <ul class="sidebar-submenu">
@@ -54,7 +56,6 @@
         </ul>
       </li>
  -->
-      @endif
 
 
       <li class="sidebar-header">USERS NAVIGATION</li>
@@ -79,7 +80,7 @@
           <li><a href="{{route('profile.edit', auth()->user()->id)}}"><i class="fa fa-edit"></i>Edit Profile </a></li>            
           <li><a href="{{route('listings.index')}}"><i class="icon-envelope"></i>My Listings </a></li>                  
           <li><a href="{{route('listings.create.start')}}"><i class="fa fa-user"></i>Create Listings </a></li>                  
-          <li><a href=""><i class="fa fa-user"></i>Conference Activity </a></li>                  
+          <li><a href="{{route('user-event-package.index')}}}"><i class="fa fa-user"></i>Conference Activity </a></li>
           <li><a href="{{route('wallet.create')}}"><i class="fa fa-money"></i>Fund Wallet </a></li>     
           <li><a href="{{route('package.create')}}"><i class="fa fa-circle-o"></i>Upgrade Package </a></li>     
           <li><a href="{{route('wallet.index')}}"><i class="icon-calendar"></i>My Transaction </a></li>             

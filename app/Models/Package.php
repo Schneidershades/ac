@@ -20,4 +20,9 @@ class Package extends Model
     {
        return $this->hasMany(PackageFeature::class);
     }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

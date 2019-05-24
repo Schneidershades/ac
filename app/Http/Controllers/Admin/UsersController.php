@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Models\Role;
+use App\Models\Permission;
+use App\Models\Package;
 use Session;
 
 class UsersController extends Controller
@@ -45,6 +47,8 @@ class UsersController extends Controller
         $user = User::find($id);
         return view('backend.admin.users.edit')
             ->with('user', $user)
+            ->with('permissions', Permission::all())
+            ->with('packages', Package::all())
             ->with('roles', Role::all());
     }
 
@@ -64,7 +68,12 @@ class UsersController extends Controller
             $user->active = 'no';
         }
         $user->role_id = $request->role_id;
+        $user->package_id = $request->package_id;
         $user->save();
+        
+        $user->roles()->sync($request->roles);
+        $user->givePermissionTo($request->permissions);
+
         return redirect()->route('user.index');
         Session::flash('success', 'The service price details has been saved');
     }

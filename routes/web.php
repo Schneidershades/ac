@@ -19,6 +19,8 @@ Route::get('listing/create', 'User\AdvertController@create')->name('listings.cre
 Route::get('listing/{listing}/create', 'User\AdvertController@create')->name('listings.create');
 Route::resource('/listings', 'User\AdvertController');
 
+Route::resource('/user-event-package', 'User\EventPackageController');
+
 Route::post('/{advert}/upload', 'User\UploadController@store')->name('upload.store');
 Route::get('/{advert}/upload/{upload}', 'User\UploadController@destroy')->name('upload.destroy');
 Route::get('/storage/{photo}', 'User\UploadController@getPhoto')->name('uploaded.image');
@@ -28,3 +30,15 @@ Route::resource('/package', 'User\BuyPackageController');
 
 Route::post('/pay', 'User\RaveController@initialize')->name('pay');
 Route::post('/rave/callback', 'User\RaveController@callback')->name('callback');
+
+
+
+Route::resource('/admin-events', 'Admin\EventController');
+Route::resource('/admin-users', 'Admin\UsersController');
+Route::resource('/admin-business-categories', 'Admin\CategoryController');
+Route::resource('/admin-posts', 'Admin\PostController');
+Route::resource('/admin-tags', 'Admin\PostController');
+Route::resource('/admin-adverts', 'Admin\AdvertController');
+Route::resource('/admin-settings', 'Admin\SettingsController');
+Route::resource('/admin-payments', 'Admin\PaymentController');
+Route::resource('/admin-transaction', 'Admin\TransactionController');

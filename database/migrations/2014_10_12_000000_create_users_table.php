@@ -37,6 +37,8 @@ class CreateUsersTable extends Migration
             $table->string('image')->nullable();
             $table->text('about')->nullable();
             $table->string('package_id')->nullable();
+            $table->string('package_recurring')->default('yes');
+            $table->string('last_recurring_date')->default('yes');
             $table->string('category_id')->nullable();
             $table->string('country_id')->nullable();
             $table->string('state_id')->nullable();

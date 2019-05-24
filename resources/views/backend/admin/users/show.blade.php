@@ -59,8 +59,13 @@
 
 
 					<div class="col-md-3">
-	              		<label for="input-9">ACTIVE</label><br>
+	              		<label for="input-9">User Status</label><br>
 	              		<span class="badge badge-danger m-1">{{$user->active}}</span>
+					</div>
+
+					<div class="col-md-3">
+	              		<label for="input-9">Package</label><br>
+	              		<span class="badge badge-danger m-1">{{$user->package->name}}</span>
 					</div>
 				</div><br><br>		
 

@@ -13,11 +13,7 @@ class PartnerController extends Controller
     {
         $this->middleware('admin');
     }
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+   
     public function index()
     {
         return view('backend.admin.partners.index')

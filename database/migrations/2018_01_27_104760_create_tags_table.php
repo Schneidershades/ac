@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePackageUsersTable extends Migration
+class CreateTagsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreatePackageUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('package_users', function (Blueprint $table) {
+        Schema::create('tags', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('user_id')->unsigned()->nullable();
-            $table->integer('package_id')->unsigned()->nullable();
-            $table->integer('recurred')->nullable();
+            $table->string('name')->nullable();
+            $table->text('slug')->nullable();
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ class CreatePackageUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('package_users');
+        Schema::dropIfExists('tags');
     }
 }

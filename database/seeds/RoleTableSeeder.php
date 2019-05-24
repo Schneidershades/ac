@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Models\User;
+use App\Models\Role;
 
 class RoleTableSeeder extends Seeder
 {
@@ -12,10 +12,12 @@ class RoleTableSeeder extends Seeder
      */
     public function run()
     {
-    	
-        Package::Create([
-        	'user_id'                            => 1,
-        	'role_id'                            => 1,
+        Role::Create([
+            'name'             => 'admin',
+        ]);
+        
+        Role::Create([
+            'name'             => 'user',
         ]);
     }
 }

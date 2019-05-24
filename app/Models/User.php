@@ -7,6 +7,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Traits\Permissions\HasPermissionsTrait;
 Use App\Models\PackageUser;
+Use App\Models\EventTransaction;
 
 class User extends Authenticatable
 {
@@ -96,7 +97,12 @@ class User extends Authenticatable
 
     public function package()
     {
-        return $this->hasOne(PackageUser::class, 'user_id');
+        return $this->belongsTo(Package::class);
+    }
+
+    public function eventTransaction()
+    {
+        return $this->hasMany(EventTransaction::class);
     }
 
 

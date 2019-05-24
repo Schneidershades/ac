@@ -109,19 +109,19 @@
                         <path fill-rule="evenodd" d="M32.000,13.000 L32.000,7.000 L35.000,7.000 L35.000,13.000 L32.000,13.000 ZM24.000,4.000 L27.000,4.000 L27.000,16.000 L24.000,16.000 L24.000,4.000 ZM16.000,-0.000 L19.000,-0.000 L19.000,20.000 L16.000,20.000 L16.000,-0.000 ZM8.000,4.000 L11.000,4.000 L11.000,16.000 L8.000,16.000 L8.000,4.000 ZM-0.000,7.000 L3.000,7.000 L3.000,13.000 L-0.000,13.000 L-0.000,7.000 Z"
                         />
                     </svg>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor penatibus
-                        ean massa. Cum sociis natoqu penatibus et magnis dis parturient montes.</p>
+                    <p>Get to Meet your business needs here</p>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-12">
                 <div class="popular-list-slider mb-0">
+                    @foreach($adverts as $advert)
                     <div class="listing-item p-2">
                         <div class="img-holder">
                             <span class="offer">save 49%
                             </span>
-                            <img src="assets-web/img/home/pl-slide1.jpg" alt="list">
+                            <img src="{{URL::to($advert->featured)}}" alt="list">
                             <div class="rate-like centering justify-content-between">
                                 <div class="rating">
                                     <i class="fa fa-star"></i>
@@ -139,16 +139,16 @@
                             <ul class="ctg-info py-2 mb-3">
                                 <li>
                                     <a href="#">
-                                        <i class="flaticon-cutlery mr-2"></i> restaurants</a>
+                                        <i class="flaticon-cutlery mr-2"></i> {{$advert->category->name}}</a>
                                 </li>
                                 <li>
-                                    <span class="c-theme"> open now</span>
+                                    <span class="c-theme"> Available</span>
                                 </li>
                             </ul>
                             <h5 class="mb-2">
-                                <a href="listing-detail.html">the lounge & bar</a>
+                                <a href="">{{$advert->type}}</a>
                             </h5>
-                            <p>Donec pede justo, fringilla vel, aliquet nectior</p>
+                            <p>{{$advert->title}}</p>
                             <ul class="ctg-info2 pt-2 mt-3 centering justify-content-between">
                                 <li class="mt-1">
                                     <a href="#">
@@ -156,191 +156,12 @@
                                 </li>
                                 <li class="mt-1">
                                     <a href="#">
-                                        <i class="fa fa-phone mr-2"></i>0123-456-789</a>
+                                        <i class="fa fa-phone mr-2"></i>{{$advert->phone_contact}}</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <div class="listing-item p-2">
-                        <div class="img-holder">
-                            <span class="offer">save 30%
-                            </span>
-                            <img src="assets-web/img/home/pl-slide2.jpg" alt="list">
-                            <div class="rate-like centering justify-content-between">
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                </div>
-
-                                <a class="likes" href="#">
-                                    <i class="far fa-heart"></i>3
-                                </a>
-                            </div>
-                        </div>
-                        <div class="list-content p-2">
-                            <ul class="ctg-info py-2 mb-3">
-                                <li>
-                                    <a href="#">
-                                        <i class="flaticon-shop mr-2"></i>shopping</a>
-                                </li>
-                                <li>
-                                    <span class="c-theme"> open now</span>
-                                </li>
-                            </ul>
-                            <h5 class="mb-2">
-                                <a href="listing-detail.html">the best shop in city</a>
-                            </h5>
-                            <p>Donec pede justo, fringilla vel, aliquet nectior</p>
-                            <ul class="ctg-info2 pt-2 mt-3 centering justify-content-between">
-                                <li class="mt-1">
-                                    <a href="#">
-                                        <i class="fa fa-map-marker-alt mr-2"></i>San Francisco, USA</a>
-                                </li>
-                                <li class="mt-1">
-                                    <a href="#">
-                                        <i class="fa fa-phone mr-2"></i>0123-456-789</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="listing-item p-2">
-                        <div class="img-holder">
-                            <span class="offer">save 19%
-                            </span>
-                            <img src="assets-web/img/home/pl-slide3.jpg" alt="list">
-                            <div class="rate-like centering justify-content-between">
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                </div>
-
-                                <a class="likes" href="#">
-                                    <i class="far fa-heart"></i>6
-                                </a>
-                            </div>
-                        </div>
-                        <div class="list-content p-2">
-                            <ul class="ctg-info py-2 mb-3">
-                                <li>
-                                    <a href="#">
-                                        <i class="flaticon-cheers mr-2"></i>nightlife</a>
-                                </li>
-                                <li>
-                                    <span class="c-theme"> open now</span>
-                                </li>
-                            </ul>
-                            <h5 class="mb-2">
-                                <a href="listing-detail.html">enjoy best nightlife</a>
-                            </h5>
-                            <p>Donec pede justo, fringilla vel, aliquet nectior</p>
-                            <ul class="ctg-info2 pt-2 mt-3 centering justify-content-between">
-                                <li class="mt-1">
-                                    <a href="#">
-                                        <i class="fa fa-map-marker-alt mr-2"></i>San Francisco, USA</a>
-                                </li>
-                                <li class="mt-1">
-                                    <a href="#">
-                                        <i class="fa fa-phone mr-2"></i>0123-456-789</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="listing-item p-2">
-                        <div class="img-holder">
-                            <span class="offer">save 59%
-                            </span>
-                            <img src="assets-web/img/home/pl-slide4.jpg" alt="list">
-                            <div class="rate-like centering justify-content-between">
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                </div>
-
-                                <a class="likes" href="#">
-                                    <i class="far fa-heart"></i> 9
-                                </a>
-                            </div>
-                        </div>
-                        <div class="list-content p-2">
-                            <ul class="ctg-info py-2 mb-3">
-                                <li>
-                                    <a href="#">
-                                        <i class="flaticon-spa mr-2"></i>beauty & spa</a>
-                                </li>
-                                <li>
-                                    <span class="c-theme"> open now</span>
-                                </li>
-                            </ul>
-                            <h5 class="mb-2">
-                                <a href="listing-detail.html">best beauty & spa services</a>
-                            </h5>
-                            <p>Donec pede justo, fringilla vel, aliquet nectior</p>
-                            <ul class="ctg-info2 pt-2 mt-3 centering justify-content-between">
-                                <li class="mt-1">
-                                    <a href="#">
-                                        <i class="fa fa-map-marker-alt mr-2"></i>San Francisco, USA</a>
-                                </li>
-                                <li class="mt-1">
-                                    <a href="#">
-                                        <i class="fa fa-phone mr-2"></i>0123-456-789</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="listing-item p-2">
-                        <div class="img-holder">
-                            <span class="offer">save 20%
-                            </span>
-                            <img src="assets-web/img/home/pl-slide5.jpg" alt="list">
-                            <div class="rate-like centering justify-content-between">
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-
-                                <a class="likes" href="#">
-                                    <i class="far fa-heart"></i> 14
-                                </a>
-                            </div>
-                        </div>
-                        <div class="list-content p-2">
-                            <ul class="ctg-info py-2 mb-3">
-                                <li>
-                                    <a href="#">
-                                        <i class="flaticon-find mr-2"></i>desitination</a>
-                                </li>
-                                <li>
-                                    <span class="c-theme"> open now</span>
-                                </li>
-                            </ul>
-                            <h5 class="mb-2">
-                                <a href="listing-detail.html">best destinations in city</a>
-                            </h5>
-                            <p>Donec pede justo, fringilla vel, aliquet nectior</p>
-                            <ul class="ctg-info2 pt-2 mt-3 centering justify-content-between">
-                                <li class="mt-1">
-                                    <a href="#">
-                                        <i class="fa fa-map-marker-alt mr-2"></i>San Francisco, USA</a>
-                                </li>
-                                <li class="mt-1">
-                                    <a href="#">
-                                        <i class="fa fa-phone mr-2"></i>0123-456-789</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -416,162 +237,34 @@
             </div>
         </div>
         <div class="row">
+            @foreach($home_posts as $post)
             <div class="col-xl-4 col-lg-6 col-md-6 col-12">
                 <div class="blog-item blog-1" style="background-image:url('assets-web/img/blog/blog1.png')">
                     <div class="blog-date p-2">
-                        <span>11 april 2019</span>
+                        <span>{{$post->title}}</span>
                     </div>
                     <div class="blog-content">
                         <h5>
-                            <a href="blog-detail.html">Nullam quis ante tiam sit ame orci eget erovtiu faucid nbys</a>
+                            <a href="blog-detail.html">{{$post->excerpt}}</a>
                         </h5>
                         <ul class="blog-meta d-flex justify-content-between align-items-center">
                             <li>
                                 <span class="mr-1">
-                                    <img src="assets-web/img/blog/aut-1.png" alt="#">
+                                    <img src="{{URL::to($post->excerpt)}}" alt="#">
                                 </span>
-                                <a href="#">Johnathan Doe</a>
+                                <!-- <a href="#">Johnathan Doe</a> -->
                             </li>
                             <li>
                                 <a href="#">
                                     <i class="fa fa-eye mr-1"></i>
-                                    20
+                                    {{$post->views}}
                                 </a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-4 col-lg-6 col-md-6 col-12">
-                <div class="blog-item blog-1" style="background-image:url('assets-web/img/blog/blog2.png')">
-                    <div class="blog-date p-2">
-                        <span>21 april 2019</span>
-                    </div>
-                    <div class="blog-content">
-                        <h5>
-                            <a href="blog-detail.html">Nullam quis ante tiam sit ame orci eget erovtiu faucid nbys</a>
-                        </h5>
-                        <ul class="blog-meta d-flex justify-content-between align-items-center">
-                            <li>
-                                <span class="mr-1">
-                                    <img src="assets-web/img/blog/aut-2.png" alt="#">
-                                </span>
-                                <a href="#">Alicia Thomas</a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-eye mr-1"></i>
-                                    20
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-6 col-md-6 col-12">
-                <div class="blog-item blog-1" style="background-image:url('assets-web/img/blog/blog3.png')">
-                    <div class="blog-date p-2">
-                        <span>01 april 2019</span>
-                    </div>
-                    <div class="blog-content">
-                        <h5>
-                            <a href="blog-detail.html">Nullam quis ante tiam sit ame orci eget erovtiu faucid nbys</a>
-                        </h5>
-                        <ul class="blog-meta d-flex justify-content-between align-items-center">
-                            <li>
-                                <span class="mr-1">
-                                    <img src="assets-web/img/blog/aut-3.png" alt="#">
-                                </span>
-                                <a href="#">Johnis Doe</a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-eye mr-1"></i>
-                                    20
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-6 col-md-6 col-12">
-                <div class="blog-item blog-1" style="background-image:url('assets-web/img/blog/blog4.png')">
-                    <div class="blog-date p-2">
-                        <span>09 april 2019</span>
-                    </div>
-                    <div class="blog-content">
-                        <h5>
-                            <a href="blog-detail.html">Nullam quis ante tiam sit ame orci liamco non.</a>
-                        </h5>
-                        <ul class="blog-meta d-flex justify-content-between align-items-center">
-                            <li>
-                                <span class="mr-1">
-                                    <img src="assets-web/img/blog/aut-1.png" alt="#">
-                                </span>
-                                <a href="#">Johnas Doe</a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-eye mr-1"></i>
-                                    20
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-6 col-lg-6 col-md-6 col-12">
-                <div class="blog-item blog-1" style="background-image:url('assets-web/img/blog/blog5.png')">
-                    <div class="blog-date p-2">
-                        <span>15 april 2019</span>
-                    </div>
-                    <div class="blog-content">
-                        <h5>
-                            <a href="blog-detail.html">Amet incididunt tempor aliqua mollit magna proident sit amet elit nostrud. </a>
-                        </h5>
-                        <ul class="blog-meta d-flex justify-content-between align-items-center">
-                            <li>
-                                <span class="mr-1">
-                                    <img src="assets-web/img/blog/aut-3.png" alt="#">
-                                </span>
-                                <a href="#">Alexi Johnas </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-eye mr-1"></i>
-                                    20
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-6 col-md-6 col-12">
-                <div class="blog-item blog-1" style="background-image:url('assets-web/img/blog/blog6.png')">
-                    <div class="blog-date p-2">
-                        <span>13 april 2019</span>
-                    </div>
-                    <div class="blog-content">
-                        <h5>
-                            <a href="blog-detail.html">Nullam quis ante tiam sit ame orci liamco non.</a>
-                        </h5>
-                        <ul class="blog-meta d-flex justify-content-between align-items-center">
-                            <li>
-                                <span class="mr-1">
-                                    <img src="assets-web/img/blog/aut-2.png" alt="#">
-                                </span>
-                                <a href="#">sehny Doe</a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-eye mr-1"></i>
-                                    20
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            @endforeach
             <div class="col-12 text-center mt-30">
                 <a href="#" class="btn btn-one btn-anim">view all</a>
             </div>

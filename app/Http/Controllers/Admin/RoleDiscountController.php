@@ -16,11 +16,7 @@ class RoleDiscountController extends Controller
     {
         $this->middleware('admin');
     }
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+ 
     public function index()
     {
         $roleDiscounts = RoleDiscount::all();
@@ -28,11 +24,7 @@ class RoleDiscountController extends Controller
                 ->with('discounts', $roleDiscounts);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
         return view('backend.admin.roleDiscounts.create')
@@ -52,12 +44,7 @@ class RoleDiscountController extends Controller
         return redirect()->back();
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+ 
     public function store(Request $request)
     {   
         // dd($request->all());
@@ -91,12 +78,6 @@ class RoleDiscountController extends Controller
         Session::flash('success', 'The role discount details has been saved');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         $roleDiscount = RoleDiscount::find($id);

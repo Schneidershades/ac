@@ -15,6 +15,8 @@ class CreateEventTransactionsTable extends Migration
     {
         Schema::create('event_transactions', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->integer('event_package_id')->nullable();
+            $table->string('status')->default('pending');
             $table->timestamps();
         });
     }
