@@ -40,13 +40,13 @@
                     <!-- Tab panes -->
                     <div class="tab-content">
                         <div role="tabpanel" class="tab-pane fade in active show" id="login">
-                            <form class="custom-form" id="loginform"  method="POST" action="{{ route('login') }}">
+                            <form class="custom-form" method="POST" action="{{ route('login') }}">
                                 @csrf
                                 <div class="row">
 
                                     <div class="col-12">
                                         <span class="fa fa-user"></span>
-                                        <input type="text" id="name1"  type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+                                        <input type="text" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
                                         @if ($errors->has('email'))
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $errors->first('email') }}</strong>
@@ -55,7 +55,7 @@
                                     </div>
                                     <div class="col-12">
                                         <span class="fa fa-lock"></span>
-                                        <input type="password" id="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+                                        <input type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
                                         @if ($errors->has('password'))
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $errors->first('password') }}</strong>
@@ -65,7 +65,7 @@
 
 
                                     <div class="col-6">
-                                        <input type="checkbox" name="remember" id="checkbox_id1" value="value"  {{ old('remember') ? 'checked' : '' }}>
+                                        <input type="checkbox" name="remember" value="value"  {{ old('remember') ? 'checked' : '' }}>
 
                                         <label for="checkbox_id1"> {{ __('Remember Me') }}</label>
                                     </div>
@@ -85,7 +85,7 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <span class="fa fa-user"></span>
-                                        <input type="text" id="name2" class="form-control" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus placeholder="Enter Organization/ Individual Name">
+                                        <input type="text" class="form-control" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus placeholder="Enter Organization/ Individual Name">
 
                                         @if ($errors->has('name'))
                                             <span class="invalid-feedback" role="alert">
