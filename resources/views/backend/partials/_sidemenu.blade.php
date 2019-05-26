@@ -34,7 +34,6 @@
           <li><a href="{{route('admin-events.index')}}"><i class="fa fa-circle-o"></i> Events</a></li>
           <li><a href="{{route('admin-users.index')}}"><i class="fa fa-circle-o"></i> Users </a></li>
           <li><a href="{{route('admin-business-categories.index')}}"><i class="fa fa-circle-o"></i> Business Categories </a></li>
-          <li><a href="{{route('admin-post-categories.index')}}"><i class="fa fa-circle-o"></i> Post Categories </a></li>
           <li><a href="{{route('admin-posts.index')}}"><i class="fa fa-circle-o"></i> Posts </a></li>
           <li><a href="{{route('admin-tags.index')}}"><i class="fa fa-circle-o"></i> Tags </a></li>
           <li><a href="{{route('admin-tags.settings')}}"><i class="fa fa-circle-o"></i> Settings</a></li>
