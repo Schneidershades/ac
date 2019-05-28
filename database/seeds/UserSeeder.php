@@ -12,22 +12,19 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
+        $user2 = User::Create([
+            'name'                            => 'Genesis',
+            'email'                            => 'info@admin.com',
+            'password'                      => bcrypt('password'),
+            'package_id'                      => 1,
+        ]);
+
         $user1 = User::Create([
         	'name'                            => 'Busayo Schneider',
         	'email'                            => 'admin@admin.com',
         	'password'                      => bcrypt('password'),
         	'package_id'                      => 1,
         ]);
-
-
-        
-        $user2 = User::Create([
-        	'name'                            => 'Genesis',
-        	'email'                            => 'info@admin.com',
-        	'password'                      => bcrypt('password'),
-        	'package_id'                      => 1,
-        ]);
-
   
 
         $user3 = User::Create([
@@ -36,8 +33,6 @@ class UserSeeder extends Seeder
         	'password'                      => bcrypt('password'),
         	'package_id'                      => 1,
         ]);
-
-
 
 
         $user4 = User::Create([
