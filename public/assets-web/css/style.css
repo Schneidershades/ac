@@ -235,7 +235,6 @@ option:hover {
     margin-bottom: 30px;
     border: 0;
     border: 1px solid #e1e1e1;
-    text-transform: capitalize;
     -webkit-box-shadow: none;
     box-shadow: none;
     border-radius: 5px;
@@ -322,31 +321,26 @@ h6 {
 h1 {
     font-size: 55px;
     font-weight: 600;
-    text-transform: capitalize;
 }
 
 h2 {
     font-size: 48px;
     font-weight: 600;
-    text-transform: capitalize;
 }
 
 h3 {
     font-size: 40px;
     font-weight: 600;
-    text-transform: capitalize;
 }
 
 h4 {
     font-size: 22px;
     font-weight: 600;
-    text-transform: capitalize;
 }
 
 h5 {
     font-size: 18px;
     font-weight: 600;
-    text-transform: capitalize;
 }
 
 h5 a,
@@ -365,7 +359,6 @@ h5:hover a {
 h6 {
     font-size: 16px;
     font-weight: 600;
-    text-transform: capitalize;
 }
 
 .sp-100 {
@@ -439,7 +432,6 @@ h6 {
     border-radius: 100px;
     font-size: 14px;
     padding: 11px 30px 8px;
-    text-transform: capitalize;
     font-weight: 600;
     position: relative;
     -webkit-transition: all .3s ease;
@@ -1455,7 +1447,6 @@ h6 {
 }
 
 .head-contact li {
-    text-transform: capitalize;
     line-height: 1;
     display: inline-block;
     margin: 5px 0;
@@ -1499,7 +1490,6 @@ h6 {
 
 .language-drop .dropdown-item {
     padding: 10px;
-    text-transform: capitalize;
     background-color: #fff;
     font-size: 14px;
 }
@@ -1662,7 +1652,6 @@ h6 {
     opacity: 1;
     font-size: 15px;
     color: #000;
-    text-transform: capitalize;
     text-shadow: none;
     background: rgba(255, 255, 255, 0.40);
     height: 30px;
@@ -1696,7 +1685,6 @@ h6 {
 
 .top-search .form-control {
     color: #fff;
-    text-transform: capitalize;
     background: transparent;
     border: 0;
     border-bottom: 1px solid #fff;
@@ -1851,7 +1839,6 @@ h6 {
     color: #fff;
     padding: 1px 5px 0 0;
     font-size: 14px;
-    text-transform: capitalize;
     z-index:1;
 }
 
@@ -1899,7 +1886,6 @@ h6 {
     padding-right: 15px;
     border-right: 1px solid #ebebeb;
     margin-right: 15px;
-    text-transform: capitalize;
     color: #000;
     display: inline-block;
     font-size: 14px;
@@ -2494,7 +2480,6 @@ li.list-rating i {
 }
 
 .blog-meta li {
-    text-transform: capitalize;
 }
 
 .blog-meta li span {
@@ -2510,7 +2495,6 @@ li.list-rating i {
 
 .blog-date span {
     font-weight: 400;
-    text-transform: capitalize;
     color: #000;
     max-width: 70px;
     border-radius: 5px;
@@ -2707,7 +2691,6 @@ blockquote p {
 }
 
 .blog-navigation .navi {
-    text-transform: capitalize;
     color: #000
 }
 
@@ -2741,7 +2724,6 @@ ol.comment-list {
 .comment-author .fn {
     font-size: 18px;
     font-weight: 600;
-    text-transform: capitalize;
     color: #232323;
     font-style: normal;
     font-family: 'Josefin Sans', sans-serif;
@@ -2749,7 +2731,6 @@ ol.comment-list {
 }
 
 .says {
-    text-transform: capitalize;
 }
 
 .comment-meta a {
@@ -2765,7 +2746,6 @@ ol.comment-list {
     border-radius: 100px;
     font-size: 14px;
     padding: 8px 25px 6px;
-    text-transform: capitalize;
     position: relative;
     -webkit-transition: all .3s ease;
     -o-transition: all .3s ease;
@@ -2829,7 +2809,6 @@ ol.comment-list {
 }
 
 .page-numbers {
-    text-transform: capitalize;
     height: 30px;
     width: 30px;
     line-height: 30px;
@@ -2996,7 +2975,6 @@ ol.comment-list {
 
 .author-info span {
     color: #000;
-    text-transform: capitalize;
     font-size: 14px;
 }
 
@@ -3010,7 +2988,6 @@ ol.comment-list {
     justify-content: space-between;
     margin-bottom: 15px;
     position: relative;
-    text-transform: capitalize;
     -webkit-transition: all .3s ease;
     -o-transition: all .3s ease;
     transition: all .3s ease;
@@ -3118,7 +3095,6 @@ ol.comment-list {
     -o-transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    text-transform: capitalize;
     padding: 5px 20px 3px;
     border-radius: 30px;
 }
@@ -3212,7 +3188,6 @@ ol.comment-list {
 .counter-box p {
     color: #fff;
     margin-bottom: 0;
-    text-transform: capitalize;
 }
 
 /* =====================
@@ -3546,7 +3521,6 @@ ol.comment-list {
 
 .t-inner span {
     display: block;
-    text-transform: capitalize;
     padding-bottom: 14px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
@@ -3584,7 +3558,6 @@ ol.comment-list {
     color: #2520ff;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 700;
-    text-transform: capitalize;
 }
 
 .error-content p {
@@ -3641,7 +3614,6 @@ ol.comment-list {
     font-size: 14px;
     color: #2520ff;
     font-family: 'Josefin Sans', sans-serif;
-    text-transform: capitalize;
     font-weight: 600;
 }
 
@@ -3671,7 +3643,6 @@ ol.comment-list {
 .faq-tabs .nav-link {
     display: block;
     border: 1px solid #e1e1e1;
-    text-transform: capitalize;
     border-radius: 5px;
     color: #000;
     font-size: 16px;
@@ -3772,7 +3743,6 @@ ol.comment-list {
     position: relative;
     font-size: 22px;
     font-weight: 600;
-    text-transform: capitalize;
     color: #000;
     font-family: 'Josefin Sans', sans-serif;
     line-height: 1;
@@ -3819,7 +3789,6 @@ ol.comment-list {
 }
 
 .paswd {
-    text-transform: capitalize;
     position: relative;
     cursor: pointer;
     -webkit-transition: all 0.3s ease;
@@ -3846,7 +3815,6 @@ ol.comment-list {
 }
 
 .seprator span {
-    text-transform: capitalize;
     background-color: #fff;
     padding: 0 15px;
 }
@@ -3936,7 +3904,6 @@ ol.comment-list {
 }
 
 .plan-info-list p {
-    text-transform: capitalize;
 }
 
 .plan-info-list li:last-child p {
@@ -3963,7 +3930,6 @@ ol.comment-list {
 
 .listing-form label {
     color: #000;
-    text-transform: capitalize;
 }
 
 .listing-form textarea.form-control {
@@ -4053,7 +4019,6 @@ ol.comment-list {
     display: flex;
     margin-bottom: 30px;
     border: 1px solid #e1e1e1;
-    text-transform: capitalize;
     -webkit-box-shadow: none;
     box-shadow: none;
     border-radius: 100px;
@@ -4071,7 +4036,6 @@ ol.comment-list {
 .range-box p {
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    text-transform: capitalize;
     margin-bottom: 0;
     margin-right: 20px;
 }
@@ -4186,7 +4150,6 @@ ol.comment-list {
 
 .sort-dropdown .dropdown-toggle {
     border: 1px solid #e1e1e1;
-    text-transform: capitalize;
     -webkit-box-shadow: none;
     box-shadow: none;
     border-radius: 100px;
@@ -4204,7 +4167,6 @@ ol.comment-list {
 }
 
 .sort-dropdown .dropdown-item {
-    text-transform: capitalize;
     padding: 10px 20px;
 }
 
@@ -4320,7 +4282,6 @@ ol.comment-list {
 .quick-link li a {
     position: relative;
     padding-left: 30px;
-    text-transform: capitalize;
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
@@ -4456,7 +4417,6 @@ ol.comment-list {
     margin: 0;
     line-height: 1.3;
     padding-left: 1.6em;
-    text-transform: capitalize;
     position: relative;
     cursor: pointer;
     color: #858585;
@@ -4613,7 +4573,6 @@ ol.comment-list {
 }
 
 .aminities span {
-    text-transform: capitalize;
 }
 
 .stat-box,
@@ -4716,7 +4675,6 @@ ol.comment-list {
 
 .booking-form label {
     color: #000;
-    text-transform: capitalize;
 }
 
 .qty {
@@ -4762,7 +4720,6 @@ ol.comment-list {
 .total-cost p,
 .opening-hours p {
     color: #000;
-    text-transform: capitalize;
     margin: 0;
 }
 

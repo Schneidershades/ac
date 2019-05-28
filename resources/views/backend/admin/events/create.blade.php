@@ -6,6 +6,7 @@
 <!-- <link rel="stylesheet" href="{{ URL::to('assets/css/basic.css')}}"/> -->
   <link href="{{ URL::to('assets/plugins/dropzone/css/dropzone.css')}}" rel="stylesheet" type="text/css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.css" type="text/css" rel="stylesheet" />
+  <link rel="stylesheet" href="{{URL::to('assets/plugins/summernote/dist/summernote-bs4.css')}}"/>
 @endsection
 
 @section('content')
@@ -65,7 +66,7 @@
 
             <div class="form-group col-md-12">
               <label for="input-13">Full Description</label>
-              <textarea name="description" id="" cols="20" rows="4" class="form-control "></textarea>
+              <textarea name="description" id="summernoteEditor" cols="20" rows="4" class="form-control "></textarea>
             </div>
 
             <div class="form-group col-md-3">
@@ -212,5 +213,14 @@
 
   });
 </script>
+
+
+<script src="{{URL::to('assets/plugins/summernote/dist/summernote-bs4.min.js')}}"></script>
+  <script>
+   $('#summernoteEditor').summernote({
+            height: 400,
+            tabsize: 2
+        });
+  </script>
 
 @endsection

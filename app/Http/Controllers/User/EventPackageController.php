@@ -10,7 +10,7 @@ class EventPackageController extends Controller
 {
      public function index()
     {
-        return view('users.event_package')
-            ->with('event_packages_all',  EventPackage::all());
+        return view('users.event_package_all')
+            ->with('packages',  EventPackage::all());
     }
 }

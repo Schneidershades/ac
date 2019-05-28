@@ -39,7 +39,7 @@
                     </ul>
                     <!-- Tab panes -->
                     <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane fade in active show" id="login">
+                        <div role="tabpanel" class="tab-pane fade in active show">
                             <form class="custom-form" method="POST" action="{{ route('login') }}">
                                 @csrf
                                 <div class="row">
@@ -73,7 +73,7 @@
                                         <a href="#" class="paswd"> forgot password ?</a>
                                     </div>
                                     <div class="col-12 mt-4">
-                                        <button type="submit" class="btn btn-one btn-anim w-100" id="submit-login" name="submit-login">
+                                        <button type="submit" class="btn btn-one btn-anim w-100" name="submit-login">
                                             login</button>
                                     </div>
                                 </div>
@@ -95,7 +95,7 @@
                                     </div>
                                     <div class="col-12">
                                         <span class="fa fa-envelope"></span>
-                                        <input type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required placeholder="Enter Organization Email" id="email2">
+                                        <input type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required placeholder="Enter Organization Email">
 
                                         @if ($errors->has('email'))
                                             <span class="invalid-feedback" role="alert">

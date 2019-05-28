@@ -32,7 +32,7 @@
 				<div class="card-title text-uppercase "><i class="fa fa-address-book-o"></i> Choose your Company Name</div>
 				<hr>
 
-				<form class="color-form" method="POST" action="{{route('advert.store')}}" enctype="multipart/form-data">
+				<form class="color-form" method="POST" action="{{route('listings.store')}}" enctype="multipart/form-data">
 					@csrf
 					<div class="form-row">
 						<div class="form-group col-md-4" >

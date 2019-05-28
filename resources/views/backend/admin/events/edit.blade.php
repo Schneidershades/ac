@@ -6,6 +6,7 @@
 <!-- <link rel="stylesheet" href="{{ URL::to('assets/css/basic.css')}}"/> -->
   <link href="{{ URL::to('assets/plugins/dropzone/css/dropzone.css')}}" rel="stylesheet" type="text/css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.css" type="text/css" rel="stylesheet" />
+  <link rel="stylesheet" href="{{URL::to('assets/plugins/summernote/dist/summernote-bs4.css')}}"/>
 @endsection
 
 @section('content')
@@ -214,4 +215,11 @@
   });
 </script>
 
+<script src="{{URL::to('assets/plugins/summernote/dist/summernote-bs4.min.js')}}"></script>
+  <script>
+   $('#summernoteEditor').summernote({
+            height: 400,
+            tabsize: 2
+        });
+  </script>
 @endsection

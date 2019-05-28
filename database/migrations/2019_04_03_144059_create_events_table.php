@@ -19,8 +19,8 @@ class CreateEventsTable extends Migration
             $table->string('excerpt')->nullable();
             $table->date('from')->nullable();
             $table->date('to')->nullable();
-            $table->date('venue')->nullable();
-            $table->text('details')->nullable();
+            $table->string('venue')->nullable();
+            $table->text('description')->nullable();
             $table->text('image1')->nullable();
             $table->text('image2')->nullable();
             $table->text('image3')->nullable();

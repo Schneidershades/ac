@@ -22,8 +22,8 @@ class AdvertController extends Controller
     {
         $adverts = auth()->user()->adverts()->latest()->finished()->get();
 
-        return view('users.listing_add', [
-            'listing' => $adverts
+        return view('users.listing_all', [
+            'listings' => $adverts
         ]);
     }
 

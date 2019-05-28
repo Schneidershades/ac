@@ -19,7 +19,7 @@ Route::get('listing/create', 'User\AdvertController@create')->name('listings.cre
 Route::get('listing/{listing}/create', 'User\AdvertController@create')->name('listings.create');
 Route::resource('/listings', 'User\AdvertController');
 
-Route::resource('/user-event-package', 'User\EventPackageController');
+Route::resource('/user-event-packages', 'User\EventPackageController');
 
 Route::post('/{advert}/upload', 'User\UploadController@store')->name('upload.store');
 Route::get('/{advert}/upload/{upload}', 'User\UploadController@destroy')->name('upload.destroy');
