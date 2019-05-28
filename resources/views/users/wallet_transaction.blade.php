@@ -29,24 +29,10 @@
 	<div class="col-lg-6 mx-auto">
 		<div class="card">
 			<div class="card-body">
-				<div class="card-title text-uppercase "><i class="fa fa-address-book-o"></i> Wallet Fund</div>
+				<div class="card-title text-uppercase "><i class="fa fa-address-book-o"></i> Wallet Transactions</div>
 				<hr>
 
-				<form class="color-form" method="POST" action="{{route('advert.store')}}" enctype="multipart/form-data">
-					@csrf
-					<div class="form-row">
-						<div class="form-group col-md-12" >
-							<label for="input-9">Amount </label>
-							<input type="number" min="1000" class="form-control form-control-rounded" id="input-9" name="amount" required/>
-						</div>
-					</div>
-
-					<div class="form-group row">
-						<div class="col-sm-10">
-							<button type="submit" class="btn btn-primary shadow-primary px-5"><i class="icon-lock"></i> Fund Wallet</button>
-						</div>
-					</div>
-				</form>
+				
 			</div>
 		</div>
 	</div>

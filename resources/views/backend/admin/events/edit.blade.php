@@ -36,12 +36,13 @@
         <div class="card-title text-uppercase "><i class="fa fa-address-book-o"></i> Edit your Event</div>
         <hr>
 
-        <form class="color-form" method="POST" action="{{route('admin-events.update')}}" enctype="multipart/form-data">
+        <form class="color-form" method="POST" action="{{route('admin-events.update', $event->id)}}" enctype="multipart/form-data">
           @csrf
+          @method('PUT')
           <div class="form-row">
             <div class="form-group col-md-6">
-              <label for="input-13">Event Name</label>
-              <input type="text" name="name" class="form-control " maxlength="150" required value="{{$event->name}}">
+              <label for="input-13">Event Title</label>
+              <input type="text" name="title" class="form-control " maxlength="150" required value="{{$event->title}}">
             </div>
 
             <div class="form-group col-md-6">
@@ -66,7 +67,7 @@
 
             <div class="form-group col-md-12">
               <label for="input-13">Full Description</label>
-              <textarea name="description" id="" cols="20" rows="4" class="form-control ">{{$event->description}}</textarea>
+              <textarea name="description" id="summernoteEditor" cols="20" rows="4" class="form-control ">{{$event->description}}</textarea>
             </div>
 
             <div class="form-group col-md-3">
@@ -128,18 +129,18 @@
             
             <!-- Make sure the repeater list value is different from the first repeater  -->
             <div data-repeater-list="event_package_details">
-              @foreach($event->eventPackage as $package)
+              @foreach($event->eventPackages as $package)
               <div data-repeater-item class="form-group row">
                 <div class="col-md-12">
                   <div class="card-title"><i class="fa fa-address-book-o"></i> NEW EVENT PACKAGE</div><br>
                 </div>
                 <div class="col-md-12">
                   <label for="input-13">Event Package Description</label>
-                  <textarea name="event_package_description" id="" cols="20" rows="4" class="form-control" value="{{$package->event_package_description}}"></textarea>
+                  <input type="text" value="{{$package->event_package_description}}" class="form-control" name="event_package_description">
                 </div>
                 <div class="col-md-12">
                   <label for="input-13">Amount</label>
-                  <input type="email" name="email" class="form-control " required value="{{$package->amount}}"/>
+                  <input type="text" name="amount" class="form-control " required value="{{$package->amount}}"/>
                 </div>
 
                 <div class="form-group col-md-12">

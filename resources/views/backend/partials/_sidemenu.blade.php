@@ -16,6 +16,8 @@
      </a>
    </div>
    <ul class="sidebar-menu do-nicescrol in">
+    
+   @if(auth()->user()->hasRole('admin'))
       <li class="sidebar-header">ADMIN NAVIGATION</li>
       <!-- <li>
         <a href="" class="waves-effect">
@@ -37,7 +39,7 @@
           <li><a href="{{route('admin-posts.index')}}"><i class="fa fa-circle-o"></i> Posts </a></li>      
         </ul>
       </li>
-
+    @endif
      <!--  <li>
         <a href="" class="waves-effect">
           <i class="icon-home"></i> <span>Website Content</span> <i class="fa fa-angle-left pull-right"></i>
@@ -56,7 +58,7 @@
       <li class="sidebar-header">USERS NAVIGATION</li>
 
       <li>
-        <a href="{{route('home')}}" class="waves-effect">
+        <a href="{{route('welcome')}}" class="waves-effect">
           <i class="fa fa-home text-red"></i> <span>Website</span></a>
       </li>
 

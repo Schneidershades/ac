@@ -12,6 +12,7 @@ use App\Models\Slider;
 use App\Models\Testimonial;
 use App\Models\Partner;
 use App\Models\Count;
+use App\Models\Event;
 use App\Models\Faq;
 use App\Models\Contact;
 use App\Models\Post;
@@ -90,7 +91,9 @@ class PageController extends Controller
 
     public function conference()
     {
-        return view('pages.conference');
+        $event = Event::first();
+        return view('pages.conference')
+            ->with('event', $event);
     } 
 
     public function roundTable()

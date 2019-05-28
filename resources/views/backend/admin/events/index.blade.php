@@ -33,7 +33,6 @@
                 <th>Name</th>
                 <th>From</th>
                 <th>To</th>
-                <th>Venue</th>
                 <th>Action</th>
               </tr>
             </thead>
@@ -41,10 +40,9 @@
 
               @foreach($events as $event)
               <tr>
-                <td>{{$event->name}}</td>
+                <td>{{$event->title}}</td>
                 <td>{{$event->from}}</td>
                 <td>{{$event->to}}</td>
-                <td>{{$event->venue}}</td>
                 <td>
                   <a href="{{route('admin-events.edit', $event->id)}}" class="btn btn-dark btn-round waves-effect waves-light m-1"><i aria-hidden="true" class="fa fa-edit"></i></a>
                   <a href="{{route('admin-events.show', $event->id)}}" class="btn btn-warning btn-round waves-effect waves-light m-1"><i aria-hidden="true" class="fa fa-eye"></i></a>
@@ -58,7 +56,6 @@
                 <th>Name</th>
                 <th>From</th>
                 <th>To</th>
-                <th>Venue</th>
                 <th>Action</th>
               </tr>
             </tfoot>

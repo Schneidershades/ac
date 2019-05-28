@@ -44,14 +44,18 @@
                                 @csrf
                                 <div class="row">
 
+
+                                    
                                     <div class="col-12">
                                         <span class="fa fa-user"></span>
-                                        <input type="text" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+                                        <input type="text" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required >
+
                                         @if ($errors->has('email'))
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $errors->first('email') }}</strong>
                                             </span>
                                         @endif
+
                                     </div>
                                     <div class="col-12">
                                         <span class="fa fa-lock"></span>
@@ -85,7 +89,7 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <span class="fa fa-user"></span>
-                                        <input type="text" class="form-control" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus placeholder="Enter Organization/ Individual Name">
+                                        <input type="text" class="form-control" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required  placeholder="Enter Organization/ Individual Name">
 
                                         @if ($errors->has('name'))
                                             <span class="invalid-feedback" role="alert">
@@ -93,6 +97,8 @@
                                             </span>
                                         @endif
                                     </div>
+
+                                    
                                     <div class="col-12">
                                         <span class="fa fa-envelope"></span>
                                         <input type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required placeholder="Enter Organization Email">
@@ -103,6 +109,18 @@
                                             </span>
                                         @endif
                                     </div>
+
+                                    <div class="col-12">
+                                        <span class="fa fa-user"></span>
+                                        <input type="text" class="form-control" class="form-control{{ $errors->has('referral') ? ' is-invalid' : '' }}" name="referral" value="{{ old('referral') }}" required  placeholder="Email Referral">
+
+                                        @if ($errors->has('referral'))
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $errors->first('referral') }}</strong>
+                                            </span>
+                                        @endif
+                                    </div>
+                                    
                                     <div class="col-12">
                                         <span class="fa fa-lock"></span>
                                         <input type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="Password" id="password">
@@ -150,7 +168,7 @@
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required >
 
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback" role="alert">

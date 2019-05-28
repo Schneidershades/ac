@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Models\User;
 use App\Models\Referral;
+use App\Models\Wallet;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -53,7 +54,7 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8'],
-            'referral' => ['required', 'string', 'email', 'max:255'],
+            // 'referral' => ['required', 'string', 'email', 'max:255'],
         ]);
     }
 
@@ -63,30 +64,50 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\User
      */
-    protected function create(array $data)
+    protected function create(array $data )
     {
-        $referral_user = User::where('email', $data['referral'])->first();
+        $referral_user = User::where('email', $data['referral'])->orWhere('username', '=', $data['referral'])->first();
         
         if ($referral_user === null) {
-            return redirect()->back()->with('error', 'Invalid Referral Credential. Please find a valid referral ID');
+            $referralID = 1;
+        }else{
+            $referralID = $referral_user->id;
         }
 
-        if($data['email'] && $referral_user != null){
-            if ($referral_user->email == $data['email']){
-               return redirect()->back()->with('error', 'you cannot be the referral at the moment. Please find a valid referral ID');
-            }
-        }
+        // if($data['email'] && $referral_user != null){
+        //     if ($referral_user->email == $data['email']){
+        //        return redirect()->back()->with('error', 'you cannot be the referral at the moment. Please find a valid referral ID');
+        //     }
+        // }
 
         // store in the referals table
-        $referral = new Referral;
-        $referral->user_id = $user->id;
-        $referral->referral_id = $referral_user->id;
-        $referral->save();
-
-        return User::create([
+        
+        $save_user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+            'password' => bcrypt($data['password']),
+            'username' => str_slug($data['name']),
+            'package_id' => '1',
         ]);
+
+        $referral = new Referral;
+        $referral->user_id = $save_user->id;
+        $referral->referral_id = $referralID;
+        $referral->save();
+
+        
+
+        // create a wallet for the registering user
+        $find_wallet =  Wallet::where('user_id', $save_user->id)->first();
+        
+        if ($find_wallet == null){
+            // if he/her dosent have a wallet
+            $wallet = new Wallet;
+            $wallet->user_id = $save_user->id;
+            $wallet->balance = 0;
+            $wallet->save();
+        }
+
+        return $save_user;
     }
 }

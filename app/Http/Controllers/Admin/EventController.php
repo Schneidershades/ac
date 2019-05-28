@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Event;
 use App\Models\EventPackage;
+use App\Models\Functions\Helper;
+use Storage;
 
 class EventController extends Controller
 {
@@ -29,12 +31,12 @@ class EventController extends Controller
         $event->from = $request->from;
         $event->to = $request->to;
         $event->venue = $request->venue;
-        $event->details = $request->details;
+        $event->description = $request->description;
         $event->meta_keyword = $request->excerpt;
         $event->meta_description = $request->excerpt;
 
         if ($request->image1){
-            $path = FunctionHelpers::uploadAnything(
+            $path = Helper::uploadAnything(
                 $request->image1, 
                 $event->name, 
                 'assets/files/events/'.$event->name.'/', 
@@ -43,7 +45,7 @@ class EventController extends Controller
         }
 
         if ($request->image2){
-            $path = FunctionHelpers::uploadAnything(
+            $path = Helper::uploadAnything(
                 $request->image2, 
                 $event->name, 
                 'assets/files/events/'.$event->name.'/', 
@@ -52,7 +54,7 @@ class EventController extends Controller
         }
 
         if ($request->image3){
-            $path = FunctionHelpers::uploadAnything(
+            $path = Helper::uploadAnything(
                 $request->image3, 
                 $event->name, 
                 'assets/files/events/'.$event->name.'/', 
@@ -61,7 +63,7 @@ class EventController extends Controller
         }
 
         if ($request->image4){
-            $path = FunctionHelpers::uploadAnything(
+            $path = Helper::uploadAnything(
                 $request->image4, 
                 $event->name, 
                 'assets/files/events/'.$event->name.'/', 
@@ -70,7 +72,7 @@ class EventController extends Controller
         }
 
         if ($request->image5){
-            $path = FunctionHelpers::uploadAnything(
+            $path = Helper::uploadAnything(
                 $request->image5, 
                 $event->name, 
                 'assets/files/events/'.$event->name.'/', 
@@ -79,7 +81,7 @@ class EventController extends Controller
         }
 
         if ($request->image6){
-            $path = FunctionHelpers::uploadAnything(
+            $path = Helper::uploadAnything(
                 $request->image6, 
                 $event->name, 
                 'assets/files/events/'.$event->name.'/', 
@@ -88,7 +90,7 @@ class EventController extends Controller
         }
 
         if ($request->image7){
-            $path = FunctionHelpers::uploadAnything(
+            $path = Helper::uploadAnything(
                 $request->image7, 
                 $event->name, 
                 'assets/files/events/'.$event->name.'/', 
@@ -97,7 +99,7 @@ class EventController extends Controller
         }
 
         if ($request->image8){
-            $path = FunctionHelpers::uploadAnything(
+            $path = Helper::uploadAnything(
                 $request->image8, 
                 $event->name, 
                 'assets/files/events/'.$event->name.'/', 
@@ -106,7 +108,7 @@ class EventController extends Controller
         }
 
         if ($request->image9){
-            $path = FunctionHelpers::uploadAnything(
+            $path = Helper::uploadAnything(
                 $request->image9, 
                 $event->name, 
                 'assets/files/events/'.$event->name.'/', 
@@ -115,7 +117,7 @@ class EventController extends Controller
         }
 
         if ($request->image10){
-            $path = FunctionHelpers::uploadAnything(
+            $path = Helper::uploadAnything(
                 $request->image10, 
                 $event->name, 
                 'assets/files/events/'.$event->name.'/', 
@@ -140,8 +142,8 @@ class EventController extends Controller
     public function show($id)
     {
         $event = Event::find($id);
-        return view('backend.admin.events.index')
-            ->with('events', $events);
+        return view('backend.admin.events.show')
+            ->with('event', $event);
     }
 
     public function edit($id)
@@ -153,22 +155,24 @@ class EventController extends Controller
 
     public function update(Request $request, $id)
     {
-
+        // dd($request->all());
         $event = Event::find($id);
 
-        $event->eventPackages->detach();
+        foreach ($event->eventPackages as $package){
+            $package->forceDelete();
+        }
 
         $event->title = $request->title;
         $event->excerpt = $request->excerpt;
         $event->from = $request->from;
         $event->to = $request->to;
         $event->venue = $request->venue;
-        $event->details = $request->details;
+        $event->description = $request->details;
         $event->meta_keyword = $request->excerpt;
         $event->meta_description = $request->excerpt;
 
         if ($request->image1){
-            $path = FunctionHelpers::uploadAnything(
+            $path = Helper::uploadAnything(
                 $request->image1, 
                 $event->name, 
                 'assets/files/events/'.$event->name.'/', 
@@ -182,7 +186,7 @@ class EventController extends Controller
         }
 
         if ($request->image2){
-            $path = FunctionHelpers::uploadAnything(
+            $path = Helper::uploadAnything(
                 $request->image2, 
                 $event->name, 
                 'assets/files/events/'.$event->name.'/', 
@@ -196,7 +200,7 @@ class EventController extends Controller
         }
 
         if ($request->image3){
-            $path = FunctionHelpers::uploadAnything(
+            $path = Helper::uploadAnything(
                 $request->image3, 
                 $event->name, 
                 'assets/files/events/'.$event->name.'/', 
@@ -210,7 +214,7 @@ class EventController extends Controller
         }
 
         if ($request->image4){
-            $path = FunctionHelpers::uploadAnything(
+            $path = Helper::uploadAnything(
                 $request->image4, 
                 $event->name, 
                 'assets/files/events/'.$event->name.'/', 
@@ -224,7 +228,7 @@ class EventController extends Controller
         }
 
         if ($request->image5){
-            $path = FunctionHelpers::uploadAnything(
+            $path = Helper::uploadAnything(
                 $request->image5, 
                 $event->name, 
                 'assets/files/events/'.$event->name.'/', 
@@ -238,7 +242,7 @@ class EventController extends Controller
         }
 
         if ($request->image6){
-            $path = FunctionHelpers::uploadAnything(
+            $path = Helper::uploadAnything(
                 $request->image6, 
                 $event->name, 
                 'assets/files/events/'.$event->name.'/', 
@@ -252,7 +256,7 @@ class EventController extends Controller
         }
 
         if ($request->image7){
-            $path = FunctionHelpers::uploadAnything(
+            $path = Helper::uploadAnything(
                 $request->image7, 
                 $event->name, 
                 'assets/files/events/'.$event->name.'/', 
@@ -266,7 +270,7 @@ class EventController extends Controller
         }
 
         if ($request->image8){
-            $path = FunctionHelpers::uploadAnything(
+            $path = Helper::uploadAnything(
                 $request->image8, 
                 $event->name, 
                 'assets/files/events/'.$event->name.'/', 
@@ -280,7 +284,7 @@ class EventController extends Controller
         }
 
         if ($request->image9){
-            $path = FunctionHelpers::uploadAnything(
+            $path = Helper::uploadAnything(
                 $request->image9, 
                 $event->name, 
                 'assets/files/events/'.$event->name.'/', 
@@ -294,7 +298,7 @@ class EventController extends Controller
         }
 
         if ($request->image10){
-            $path = FunctionHelpers::uploadAnything(
+            $path = Helper::uploadAnything(
                 $request->image10, 
                 $event->name, 
                 'assets/files/events/'.$event->name.'/', 

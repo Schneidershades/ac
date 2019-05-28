@@ -135,7 +135,7 @@
                 <!-- <input type="text" class="form-control  " id="input-9" name="" value=""/> -->
                 <div class="col-md-12">
                   <label for="input-13">Event Package Description</label>
-                  <textarea name="event_package_description" id="" cols="20" rows="4" class="form-control "></textarea>
+                  <input type="text" value="{{$package->event_package_description}}" class="form-control" name="event_package_description">
                 </div>
                 <div class="col-md-12">
                   <label for="input-13">Amount</label>

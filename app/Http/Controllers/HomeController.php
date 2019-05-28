@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\PackageUser;
+use App\Models\EventPackage;
 
 class HomeController extends Controller
 {
@@ -24,12 +24,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        if(!auth()->user()->package){
-            $createPackage = new PackageUser;
-            $createPackage->user_id = auth()->user()->id;
-            $createPackage->package_id = 1;
-            $createPackage->save();
-        }
-        return view('backend.home');
+        $eventPackages = EventPackage::all();
+        return view('backend.home')
+            ->with('eventPackages', $eventPackages);
     }
+
+
 }
