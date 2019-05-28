@@ -15,8 +15,7 @@ class EventsTableSeeder extends Seeder
         Event::Create([
             'title'             => 'Business Opportunity Conference and Exhibition',
             'excerpt'             => 'Pathway to sustainable personal and business success',
-            'from'             => '',
-            'to'             => '',
+            
             'time_in'             => '6am',
             'time_out'             => '5pm',
             'venue'             => 'Plot 9/10, Block 2, Oniru Chieftaincy Estate, Victoria Island, Lagos - Nigeria',
