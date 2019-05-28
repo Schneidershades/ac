@@ -2,7 +2,6 @@
 
 use Illuminate\Database\Seeder;
 use App\Models\Event;
-use Carbon;
 
 class EventsTableSeeder extends Seeder
 {
@@ -16,8 +15,8 @@ class EventsTableSeeder extends Seeder
         Event::Create([
             'title'             => 'Business Opportunity Conference and Exhibition',
             'excerpt'             => 'Pathway to sustainable personal and business success',
-            'from'             => Carbon::parse('9/15/2019')->format('Y-m-d H:i:s'),
-            'to'             => Carbon::parse('9/15/2019')->format('Y-m-d H:i:s'),
+            'from'             => '9-15-2019',
+            'to'             => '9-15-2019',
             'time_in'             => '6am',
             'time_out'             => '5pm',
             'venue'             => 'Plot 9/10, Block 2, Oniru Chieftaincy Estate, Victoria Island, Lagos - Nigeria',
