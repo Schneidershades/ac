@@ -20,6 +20,8 @@ class CreateEventsTable extends Migration
             $table->date('from')->nullable();
             $table->date('to')->nullable();
             $table->string('venue')->nullable();
+            $table->string('time_in')->nullable();
+            $table->string('time_out')->nullable();
             $table->text('description')->nullable();
             $table->text('image1')->nullable();
             $table->text('image2')->nullable();
