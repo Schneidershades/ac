@@ -25,35 +25,8 @@
 <!-- page-banner ends-->
 
 <!-- about start-->
-<div class="about-1 o-hide bg-w sp-100">
-    <!-- <div class="container">
-        <div class="row">
-            <div class="col-lg-6 align-self-end">
-                <div class="abt-img">
-                    <img src="{{URL::to('assets-web/img/home/ad.png')}}" alt="mockup">
-                </div>
-            </div>
-            <div class="col-lg-6 mt-lg-0 mt-5">
-                <h4>{{$event->title}}</h4>
-                <p>{{$event->excerpt}}
-                </p>
-                <ul class="list-1">
-                    <li>
-                        <span>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</span>
-                    </li>
-                    <li>
-                        <span>Nulla consequat massa quis enim. Donec fringilla vel, aliquet nec.</span>
-                    </li>
-                    <li>
-                        <span> Aenean leo ligula, porttitor eu consequat vitae eleifend ac enim.</span>
-                    </li>
-                    <li>
-                        <span> Sociis na toque penatibus et magnis dis parturien monte nascetur ridic.</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div> -->
+<!-- <div class="about-1 o-hide bg-w sp-100">
+
 
     <div class="container">
         <div class="row">
@@ -64,11 +37,11 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- about end-->
 
 <!-- counter starts -->
-<section class="counters sp-100-70">
+<!-- <section class="counters sp-100-70">
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-30">
@@ -109,13 +82,13 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- counter ends -->
 
 <!-- features start-->
 <section class="features sp-100-70 bg-w">
     <div class="container">
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-12">
                 <div class="all-title">
                     <h3 class="sec-title">
@@ -128,8 +101,8 @@
                     <p>Here Are the Event Payment Packages available on sale </p>
                 </div>
             </div>
-        </div>
-        <div class="row">
+        </div> -->
+        <!-- <div class="row">
             @foreach($event->eventPackages as $package)
             <div class="col-lg-4 col-md-6 col-12 mb-30">
                 <div class="feature-item">
@@ -142,7 +115,7 @@
                 </div>
             </div>
             @endforeach
-        </div>
+        </div> -->
 
         <div class="row">
             <div class="col-lg-12 col-md-6 col-12 mb-30">
@@ -216,7 +189,7 @@
                                     </div>
                                 </div> -->
 
-                                <!-- <div class="card-title text-uppercase "><i class="fa fa-address-book-o"></i> PARTICULARS OF PARTNERS/PROPRIETORS</div>
+                                <div class="card-title text-uppercase "><i class="fa fa-address-book-o"></i> PARTICULARS OF PARTNERS/PROPRIETORS</div>
                                 <hr>
 
                                 <div class='repeater'>
@@ -312,7 +285,7 @@
                                     <div class="text-right">
                                         <button data-repeater-create type="button" class="btn btn-primary waves-effect waves-light m-1"> + </button>
                                     </div>
-                                </div> -->
+                                </div>
 
 
                                 <div class="form-group row">
