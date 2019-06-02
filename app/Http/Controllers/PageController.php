@@ -92,8 +92,10 @@ class PageController extends Controller
     public function conference()
     {
         $event = Event::first();
+        $categories = Category::all();
         return view('pages.conference')
-            ->with('event', $event);
+            ->with('event', $event)
+            ->with('categories', $categories);
     } 
 
     public function roundTable()

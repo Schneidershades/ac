@@ -14,13 +14,13 @@ class EventPackageTableSeeder extends Seeder
     {
         EventPackage::Create([
             'event_package_description'     => 'Conference Fee',
-            'amount'             	=> 15000,
+            'amount'             	=> 20000,
             'event_id'              => '1'
         ]);
 
         EventPackage::Create([
             'event_package_description'     => 'Exhibition Fee',
-            'amount'             	=> 50000,
+            'amount'             	=> 100000,
             'event_id'              => '1'
         ]);
 

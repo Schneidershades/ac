@@ -32,7 +32,6 @@ Route::post('/pay', 'User\RaveController@initialize')->name('pay');
 Route::post('/rave/callback', 'User\RaveController@callback')->name('callback');
 
 
-
 Route::resource('/admin-events', 'Admin\EventController');
 Route::resource('/admin-users', 'Admin\UsersController');
 Route::resource('/admin-business-categories', 'Admin\CategoryController');

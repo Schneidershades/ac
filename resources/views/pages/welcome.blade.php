@@ -121,7 +121,7 @@
                         <div class="img-holder">
                             <span class="offer">save 49%
                             </span>
-                            <img src="{{URL::to($advert->featured)}}" alt="list">
+                            <img src="{{URL::to($advert->image)}}" alt="list">
                             <div class="rate-like centering justify-content-between">
                                 <div class="rating">
                                     <i class="fa fa-star"></i>
@@ -139,7 +139,6 @@
                             <ul class="ctg-info py-2 mb-3">
                                 <li>
                                     <a href="#">
-                                        <i class="flaticon-cutlery mr-2"></i> {{$advert->category->name}}</a>
                                 </li>
                                 <li>
                                     <span class="c-theme"> Available</span>
@@ -152,7 +151,7 @@
                             <ul class="ctg-info2 pt-2 mt-3 centering justify-content-between">
                                 <li class="mt-1">
                                     <a href="#">
-                                        <i class="fa fa-map-marker-alt mr-2"></i>San Francisco, USA</a>
+                                        <!-- <i class="fa fa-map-marker-alt mr-2"></i>San Francisco, USA</a> -->
                                 </li>
                                 <li class="mt-1">
                                     <a href="#">
