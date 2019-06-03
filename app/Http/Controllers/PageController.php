@@ -20,6 +20,7 @@ use App\Models\Advert;
 use App\Models\Category;
 use App\Models\Package;
 use App\Models\User;
+use App\Models\EventTransaction;
 
 class PageController extends Controller
 {
@@ -97,6 +98,56 @@ class PageController extends Controller
             ->with('event', $event)
             ->with('categories', $categories);
     } 
+
+
+    public function saveConference(Request $request)
+    {
+        $find_user = User::where('email', $request->email)->first();
+
+        if($find_user === null){
+            $user = new User;
+            $user->email  = $request->email;
+            $user->name  = $request->full_name;
+            $user->slug  = str_slug($request->full_name);
+            $user->organization  = $request->organization;
+            $user->phone1  = $request->phone;
+            $user->category_id  = $request->category_id;
+            $user->how_did_you_hear_about_ac  = $request->how_did_you_hear_about_ac;
+            if($request->password && $request->member == 'yes'){
+                $user->password  = $request->password;
+            }
+
+            $user->save();
+            $eventUser = $user->id;
+        }else{
+            $find_user->organization  = $request->organization;
+            $find_user->phone1  = $request->phone;
+            $find_user->category_id  = $request->category_id;
+            $find_user->how_did_you_hear_about_ac  = $request->how_did_you_hear_about_ac;
+            $find_user->save();
+            $eventUser = $find_user->id;
+        }
+        
+
+        $transaction =  new EventTransaction;
+        $transaction->event_package_id = $request->event_package_id;
+        $transaction->user_id = $eventUser;
+        $transaction->save();
+
+        return redirect()->route('conference.register.receipt', $transaction->identifier);
+    }
+
+    public function conferenceReciept($id)
+    {
+
+        $event = Event::first();
+        $categories = Category::all();
+        $transaction = EventTransaction::where('identifier',$id)->first();
+        return view('pages.conference_receipt')
+            ->with('categories', $categories)
+            ->with('event', $event)
+            ->with('transaction', $transaction);
+    }
 
     public function roundTable()
     {

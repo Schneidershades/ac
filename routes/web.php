@@ -6,7 +6,12 @@ Route::get('/about', 'PageController@about')->name('about');
 Route::get('/contact', 'PageController@contact')->name('contact');
 Route::post('/contact', 'PageController@contactStore')->name('contact.store');
 Route::get('/home', 'HomeController@index')->name('home');
+
 Route::get('/conference/about', 'PageController@conference')->name('conference.about');
+Route::post('/conference/registration/process', 'PageController@saveConference')->name('conference.register');
+Route::get('/conference/registration/receipt/{id}', 'PageController@conferenceReciept')->name('conference.register.receipt');
+
+
 Route::get('/news/round-table', 'PageController@roundTable')->name('round.table');
 
 Route::resource('/profile', 'User\ProfileController');

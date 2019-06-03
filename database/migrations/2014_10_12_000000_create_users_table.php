@@ -17,6 +17,7 @@ class CreateUsersTable extends Migration
             $table->bigIncrements('id');
             $table->string('name')->nullable();
             $table->string('email')->unique(); 
+            $table->string('organization')->nullable(); 
             $table->string('username')->nullable()->unique(); 
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
@@ -46,6 +47,7 @@ class CreateUsersTable extends Migration
             $table->string('city_id')->nullable();
             $table->string('postal_code')->nullable();
             $table->string('testimonials')->nullable();
+            $table->string('how_did_you_hear_about_ac')->nullable();
             $table->string('show_testimonials')->default(false);
             $table->decimal('amount', 40, 2)->default(0);
             $table->rememberToken();

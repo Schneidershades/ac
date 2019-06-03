@@ -37,7 +37,7 @@
                              <h3>Registration Form</h3>
                             <div class="card-title text-uppercase "><i class="fa fa-address-book-o"></i> Please Fill the information below</div>
                             <hr>
-                            <form class="color-form" method="POST" action="" enctype="multipart/form-data">
+                            <form class="color-form" method="POST" action="{{route('conference.register')}}" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-row">
                                     <div class="form-group col-md-4">
@@ -47,7 +47,7 @@
 
                                     <div class="form-group col-md-4">
                                         <label for="input-9">Registration Package</label>
-                                        <select name="package_id" id="" class="form-control ">
+                                        <select name="event_package_id" id="" class="form-control ">
                                             <option value="">---Select Registration Package --- </option>
                                             @foreach($event->eventPackages as $package)
                                             <option value="{{$package->id}}">{{$package->event_package_description}} - N{{$package->amount}}</option>
@@ -81,18 +81,26 @@
                                     </div>
 
 
-                                    <div class="form-group col-md-6">
-                                        <label for="input-9">Would you love to be an achievers confluence member?</label>
-                                        <select name="package_id" id="" class="form-control ">
+                                    <div class="form-group col-md-4">
+                                        <label for="input-9">Would you love to be an AC member?</label>
+                                        <select name="member" id="" class="form-control " onchange="
+                                            if(this.value=='yes'){ 
+                                              $('#authentication').fadeIn(); }else{ $('#authentication').fadeOut(); 
+                                            }" >
                                             <option value="">---Select Membership --- </option>
                                             <option value="yes">Yes </option>
                                             <option value="no">No </option>
                                         </select>
                                     </div>
 
-                                    <div class="form-group col-md-6">
+                                    <div class="form-group col-md-4" id="authentication" style="display:none">
+                                        <label for="input-13">Choose your account password</label>
+                                        <input type="password" name="password" class="form-control form-control-rounded" required/>
+                                    </div>
+
+                                    <div class="form-group col-md-4">
                                         <label for="input-9">How did you hear about us?</label>
-                                        <select name="package_id" id="" class="form-control ">
+                                        <select name="how_did_you_hear_about_ac" id="" class="form-control ">
                                             <option value="">---Select Survey --- </option>
                                             <option value="online-advert">Online Advert </option>
                                             <option value="radio-tv">Radio/Tv Advert </option>
@@ -102,6 +110,8 @@
                                         </select>
                                     </div>
                                 </div>
+
+
                                 
                                 <div class="form-group row">
                                     <div class="col-sm-10">

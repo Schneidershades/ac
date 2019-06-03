@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Traits\Permissions\HasPermissionsTrait;
 Use App\Models\PackageUser;
 Use App\Models\EventTransaction;
+Use App\Models\Category;
 
 class User extends Authenticatable
 {
@@ -103,6 +104,11 @@ class User extends Authenticatable
     public function eventTransaction()
     {
         return $this->hasMany(EventTransaction::class);
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
     }
 
 
