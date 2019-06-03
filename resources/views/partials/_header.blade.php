@@ -113,7 +113,7 @@
 
                                     
 
-                                    <li class="nav-item dropdown">
+                                    <!-- <li class="nav-item dropdown">
                                         <a href="javascript:void(0)" class="nav-link dropdown-toggle" data-toggle="dropdown">Business </a>
                                         <ul class="dropdown-menu">
                                             <li class="dropdown-item">
@@ -135,17 +135,21 @@
                                                 <a href="#">Sponsorship</a>
                                             </li>
                                         </ul>
-                                    </li>
+                                    </li> -->
 
                                     <li class="nav-item">
                                         <a class="nav-link" href="{{route('contact')}}">contact us</a>
                                     </li>
 
                                     <li class="nav-item">
+                                        <a class="nav-link" href="{{route('login')}}">Login/Register</a>
+                                    </li>
+
+                                    <!-- <li class="nav-item">
                                         <a class="nav-link" href="#search">
                                             <i class="fa fa-search"></i>
                                         </a>
-                                    </li>
+                                    </li> -->
                                     @auth
                                     <!-- <li class="nav-item d-lg-block d-none">
                                         <a href="" class="btn btn-one btn-anim br-5 px-3 nav-btn">
@@ -153,6 +157,7 @@
                                         </a>
                                     </li> -->
                                     @else
+
                                      <!-- <li class="nav-item d-lg-block d-none">
                                         <a href="{{route('login')}}" class="btn btn-one btn-anim br-5 px-3 nav-btn">
                                             <i class="fa fa-plus-circle"></i> Login/Register

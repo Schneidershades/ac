@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\EventPackage;
+use App\Models\Wallet;
 
 class HomeController extends Controller
 {
@@ -33,11 +34,19 @@ class HomeController extends Controller
             $wallet->balance = 0;
             $wallet->save();
         }
+        // $nadia = 94;
 
+        // if($nadia == 94){
+        //     dd('yes actually');
+        // }else{
+        //     dd('no');
+        // }
         $eventPackages = EventPackage::all();
         return view('backend.home')
             ->with('eventPackages', $eventPackages);
     }
+
+
 
 
 }
