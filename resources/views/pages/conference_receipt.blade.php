@@ -39,7 +39,9 @@
                             <hr>
                             <form class="color-form" method="POST" action="{{route('pay')}}">
                                 @csrf
-                                <input type="hidden" name="amount" value="{{$transaction->amount }}" /> <!-- Replace the value with your transaction amount -->
+
+
+                                <input type="hidden" name="amount" value="{{$transaction->eventPackage->amount }}" /> <!-- Replace the value with your transaction amount -->
                                 <input type="hidden" name="payment_method" value="both" /> <!-- Can be card, account, both -->
                                 <input type="hidden" name="description" value="{{$transaction->eventPackage->event_package_description}}" /> <!-- Replace the value with your transaction description -->
                                 <input type="hidden" name="country" value="NG" /> <!-- Replace the value with your transaction country -->
@@ -48,6 +50,7 @@
                                 <input type="hidden" name="firstname" value="{{$transaction->user->email}}" /> <!-- Replace the value with your customer firstname -->
                                 <input type="hidden" name="lastname" value="{{$transaction->user->email}}" /> <!-- Replace the value with your customer lastname -->
                                 <input type="hidden" name="phonenumber" value="{{$transaction->user->phone1}}" /> <!-- Replace the value with your customer phonenumber -->
+
                                 <input type="hidden" name="ref" value="{{$transaction->identifier}}" /> <!-- Ucomment and  Replace the value with your transaction reference. It must be unique per transaction. You can delete this line if you want one to be generated for you. --> 
                              
                                 <div class="form-row">
