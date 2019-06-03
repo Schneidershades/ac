@@ -39,8 +39,6 @@
                             <hr>
                             <form class="color-form" method="POST" action="{{route('pay')}}">
                                 @csrf
-
-
                                 <input type="hidden" name="amount" value="{{$transaction->eventPackage->amount }}" /> <!-- Replace the value with your transaction amount -->
                                 <input type="hidden" name="payment_method" value="both" /> <!-- Can be card, account, both -->
                                 <input type="hidden" name="description" value="{{$transaction->eventPackage->event_package_description}}" /> <!-- Replace the value with your transaction description -->
