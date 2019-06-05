@@ -54,8 +54,8 @@
 
 
 					<div class="col-md-3">
-	              		<label for="input-9">User Status</label><br>
-	              		<span class="badge badge-danger m-1">{{$user->active}}</span>
+	              		<label for="input-9">Wallet</label><br>
+	              		<span class="badge badge-danger m-1">{{$user->wallet->balance}}</span>
 					</div>
 
 					<div class="col-md-3">
