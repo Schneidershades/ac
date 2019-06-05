@@ -45,7 +45,7 @@
                 <td>{{$user->package->name}}</td>
                 <td>{{$user->created_at}}</td>
                 <td>
-                  <a href="{{route('admin-users.edit', $user->id)}}" class="btn btn-dark btn-round waves-effect waves-light m-1"><i aria-hidden="true" class="fa fa-edit"></i></a>
+                  <!-- <a href="{{route('admin-users.edit', $user->id)}}" class="btn btn-dark btn-round waves-effect waves-light m-1"><i aria-hidden="true" class="fa fa-edit"></i></a> -->
                   <a href="{{route('admin-users.show', $user->id)}}" class="btn btn-warning btn-round waves-effect waves-light m-1"><i aria-hidden="true" class="fa fa-eye"></i></a>
                   <a href="{{route('admin-users.destroy', $user->id)}}" class="btn btn-danger btn-round waves-effect waves-light m-1"><i aria-hidden="true" class="fa fa-trash"></i></a>
                 </td>
