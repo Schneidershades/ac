@@ -46,3 +46,4 @@ Route::resource('/admin-adverts', 'Admin\AdvertController');
 Route::resource('/admin-settings', 'Admin\SettingsController');
 Route::resource('/admin-payments', 'Admin\PaymentController');
 Route::resource('/admin-transaction', 'Admin\TransactionController');
+Route::resource('/admin-event-transactions', 'Admin\EventTransactionController');

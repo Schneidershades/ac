@@ -35,6 +35,7 @@
         <ul class="sidebar-submenu">
           <!-- <li><a href="{{route('admin-events.index')}}"><i class="fa fa-circle-o"></i> Events</a></li> -->
           <li><a href="{{route('admin-users.index')}}"><i class="fa fa-circle-o"></i> Users </a></li>
+          <li><a href="{{route('admin-event-transactions.index')}}"><i class="fa fa-circle-o"></i> Event Applicants </a></li>
           <!-- <li><a href="{{route('admin-business-categories.index')}}"><i class="fa fa-circle-o"></i> Business Categories </a></li> -->
           <!-- <li><a href="{{route('admin-posts.index')}}"><i class="fa fa-circle-o"></i> Posts </a></li>       -->
         </ul>
