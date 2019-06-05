@@ -16,7 +16,7 @@
 <div class="row">
   <div class="col-lg-12">
     <div class="card">
-      <div class="card-header"><i class="fa fa-table"></i> All Registered transactions
+      <div class="card-header"><i class="fa fa-table"></i> All Registered Event Transactions
       </div>
 
       <div class="card-body">
@@ -25,10 +25,11 @@
             <thead>
               <tr>
                 <th>Transaction ID</th>
-                <th>transaction Role</th>
-                <th>Joined</th>
+                <th>User</th>
+                <th>Contact</th>
+                <th>Initiated</th>
                 <th>Status</th>
-                <th>Action</th>
+                <!-- <th>Action</th> -->
               </tr>
             </thead>
             <tbody>
@@ -37,21 +38,24 @@
               <tr>
                 <td>{{$transaction->identifier}}</td>
                 <td>{{$transaction->user->name}}</td>
-                <td>{{$transaction->created_at}}</td>
+                <td>{{$transaction->user->phone1}}</td>
+                <td>{{$transaction->created_at->format('d')}} {{$transaction->created_at->format('M')}}, {{$transaction->created_at->format('Y')}}</td>
                 <td>{{$transaction->status}}</td>
-                <td>
-                  <!-- <a href="{{route('admin-event-transactions.show', $transaction->id)}}" class="btn btn-warning btn-round waves-effect waves-light m-1"><i aria-hidden="true" class="fa fa-eye"></i></a>
-                  <a href="{{route('admin-event-transactions.destroy', $transaction->id)}}" class="btn btn-danger btn-round waves-effect waves-light m-1"><i aria-hidden="true" class="fa fa-trash"></i></a> -->
-                </td>
+                <!-- <td>
+                  <a href="{{route('admin-event-transactions.show', $transaction->id)}}" class="btn btn-warning btn-round waves-effect waves-light m-1"><i aria-hidden="true" class="fa fa-eye"></i></a>
+                  <a href="{{route('admin-event-transactions.destroy', $transaction->id)}}" class="btn btn-danger btn-round waves-effect waves-light m-1"><i aria-hidden="true" class="fa fa-trash"></i></a>
+                </td> -->
               </tr>
               @endforeach
             </tbody>
             <tfoot>
               <tr>
-                <th>transactions</th>
-                <th>transaction Role</th>
-                <th>Joined</th>
-                <th>Action</th>
+                <th>Transaction ID</th>
+                <th>User</th>
+                <th>Contact</th>
+                <th>Initiated</th>
+                <th>Status</th>
+                <!-- <th>Action</th> -->
               </tr>
             </tfoot>
           </table>
