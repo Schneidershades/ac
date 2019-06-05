@@ -38,7 +38,7 @@ class CreateUsersTable extends Migration
             $table->string('youtube')->nullable();
             $table->string('image')->nullable();
             $table->text('about')->nullable();
-            $table->string('package_id')->nullable();
+            $table->integer('package_id')->default(1);
             $table->string('package_recurring')->default('yes');
             $table->string('last_recurring_date')->default('yes');
             $table->string('category_id')->nullable();

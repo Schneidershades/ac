@@ -114,7 +114,7 @@ class PageController extends Controller
             $user->category_id  = $request->category_id;
             $user->how_did_you_hear_about_ac  = $request->how_did_you_hear_about_ac;
             if($request->password && $request->member == 'yes'){
-                $user->password  = $request->password;
+                $user->password  = bcrypt($request->password);
             }
 
             $user->save();

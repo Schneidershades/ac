@@ -35,8 +35,8 @@
         <ul class="sidebar-submenu">
           <li><a href="{{route('admin-events.index')}}"><i class="fa fa-circle-o"></i> Events</a></li>
           <li><a href="{{route('admin-users.index')}}"><i class="fa fa-circle-o"></i> Users </a></li>
-          <li><a href="{{route('admin-business-categories.index')}}"><i class="fa fa-circle-o"></i> Business Categories </a></li>
-          <li><a href="{{route('admin-posts.index')}}"><i class="fa fa-circle-o"></i> Posts </a></li>      
+          <!-- <li><a href="{{route('admin-business-categories.index')}}"><i class="fa fa-circle-o"></i> Business Categories </a></li> -->
+          <!-- <li><a href="{{route('admin-posts.index')}}"><i class="fa fa-circle-o"></i> Posts </a></li>       -->
         </ul>
       </li>
     @endif
@@ -77,10 +77,10 @@
           <li><a href="{{route('profile.edit', auth()->user()->id)}}"><i class="fa fa-edit"></i>Edit Profile </a></li>            
           <li><a href="{{route('listings.index')}}"><i class="icon-envelope"></i>My Listings </a></li>                  
           <li><a href="{{route('listings.create.start')}}"><i class="fa fa-user"></i>Create Listings </a></li>                  
-          <li><a href="{{route('user-event-packages.index')}}"><i class="fa fa-user"></i>Conference Activity </a></li>
+          <!-- <li><a href="{{route('user-event-packages.index')}}"><i class="fa fa-user"></i>Conference Activity </a></li> -->
           <li><a href="{{route('wallet.create')}}"><i class="fa fa-money"></i>Fund Wallet </a></li>     
           <li><a href="{{route('package.create')}}"><i class="fa fa-circle-o"></i>Upgrade Package </a></li>     
-          <li><a href="{{route('wallet.index')}}"><i class="icon-calendar"></i>My Transaction </a></li>             
+          <!-- <li><a href="{{route('wallet.index')}}"><i class="icon-calendar"></i>My Transaction </a></li>              -->
         </ul>
       </li>
 
