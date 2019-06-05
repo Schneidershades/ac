@@ -43,7 +43,7 @@
               <tr>
                 <td>{{$user->name}}</td>
                 <td>{{$user->package->name}}</td>
-                <td>{{$transaction->created_at->format('d')}} {{$transaction->created_at->format('M')}}, {{$transaction->created_at->format('Y')}}</td>                
+                <td>{{$user->created_at->format('d')}} {{$user->created_at->format('M')}}, {{$user->created_at->format('Y')}}</td>                
                 <td>
                   <!-- <a href="{{route('admin-users.edit', $user->id)}}" class="btn btn-dark btn-round waves-effect waves-light m-1"><i aria-hidden="true" class="fa fa-edit"></i></a> -->
                  <!--  <a href="{{route('admin-users.show', $user->id)}}" class="btn btn-warning btn-round waves-effect waves-light m-1"><i aria-hidden="true" class="fa fa-eye"></i></a>
