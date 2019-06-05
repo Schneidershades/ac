@@ -8,7 +8,7 @@
             <div class="card-body">
               <div class="media">
               <div class="media-body text-left">
-              <h5 class="text-info">{{ $user->registrationTransactions()->count() }}</h5>
+              <h5 class="text-info">{{ $user->walletTransactions()->count() }}</h5>
                 <span>Total Orders</span>
               </div>
               <div class="align-self-center w-circle-icon rounded-circle gradient-scooter">
@@ -23,7 +23,7 @@
               <div class="media">
                <div class="media-body text-left">
                 <h5 class="text-danger">
-                  N{{$user->registrationTransactions()->sum('amount')}}
+                  N{{$user->walletTransactions()->sum('amount')}}
                 </h5>
                 <span>Total Order</span>
               </div>
@@ -48,7 +48,7 @@
 
 
 					<div class="col-md-3">
-	              		<label for="input-9">Amount</label><br>
+	              		<label for="input-9">Email</label><br>
 	              		<b>{{$user->email}}</b>
 					</div>
 
