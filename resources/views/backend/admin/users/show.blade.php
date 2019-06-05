@@ -52,11 +52,6 @@
 	              		<b>{{$user->email}}</b>
 					</div>
 
-					<div class="col-md-3">
-	              		<label for="input-9">Type</label><br>
-	              		<b>{{$user->role->name}}</b>
-					</div>
-
 
 					<div class="col-md-3">
 	              		<label for="input-9">User Status</label><br>
