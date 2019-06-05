@@ -60,7 +60,9 @@ class SettingSeeder extends Seeder
 
             'site_about_image'                  => '/assets/images/logo-white.png',
             'site_full_address_local'              => '50, Addo Road, Ajah-Lekki, Lagos, Nigeria.',
-            'site_full_address_international'      => '50, Addo Road, Ajah-Lekki, Lagos, Nigeria.'
+            'site_full_address_international'      => '50, Addo Road, Ajah-Lekki, Lagos, Nigeria.',
+            'site_account_name'      => 'Fidelity Bank',
+            'site_account_number'      => '5600436061',
         ]);
     }
 }

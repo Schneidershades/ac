@@ -43,6 +43,8 @@ class CreateSettingsTable extends Migration
             $table->text('site_overview')->nullable();
             $table->text('site_client_description')->nullable();
             $table->text('site_work_days')->nullable();
+            $table->text('site_account_name')->nullable();
+            $table->text('site_account_number')->nullable();
             $table->timestamps();
         });
     }

@@ -99,17 +99,25 @@
                                      
                                 </div>
 
-                                <div class="form-group row col-md-12">
-                                    <!-- <label for="input-9">Registration Package</label><br> -->
-                                    <h4>{{$transaction->eventPackage->event_package_description}} - N{{$transaction->eventPackage->amount}}</h4>
-                                </div>
+                                <!-- <div class="form-group row col-md-12">
+                                    <label for="input-9">Registration Package</label><br>
+                                    
+                                </div> -->
 
                                 @if($transaction->status != 'success')
-                                    <div class="form-group row">
+                                    <!-- <div class="form-group row">
                                         <div class="col-sm-10">
                                             <button type="submit" class="btn btn-primary shadow-primary px-5"><i class="icon-lock"></i> Make Payments</button>
                                         </div>
-                                    </div> 
+                                    </div>  -->
+
+                                    <h4>Please Kindly make a transafer to Achievers Connect Confluence</h4>
+                                    <h5>Amount</h5>
+                                    <h4>{{$transaction->eventPackage->event_package_description}} - N{{$transaction->eventPackage->amount}}</h4>
+                                    <h5>Account Number</h5>
+                                    <h4>{{$web->site_account_number}}</h4>
+                                    <h5>Account Name</h5>
+                                    <h4>{{$web->site_account_name}}</h4>
                                 @endif 
                             </form>
                         </div>

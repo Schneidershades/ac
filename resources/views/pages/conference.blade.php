@@ -82,7 +82,7 @@
 
 
                                     <div class="form-group col-md-4">
-                                        <label for="input-9">Would you love to be an AC member?</label>
+                                        <label for="input-9">Would you love to be an ACCi member?</label>
                                         <select name="member" id="" class="form-control " onchange="
                                             if(this.value=='yes'){ 
                                               $('#authentication').fadeIn(); }else{ $('#authentication').fadeOut(); 
