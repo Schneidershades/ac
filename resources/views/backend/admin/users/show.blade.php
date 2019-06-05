@@ -65,11 +65,7 @@
 				</div><br><br>		
 
 
-				<div class="form-group row">
-					<div class="col-sm-10">
-						<a href="{{route('user.edit', $user->id)}}" type="submit" class="btn btn-primary shadow-primary px-5"><i class="icon-lock"></i> Edit user Details</a>
-					</div>
-				</div>
+				
 			</div>
 		</div>
 	</div>
