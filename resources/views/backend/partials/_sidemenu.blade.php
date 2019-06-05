@@ -33,7 +33,7 @@
           <i class="icon-home"></i> <span>Content</span> <i class="fa fa-angle-left pull-right"></i>
         </a>
         <ul class="sidebar-submenu">
-          <li><a href="{{route('admin-events.index')}}"><i class="fa fa-circle-o"></i> Events</a></li>
+          <!-- <li><a href="{{route('admin-events.index')}}"><i class="fa fa-circle-o"></i> Events</a></li> -->
           <li><a href="{{route('admin-users.index')}}"><i class="fa fa-circle-o"></i> Users </a></li>
           <!-- <li><a href="{{route('admin-business-categories.index')}}"><i class="fa fa-circle-o"></i> Business Categories </a></li> -->
           <!-- <li><a href="{{route('admin-posts.index')}}"><i class="fa fa-circle-o"></i> Posts </a></li>       -->
