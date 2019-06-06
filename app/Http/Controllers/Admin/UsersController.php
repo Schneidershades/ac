@@ -62,19 +62,18 @@ class UsersController extends Controller
     public function update(Request $request, $id)
     {
         $user = User::find($id);
-        if($request->active == 'yes'){
-            $user->active = 'yes';
-        }else{
-            $user->active = 'no';
-        }
-        $user->role_id = $request->role_id;
+        // if($request->active == 'yes'){
+        //     $user->active = 'yes';
+        // }else{
+        //     $user->active = 'no';
+        // }
         $user->package_id = $request->package_id;
         $user->save();
         
         $user->roles()->sync($request->roles);
         $user->givePermissionTo($request->permissions);
 
-        return redirect()->route('user.index');
+        return redirect()->route('admin-users.index');
         Session::flash('success', 'The service price details has been saved');
     }
 

@@ -42,16 +42,16 @@
 		<div class="col-lg-12 mx-auto">
 			<div class="card">
 				<div class="card-body">
-					<div class="card-title text-uppercase "><i class="fa fa-address-book-o"></i> Create User Service Discount</div>
+					<div class="card-title text-uppercase "><i class="fa fa-address-book-o"></i> Update User</div>
 					<hr>
-					<form class="color-form" method="POST" action="{{route('discount.store')}}" enctype="multipart/form-data">
-						@csrf
+					<form class="color-form" method="POST" action="{{route('users.update')}}" enctype="multipart/form-data">
+						@method('PUT')
 						<div class='repeater'>
 							<!-- Make sure the repeater list value is different from the first repeater  -->
 							<div data-repeater-list="user_special_discounts">
 								<div data-repeater-item class="form-group row">
 									<div class="col-md-12">
-										<div class="card-title"><i class="fa fa-address-book-o"></i> NEW SERVICE DISCOUNT</div><br>
+										<div class="card-title"><i class="fa fa-address-book-o"></i> Update User</div><br>
 									</div>
 									<div class="col-md-3">
 										<label for="input-13">Item</label>

@@ -34,7 +34,7 @@
                 <th>Users</th>
                 <th>User Role</th>
                 <th>Joined</th>
-                <!-- <th>Action</th> -->
+                <th>Action</th>
               </tr>
             </thead>
             <tbody>
@@ -45,9 +45,9 @@
                 <td>{{$user->package->name}}</td>
                 <td>{{$user->created_at->format('d')}} {{$user->created_at->format('M')}}, {{$user->created_at->format('Y')}}</td>                
                 <td>
-                  <!-- <a href="{{route('admin-users.edit', $user->id)}}" class="btn btn-dark btn-round waves-effect waves-light m-1"><i aria-hidden="true" class="fa fa-edit"></i></a> -->
-                 <!--  <a href="{{route('admin-users.show', $user->id)}}" class="btn btn-warning btn-round waves-effect waves-light m-1"><i aria-hidden="true" class="fa fa-eye"></i></a>
-                  <a href="{{route('admin-users.destroy', $user->id)}}" class="btn btn-danger btn-round waves-effect waves-light m-1"><i aria-hidden="true" class="fa fa-trash"></i></a> -->
+                  <a href="{{route('admin-users.edit', $user->id)}}" class="btn btn-dark btn-round waves-effect waves-light m-1"><i aria-hidden="true" class="fa fa-edit"></i></a>
+                  <a href="{{route('admin-users.show', $user->id)}}" class="btn btn-warning btn-round waves-effect waves-light m-1"><i aria-hidden="true" class="fa fa-eye"></i></a>
+                  <!-- <a href="{{route('admin-users.destroy', $user->id)}}" class="btn btn-danger btn-round waves-effect waves-light m-1"><i aria-hidden="true" class="fa fa-trash"></i></a> -->
                 </td>
               </tr>
               @endforeach
@@ -57,7 +57,7 @@
                 <th>Users</th>
                 <th>User Role</th>
                 <th>Joined</th>
-                <!-- <th>Action</th> -->
+                <th>Action</th>
               </tr>
             </tfoot>
           </table>
