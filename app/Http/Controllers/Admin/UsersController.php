@@ -70,8 +70,8 @@ class UsersController extends Controller
         $user->package_id = $request->package_id;
         $user->save();
         
-        $user->roles()->sync($request->roles);
-        $user->givePermissionTo($request->permissions);
+        // $user->roles()->sync($request->roles);
+        // $user->givePermissionTo($request->permissions);
 
         return redirect()->route('admin-users.index');
         Session::flash('success', 'The service price details has been saved');
