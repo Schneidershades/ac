@@ -97,7 +97,7 @@
 
 @if($adverts->count() > 0)
 <!-- popular list start-->
-<section class="popular-list sp-100 bg-w">
+<!-- <section class="popular-list sp-100 bg-w">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -151,7 +151,6 @@
                             <ul class="ctg-info2 pt-2 mt-3 centering justify-content-between">
                                 <li class="mt-1">
                                     <a href="#">
-                                        <!-- <i class="fa fa-map-marker-alt mr-2"></i>San Francisco, USA</a> -->
                                 </li>
                                 <li class="mt-1">
                                     <a href="#">
@@ -165,7 +164,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- popular list end -->
 @endif
 
@@ -196,7 +195,7 @@
             @foreach($categories as $category)
             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-30">
                 <div class="ctg-item">
-                    <div class="icon-box" style="background-image:url({{$category->image}})">
+                    <div class="icon-box" style="background-image:url({{URL::to($category->image)}})">
                         <i class="flaticon-fast-food"></i>
                     </div>
                     <div class="content-box p-4">
