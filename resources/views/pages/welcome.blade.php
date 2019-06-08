@@ -9,7 +9,7 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background-image: url("{{URL::to('assets-web/img/home/baner-img22.jpg')}}");
+    /*background-image: url("{{URL::to('assets-web/img/home/baner-img22.jpg')}}");*/
 
     background-size: cover;
     background-position: 0 0;
