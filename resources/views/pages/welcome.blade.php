@@ -195,7 +195,7 @@
             @foreach($categories as $category)
             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-30">
                 <div class="ctg-item">
-                    <div class="icon-box" style="background-image:url({{URL::to($category->image)}})">
+                    <div class="icon-box" style="background-image:url('{{URL::to($category->image)}}')">
                         <i class="flaticon-fast-food"></i>
                     </div>
                     <div class="content-box p-4">
